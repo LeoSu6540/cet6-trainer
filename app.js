@@ -2237,10 +2237,30 @@ function showFatalError(err) {
   `);
 }
 
+async function loadWordsCompat() {
+  try {
+    const res = await fetch('/api/words?ts=' + Date.now());
+    if (res.ok) {
+      const payload = await res.json();
+      words = payload.words || [];
+      return;
+    }
+  } catch (_) {}
+  try {
+    const res = await fetch('./words.json?ts=' + Date.now());
+    if (res.ok) { words = await res.json(); return; }
+  } catch (_) {}
+  try {
+    const res = await fetch('/words.json?ts=' + Date.now());
+    if (res.ok) { words = await res.json(); return; }
+  } catch (_) {}
+  if (Array.isArray(window.CET6_WORDS)) words = window.CET6_WORDS;
+  else throw new Error('无法加载单词表。请确认 words.json 存在或使用 Node 版。');
+}
+
 async function init() {
   try {
-    const wordsPayload = await apiGet('/api/words');
-    words = wordsPayload.words || [];
+    await loadWordsCompat();
     wordsById = new Map(words.map(item => [item.id, item]));
 
     await loadStateCompat();
