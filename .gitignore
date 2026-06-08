@@ -1,0 +1,15 @@
+node_modules/
+*.log
+*.zip
+*.bak
+backup_*/
+backup_before_*/
+*_backup*/
+articles_import_report.txt
+phonetics_import_report.txt
+CET6_*.docx
+CET6_*.doc
+cet6_word_trainer_data.json
+*.tmp
+.DS_Store
+Thumbs.db
