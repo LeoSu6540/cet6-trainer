@@ -447,14 +447,8 @@ async function apiPost(url, body) {
 }
 
 async function loadArticles() {
-  try {
-    const res = await fetch('./articles.json?ts=' + Date.now());
-    if (res.ok) { articles = await res.json(); return; }
-  } catch (_) {}
-  try {
-    const res = await fetch('/articles.json?ts=' + Date.now());
-    if (res.ok) { articles = await res.json(); return; }
-  } catch (_) {}
+  const data = await fetchJsonFromCandidates(['./articles.json', '/articles.json']);
+  if (Array.isArray(data)) { articles = data; return; }
   if (Array.isArray(window.CET6_ARTICLES)) articles = window.CET6_ARTICLES;
   else articles = [];
 }
@@ -2109,9 +2103,16 @@ async function importLearningDataJSON() {
 }
 async function resetMainProgress() {
   if (!confirm('只重置"单词挑战"进度，不会删除错题本和错误次数。确定继续吗？')) return;
-  const payload = await apiPost('/api/reset-main-progress', {});
-  state = payload.state;
-  dataPath = payload.dataPath || dataPath;
+  try {
+    const payload = await apiPost('/api/reset-main-progress', {});
+    state = payload.state;
+    dataPath = payload.dataPath || dataPath;
+    renderHome();
+    return;
+  } catch (_) {}
+  state.mainChallenge = { nextIndex: 0, round: 1, history: [] };
+  if (state.sessionHistory?.sessions) delete state.sessionHistory.sessions.main;
+  await saveState();
   renderHome();
 }
 
@@ -2239,21 +2240,23 @@ function showFatalError(err) {
   `);
 }
 
+async function fetchJsonFromCandidates(paths) {
+  for (const p of paths) {
+    try {
+      const sep = p.includes('?') ? '&' : '?';
+      const res = await fetch(p + sep + 'ts=' + Date.now(), { cache: 'no-store' });
+      if (res.ok) return await res.json();
+    } catch (_) {}
+  }
+  return null;
+}
+
 async function loadWordsCompat() {
-  try {
-    const res = await fetch('./words.json?ts=' + Date.now());
-    if (res.ok) { words = await res.json(); return; }
-  } catch (_) {}
-  try {
-    const res = await fetch('/words.json?ts=' + Date.now());
-    if (res.ok) { words = await res.json(); return; }
-  } catch (_) {}
-  try {
-    const res = await fetch('/api/words?ts=' + Date.now());
-    if (res.ok) { const payload = await res.json(); words = payload.words || []; return; }
-  } catch (_) {}
-  if (Array.isArray(window.CET6_WORDS)) words = window.CET6_WORDS;
-  else throw new Error('无法加载单词表。请确认 words.json 存在或使用 Node 版。');
+  const data = await fetchJsonFromCandidates(['./words.json', '/api/words', '/words.json']);
+  if (Array.isArray(data)) { words = data; }
+  else if (Array.isArray(window.CET6_WORDS)) { words = window.CET6_WORDS; }
+  else { words = []; }
+  wordsById = new Map(words.map(w => [Number(w.id), w]));
 }
 
 async function init() {
