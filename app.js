@@ -448,8 +448,11 @@ async function apiPost(url, body) {
 
 async function loadArticles() {
   try {
-    let res = await fetch('/articles.json?ts=' + Date.now());
-    if (!res.ok) res = await fetch('./articles.json?ts=' + Date.now());
+    const res = await fetch('./articles.json?ts=' + Date.now());
+    if (res.ok) { articles = await res.json(); return; }
+  } catch (_) {}
+  try {
+    const res = await fetch('/articles.json?ts=' + Date.now());
     if (res.ok) { articles = await res.json(); return; }
   } catch (_) {}
   if (Array.isArray(window.CET6_ARTICLES)) articles = window.CET6_ARTICLES;
@@ -540,17 +543,16 @@ async function saveStateToIndexedDB(nextState) {
 }
 
 async function loadStateCompat() {
+  state = await loadStateFromIndexedDB();
+  dataPath = '(IndexedDB 离线存储)';
   try {
     const res = await fetch('/api/state?ts=' + Date.now());
     if (res.ok) {
       const payload = await res.json();
       state = payload.state;
       dataPath = payload.dataPath || '';
-      return;
     }
   } catch (_) {}
-  state = await loadStateFromIndexedDB();
-  dataPath = '(IndexedDB 离线存储)';
 }
 
 async function saveStateCompat() {
@@ -2239,20 +2241,16 @@ function showFatalError(err) {
 
 async function loadWordsCompat() {
   try {
-    const res = await fetch('/api/words?ts=' + Date.now());
-    if (res.ok) {
-      const payload = await res.json();
-      words = payload.words || [];
-      return;
-    }
-  } catch (_) {}
-  try {
     const res = await fetch('./words.json?ts=' + Date.now());
     if (res.ok) { words = await res.json(); return; }
   } catch (_) {}
   try {
     const res = await fetch('/words.json?ts=' + Date.now());
     if (res.ok) { words = await res.json(); return; }
+  } catch (_) {}
+  try {
+    const res = await fetch('/api/words?ts=' + Date.now());
+    if (res.ok) { const payload = await res.json(); words = payload.words || []; return; }
   } catch (_) {}
   if (Array.isArray(window.CET6_WORDS)) words = window.CET6_WORDS;
   else throw new Error('无法加载单词表。请确认 words.json 存在或使用 Node 版。');
