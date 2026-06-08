@@ -1,0 +1,6833 @@
+window.CET6_ARTICLES = [
+  {
+    "id": 1,
+    "title": "After the Garden Was Built",
+    "paragraphs": [
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "After the garden opened, it became a "
+          },
+          {
+            "type": "vocab",
+            "word": "prominent",
+            "phonetic": "/ˈprɑmənənt/",
+            "meaning": "显著的；杰出的"
+          },
+          {
+            "type": "text",
+            "text": " place in the neighborhood. Students could "
+          },
+          {
+            "type": "vocab",
+            "word": "commute",
+            "phonetic": "/kəˈmjut/",
+            "meaning": "通勤"
+          },
+          {
+            "type": "text",
+            "text": " there after class, and residents often came in the evening. To many people, the garden began to "
+          },
+          {
+            "type": "vocab",
+            "word": "signify",
+            "phonetic": "/ˈsɪɡnəˌfaɪ/",
+            "meaning": "表示；意味着；象征"
+          },
+          {
+            "type": "text",
+            "text": " hope."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "However, not everyone was satisfied. The "
+          },
+          {
+            "type": "vocab",
+            "word": "incumbent",
+            "phonetic": "/ˌɪnˈkʌmbənt/",
+            "meaning": "现任的；有责任的"
+          },
+          {
+            "type": "text",
+            "text": " councilor still wanted to "
+          },
+          {
+            "type": "vocab",
+            "word": "impose",
+            "phonetic": "/ˌɪmˈpoʊz/",
+            "meaning": "强加；征收"
+          },
+          {
+            "type": "text",
+            "text": " new rules on the garden. He said the rules were for "
+          },
+          {
+            "type": "vocab",
+            "word": "hygiene",
+            "phonetic": "/ˈhaɪˌdʒin/",
+            "meaning": "卫生；卫生学"
+          },
+          {
+            "type": "text",
+            "text": ", but some students believed he was trying to "
+          },
+          {
+            "type": "vocab",
+            "word": "evade",
+            "phonetic": "/ɪˈveɪd/",
+            "meaning": "逃避；规避"
+          },
+          {
+            "type": "text",
+            "text": " responsibility for the earlier scandal. The rules would "
+          },
+          {
+            "type": "vocab",
+            "word": "deprive",
+            "phonetic": "/dɪˈpraɪv/",
+            "meaning": "剥夺；使丧失"
+          },
+          {
+            "type": "text",
+            "text": " local children of free access to the garden, so many residents began to "
+          },
+          {
+            "type": "vocab",
+            "word": "deplore",
+            "phonetic": "/dɪˈplɔr/",
+            "meaning": "谴责；哀叹"
+          },
+          {
+            "type": "text",
+            "text": " the decision."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The school decided to "
+          },
+          {
+            "type": "vocab",
+            "word": "convene",
+            "phonetic": "/kənˈvin/",
+            "meaning": "召集；召开"
+          },
+          {
+            "type": "text",
+            "text": " another public meeting. People from different streets began to "
+          },
+          {
+            "type": "vocab",
+            "word": "converge",
+            "phonetic": "/kənˈvɝdʒ/",
+            "meaning": "聚集；汇合"
+          },
+          {
+            "type": "text",
+            "text": " at the garden gate. The atmosphere was "
+          },
+          {
+            "type": "vocab",
+            "word": "hectic",
+            "phonetic": "/ˈhɛktɪk/",
+            "meaning": "忙乱的；繁忙紧张的"
+          },
+          {
+            "type": "text",
+            "text": ", and there was clear "
+          },
+          {
+            "type": "vocab",
+            "word": "dissent",
+            "phonetic": "/dɪˈsɛnt/",
+            "meaning": "异议；不同意"
+          },
+          {
+            "type": "text",
+            "text": " among the crowd. Some people wanted to fight immediately, while others hoped teachers would "
+          },
+          {
+            "type": "vocab",
+            "word": "intervene",
+            "phonetic": "/ˌɪntɚˈvin/",
+            "meaning": "介入；干预"
+          },
+          {
+            "type": "text",
+            "text": " before the situation turned into "
+          },
+          {
+            "type": "vocab",
+            "word": "disorder",
+            "phonetic": "/dɪˈsɔrdɚ/",
+            "meaning": "混乱；杂乱"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Our teacher tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "reconcile",
+            "phonetic": "/ˈrɛkənˌsaɪl/",
+            "meaning": "调和；使和解"
+          },
+          {
+            "type": "text",
+            "text": " the two sides. She used an "
+          },
+          {
+            "type": "vocab",
+            "word": "analogy",
+            "phonetic": "/əˈnælədʒi/",
+            "meaning": "类比；相似"
+          },
+          {
+            "type": "text",
+            "text": ": “A garden cannot survive if sunlight and water fight each other. People are the same.” Her words helped "
+          },
+          {
+            "type": "vocab",
+            "word": "deter",
+            "phonetic": "/dɪˈtɝ/",
+            "meaning": "制止；吓阻"
+          },
+          {
+            "type": "text",
+            "text": " angry behavior. Even the councilor had to "
+          },
+          {
+            "type": "vocab",
+            "word": "concede",
+            "phonetic": "/kənˈsid/",
+            "meaning": "承认；让步"
+          },
+          {
+            "type": "text",
+            "text": " that the old rules were unfair."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The students then made a more "
+          },
+          {
+            "type": "vocab",
+            "word": "viable",
+            "phonetic": "/ˈvaɪəbəl/",
+            "meaning": "可行的；能成功的"
+          },
+          {
+            "type": "text",
+            "text": " plan. We agreed to "
+          },
+          {
+            "type": "vocab",
+            "word": "retrieve",
+            "phonetic": "/rɪˈtriv/",
+            "meaning": "找回；取回；检索"
+          },
+          {
+            "type": "text",
+            "text": " the original land documents and "
+          },
+          {
+            "type": "vocab",
+            "word": "discard",
+            "phonetic": "/dɪˈskɑrd/",
+            "meaning": "丢弃；抛弃"
+          },
+          {
+            "type": "text",
+            "text": " outdated rules. We also asked each "
+          },
+          {
+            "type": "vocab",
+            "word": "subordinate",
+            "phonetic": "/səˈbɔrdənət/",
+            "meaning": "下级的；次要的；使从属"
+          },
+          {
+            "type": "text",
+            "text": " volunteer group to manage one small area. This arrangement could "
+          },
+          {
+            "type": "vocab",
+            "word": "complement",
+            "phonetic": "/ˈkɑmpləmənt/",
+            "meaning": "补充；补足"
+          },
+          {
+            "type": "text",
+            "text": " the work of the school staff instead of replacing it."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "As winter became "
+          },
+          {
+            "type": "vocab",
+            "word": "imminent",
+            "phonetic": "/ˈɪmənənt/",
+            "meaning": "即将来临的；逼近的"
+          },
+          {
+            "type": "text",
+            "text": ", we had to "
+          },
+          {
+            "type": "vocab",
+            "word": "anticipate",
+            "phonetic": "/ænˈtɪsəˌpeɪt/",
+            "meaning": "预期；预料"
+          },
+          {
+            "type": "text",
+            "text": " new problems. Many "
+          },
+          {
+            "type": "vocab",
+            "word": "indigenous",
+            "phonetic": "/ˌɪnˈdɪdʒənəs/",
+            "meaning": "本土的；土著的"
+          },
+          {
+            "type": "text",
+            "text": " plants would "
+          },
+          {
+            "type": "vocab",
+            "word": "hibernate",
+            "phonetic": "/ˈhaɪbɚˌneɪt/",
+            "meaning": "冬眠；过冬"
+          },
+          {
+            "type": "text",
+            "text": ", so the garden might look empty for months. Some students felt "
+          },
+          {
+            "type": "vocab",
+            "word": "distress",
+            "phonetic": "/dɪˈstrɛs/",
+            "meaning": "苦恼；忧虑"
+          },
+          {
+            "type": "text",
+            "text": " because the scene might "
+          },
+          {
+            "type": "vocab",
+            "word": "resemble",
+            "phonetic": "/rɪˈzɛmbəl/",
+            "meaning": "相似；类似"
+          },
+          {
+            "type": "text",
+            "text": " the abandoned land from the past. But our biology teacher explained that winter did not "
+          },
+          {
+            "type": "vocab",
+            "word": "indicate",
+            "phonetic": "/ˈɪndəˌkeɪt/",
+            "meaning": "显示；表明；象征"
+          },
+          {
+            "type": "text",
+            "text": " failure. It was only an "
+          },
+          {
+            "type": "vocab",
+            "word": "intermediate",
+            "phonetic": "/ˌɪntɚˈmidiɪt/",
+            "meaning": "中间的；过渡的"
+          },
+          {
+            "type": "text",
+            "text": " stage before spring."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "During the local "
+          },
+          {
+            "type": "vocab",
+            "word": "electoral",
+            "phonetic": "/ɪˈlɛktɚəl/",
+            "meaning": "选举的；选举人的"
+          },
+          {
+            "type": "text",
+            "text": " campaign, several candidates came to visit the garden. One "
+          },
+          {
+            "type": "vocab",
+            "word": "eminent",
+            "phonetic": "/ˈɛmənənt/",
+            "meaning": "杰出的；显赫的"
+          },
+          {
+            "type": "text",
+            "text": " professor gave an "
+          },
+          {
+            "type": "vocab",
+            "word": "impromptu",
+            "phonetic": "/ˌɪmˈprɑmptu/",
+            "meaning": "即兴的；临时的"
+          },
+          {
+            "type": "text",
+            "text": " speech and asked the public to "
+          },
+          {
+            "type": "vocab",
+            "word": "endorse",
+            "phonetic": "/ɛnˈdɔrs/",
+            "meaning": "支持；赞同"
+          },
+          {
+            "type": "text",
+            "text": " the students’ plan. A young artist also came to "
+          },
+          {
+            "type": "vocab",
+            "word": "depict",
+            "phonetic": "/dɪˈpɪkt/",
+            "meaning": "描绘；描述"
+          },
+          {
+            "type": "text",
+            "text": " the garden in a new painting. Unlike the old mural, this one did not make the garden look "
+          },
+          {
+            "type": "vocab",
+            "word": "homogeneous",
+            "phonetic": "/ˌhoʊməˈdʒiniəs/",
+            "meaning": "同质的；单一的"
+          },
+          {
+            "type": "text",
+            "text": ". It showed different people, different plants, and different ideas living together."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The project slowly changed our "
+          },
+          {
+            "type": "vocab",
+            "word": "disposition",
+            "phonetic": "/ˌdɪspəˈzɪʃən/",
+            "meaning": "性情；倾向；安排"
+          },
+          {
+            "type": "text",
+            "text": ". We no longer tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "emulate",
+            "phonetic": "/ˈɛmjəˌleɪt/",
+            "meaning": "效仿；尽力赶上"
+          },
+          {
+            "type": "text",
+            "text": " other cities blindly. Instead, we began to "
+          },
+          {
+            "type": "vocab",
+            "word": "envisage",
+            "phonetic": "/ɛnˈvɪzɪdʒ/",
+            "meaning": "设想；展望；预见"
+          },
+          {
+            "type": "text",
+            "text": " our own future. The garden became a new "
+          },
+          {
+            "type": "vocab",
+            "word": "genre",
+            "phonetic": "/ˈʒɑnrə/",
+            "meaning": "类型；流派"
+          },
+          {
+            "type": "text",
+            "text": " of school activity: part science, part art, part public responsibility."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "In the end, the councilor’s attempt to "
+          },
+          {
+            "type": "vocab",
+            "word": "undermine",
+            "phonetic": "/ˈʌndɚˌmaɪn/",
+            "meaning": "逐渐破坏；削弱"
+          },
+          {
+            "type": "text",
+            "text": " the project failed. The students’ plan began to "
+          },
+          {
+            "type": "vocab",
+            "word": "prevail",
+            "phonetic": "/prɪˈveɪl/",
+            "meaning": "获胜；占上风；流行"
+          },
+          {
+            "type": "text",
+            "text": ". The garden did more than "
+          },
+          {
+            "type": "vocab",
+            "word": "elevate",
+            "phonetic": "/ˈɛləˌveɪt/",
+            "meaning": "提升；提高"
+          },
+          {
+            "type": "text",
+            "text": " the beauty of the neighborhood; it taught everyone that ordinary people could protect a shared place when they refused to "
+          },
+          {
+            "type": "vocab",
+            "word": "disperse",
+            "phonetic": "/dɪˈspɝs/",
+            "meaning": "分散；散开"
+          },
+          {
+            "type": "text",
+            "text": " in fear."
+          }
+        ]
+      }
+    ],
+    "vocabCount": 46
+  },
+  {
+    "id": 2,
+    "title": "The Second Spring of the Garden",
+    "paragraphs": [
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "By the second spring, the garden no longer looked like a student experiment. It had become an "
+          },
+          {
+            "type": "vocab",
+            "word": "exquisite",
+            "phonetic": "/ˈɛkskwəzət/",
+            "meaning": "精致的；细腻的"
+          },
+          {
+            "type": "text",
+            "text": " public space, with stone paths, quiet benches, and flowers arranged in soft, almost "
+          },
+          {
+            "type": "vocab",
+            "word": "feminine",
+            "phonetic": "/ˈfɛmənən/",
+            "meaning": "女性的；柔美的"
+          },
+          {
+            "type": "text",
+            "text": " patterns. To the younger students, its story already felt "
+          },
+          {
+            "type": "vocab",
+            "word": "epic",
+            "phonetic": "/ˈɛpɪk/",
+            "meaning": "史诗般的；宏大的"
+          },
+          {
+            "type": "text",
+            "text": ", as if a small group of ordinary people had defeated something much larger than themselves."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The school wanted to "
+          },
+          {
+            "type": "vocab",
+            "word": "foster",
+            "phonetic": "/ˈfɑstɚ/",
+            "meaning": "培养；促进"
+          },
+          {
+            "type": "text",
+            "text": " a deeper connection between students and the community, so it planned a public exhibition. The exhibition would include an "
+          },
+          {
+            "type": "vocab",
+            "word": "exposition",
+            "phonetic": "/ˌɛkspəˈzɪʃən/",
+            "meaning": "阐述；讲解"
+          },
+          {
+            "type": "text",
+            "text": " of the garden’s history, from the abandoned land to the final victory over the parking lot plan. Every poster had to be "
+          },
+          {
+            "type": "vocab",
+            "word": "explicit",
+            "phonetic": "/ɪkˈsplɪsət/",
+            "meaning": "清楚的；明确的"
+          },
+          {
+            "type": "text",
+            "text": ", accurate, and easy to understand. The teachers said the message should be "
+          },
+          {
+            "type": "vocab",
+            "word": "intelligible",
+            "phonetic": "/ˌɪnˈtɛlədʒəbəl/",
+            "meaning": "可理解的；易懂的"
+          },
+          {
+            "type": "text",
+            "text": " even to visitors who knew nothing about the project."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A local foundation agreed to "
+          },
+          {
+            "type": "vocab",
+            "word": "endow",
+            "phonetic": "/ɛnˈdaʊ/",
+            "meaning": "捐赠；资助"
+          },
+          {
+            "type": "text",
+            "text": " the garden with a small "
+          },
+          {
+            "type": "vocab",
+            "word": "grant",
+            "phonetic": "/ˈɡrænt/",
+            "meaning": "拨款；补助金"
+          },
+          {
+            "type": "text",
+            "text": ", but the money came with strict "
+          },
+          {
+            "type": "vocab",
+            "word": "fiscal",
+            "phonetic": "/ˈfɪskəl/",
+            "meaning": "财政的；财务的"
+          },
+          {
+            "type": "text",
+            "text": " rules. The students had to prepare an "
+          },
+          {
+            "type": "vocab",
+            "word": "inventory",
+            "phonetic": "/ˈɪnvənˌtɔri/",
+            "meaning": "库存清单；物品清单"
+          },
+          {
+            "type": "text",
+            "text": " of tools, seeds, signs, and decorations. They also had to "
+          },
+          {
+            "type": "vocab",
+            "word": "gauge",
+            "phonetic": "/ˈɡeɪdʒ/",
+            "meaning": "估计；衡量"
+          },
+          {
+            "type": "text",
+            "text": " how many visitors might come, how much food was needed, and whether the narrow paths could handle "
+          },
+          {
+            "type": "vocab",
+            "word": "excess",
+            "phonetic": "/ˈɛkˌsɛs/",
+            "meaning": "过量的；额外的"
+          },
+          {
+            "type": "text",
+            "text": " traffic."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The preparation became "
+          },
+          {
+            "type": "vocab",
+            "word": "hectic",
+            "phonetic": "/ˈhɛktɪk/",
+            "meaning": "忙乱的；繁忙紧张的"
+          },
+          {
+            "type": "text",
+            "text": ". Volunteers were asked to "
+          },
+          {
+            "type": "vocab",
+            "word": "enlist",
+            "phonetic": "/ˌɛnˈlɪst/",
+            "meaning": "招募；使参与"
+          },
+          {
+            "type": "text",
+            "text": " younger students, parents, and retired residents. Some supplies arrived by "
+          },
+          {
+            "type": "vocab",
+            "word": "freight",
+            "phonetic": "/ˈfreɪt/",
+            "meaning": "货运；运费"
+          },
+          {
+            "type": "text",
+            "text": ", while others had to be carried by hand. Because heavy rain was "
+          },
+          {
+            "type": "vocab",
+            "word": "imminent",
+            "phonetic": "/ˈɪmənənt/",
+            "meaning": "即将来临的；逼近的"
+          },
+          {
+            "type": "text",
+            "text": ", it became "
+          },
+          {
+            "type": "vocab",
+            "word": "imperative",
+            "phonetic": "/ˌɪmˈpɛrətɪv/",
+            "meaning": "必要的；紧急的"
+          },
+          {
+            "type": "text",
+            "text": " to "
+          },
+          {
+            "type": "vocab",
+            "word": "fortify",
+            "phonetic": "/ˈfɔrtɪˌfaɪ/",
+            "meaning": "加强；加固"
+          },
+          {
+            "type": "text",
+            "text": " the temporary tents before the festival began."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The weather forecast was "
+          },
+          {
+            "type": "vocab",
+            "word": "grim",
+            "phonetic": "/ˈɡrɪm/",
+            "meaning": "严峻的；令人担忧的"
+          },
+          {
+            "type": "text",
+            "text": ". Dark clouds gathered above the school, and volunteers had to "
+          },
+          {
+            "type": "vocab",
+            "word": "huddle",
+            "phonetic": "/ˈhʌdəl/",
+            "meaning": "挤作一团；蜷缩"
+          },
+          {
+            "type": "text",
+            "text": " together under the entrance gate. For a moment, everyone became "
+          },
+          {
+            "type": "vocab",
+            "word": "frantic",
+            "phonetic": "/ˈfræntɪk/",
+            "meaning": "狂乱的；慌乱的"
+          },
+          {
+            "type": "text",
+            "text": ", fearing that the storm would "
+          },
+          {
+            "type": "vocab",
+            "word": "hinder",
+            "phonetic": "/ˈhɪndɚ/",
+            "meaning": "阻碍；妨碍"
+          },
+          {
+            "type": "text",
+            "text": " the festival and cause the school to "
+          },
+          {
+            "type": "vocab",
+            "word": "incur",
+            "phonetic": "/ˌɪnˈkɝ/",
+            "meaning": "招致；蒙受"
+          },
+          {
+            "type": "text",
+            "text": " serious losses. If the event failed, the foundation might even ask the school to "
+          },
+          {
+            "type": "vocab",
+            "word": "forfeit",
+            "phonetic": "/ˈfɔrfɪt/",
+            "meaning": "丧失；被没收"
+          },
+          {
+            "type": "text",
+            "text": " part of the grant."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Still, the crisis gave the students new "
+          },
+          {
+            "type": "vocab",
+            "word": "impetus",
+            "phonetic": "/ˈɪmpətəs/",
+            "meaning": "动力；推动力"
+          },
+          {
+            "type": "text",
+            "text": ". One team built an "
+          },
+          {
+            "type": "vocab",
+            "word": "ingenious",
+            "phonetic": "/ˌɪnˈdʒinjəs/",
+            "meaning": "巧妙的；有创造力的"
+          },
+          {
+            "type": "text",
+            "text": " drainage system to "
+          },
+          {
+            "type": "vocab",
+            "word": "harness",
+            "phonetic": "/ˈhɑrnəs/",
+            "meaning": "利用；控制"
+          },
+          {
+            "type": "text",
+            "text": " rainwater and protect the flower beds. Another team created signs to "
+          },
+          {
+            "type": "vocab",
+            "word": "indicate",
+            "phonetic": "/ˈɪndəˌkeɪt/",
+            "meaning": "显示；表明"
+          },
+          {
+            "type": "text",
+            "text": " which paths were safe. Their quick thinking helped the project "
+          },
+          {
+            "type": "vocab",
+            "word": "excel",
+            "phonetic": "/ɪkˈsɛl/",
+            "meaning": "擅长；表现突出"
+          },
+          {
+            "type": "text",
+            "text": " again."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Some visitors were especially interested in the plants. A biology teacher explained that many "
+          },
+          {
+            "type": "vocab",
+            "word": "indigenous",
+            "phonetic": "/ˌɪnˈdɪdʒənəs/",
+            "meaning": "本土的；土著的"
+          },
+          {
+            "type": "text",
+            "text": " species could survive harsh winters because they could "
+          },
+          {
+            "type": "vocab",
+            "word": "hibernate",
+            "phonetic": "/ˈhaɪbɚˌneɪt/",
+            "meaning": "冬眠；过冬"
+          },
+          {
+            "type": "text",
+            "text": " underground. A few carefully chosen "
+          },
+          {
+            "type": "vocab",
+            "word": "exotic",
+            "phonetic": "/ɪɡˈzɑtɪk/",
+            "meaning": "异国的；外来的"
+          },
+          {
+            "type": "text",
+            "text": " flowers were added, but the teacher warned students not to "
+          },
+          {
+            "type": "vocab",
+            "word": "equate",
+            "phonetic": "/ɪˈkweɪt/",
+            "meaning": "把……等同于"
+          },
+          {
+            "type": "text",
+            "text": " beauty with foreignness. A garden, she said, should not become "
+          },
+          {
+            "type": "vocab",
+            "word": "homogeneous",
+            "phonetic": "/ˌhoʊməˈdʒiniəs/",
+            "meaning": "同质的；单一的"
+          },
+          {
+            "type": "text",
+            "text": ". Its strength came from variety."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Near the fence, sheep were allowed to "
+          },
+          {
+            "type": "vocab",
+            "word": "graze",
+            "phonetic": "/ˈɡreɪz/",
+            "meaning": "吃草；放牧"
+          },
+          {
+            "type": "text",
+            "text": " in a small demonstration area. The scene attracted children, but the teacher also used it to discuss "
+          },
+          {
+            "type": "vocab",
+            "word": "famine",
+            "phonetic": "/ˈfæmən/",
+            "meaning": "饥荒；严重缺乏"
+          },
+          {
+            "type": "text",
+            "text": ", agriculture, and the "
+          },
+          {
+            "type": "vocab",
+            "word": "inherent",
+            "phonetic": "/ɪnˈhɪrənt/",
+            "meaning": "固有的；内在的"
+          },
+          {
+            "type": "text",
+            "text": " relationship between land and survival. She said the garden had an "
+          },
+          {
+            "type": "vocab",
+            "word": "intrinsic",
+            "phonetic": "/ˌɪnˈtrɪnsɪk/",
+            "meaning": "本质的；内在的"
+          },
+          {
+            "type": "text",
+            "text": " value that could not be measured only by money."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "During the festival, an "
+          },
+          {
+            "type": "vocab",
+            "word": "envoy",
+            "phonetic": "/ˈɛnvɔɪ/",
+            "meaning": "使者；特使"
+          },
+          {
+            "type": "text",
+            "text": " from another city arrived. He was an "
+          },
+          {
+            "type": "vocab",
+            "word": "exponent",
+            "phonetic": "/ɪkˈspoʊnənt/",
+            "meaning": "倡导者；代表人物"
+          },
+          {
+            "type": "text",
+            "text": " of community education and wanted to copy the project elsewhere. At first, everyone welcomed him. But then he suggested turning the garden model into a national "
+          },
+          {
+            "type": "vocab",
+            "word": "franchise",
+            "phonetic": "/ˈfrænˌtʃaɪz/",
+            "meaning": "特许经营；加盟权"
+          },
+          {
+            "type": "text",
+            "text": ". The idea made several students "
+          },
+          {
+            "type": "vocab",
+            "word": "indignant",
+            "phonetic": "/ˌɪnˈdɪɡnənt/",
+            "meaning": "愤怒的；愤慨的"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The "
+          },
+          {
+            "type": "vocab",
+            "word": "incumbent",
+            "phonetic": "/ˌɪnˈkʌmbənt/",
+            "meaning": "现任的；有责任的"
+          },
+          {
+            "type": "text",
+            "text": " councilor supported the proposal and tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "induce",
+            "phonetic": "/ˌɪnˈdus/",
+            "meaning": "引诱；诱导"
+          },
+          {
+            "type": "text",
+            "text": " the school to accept it. He even seemed to "
+          },
+          {
+            "type": "vocab",
+            "word": "intimate",
+            "phonetic": "/ˈɪntəˌmeɪt/",
+            "meaning": "暗示；透露"
+          },
+          {
+            "type": "text",
+            "text": " that future funding would depend on cooperation. But students argued that a franchise might "
+          },
+          {
+            "type": "vocab",
+            "word": "infringe",
+            "phonetic": "/ˌɪnˈfrɪndʒ/",
+            "meaning": "侵犯；违反"
+          },
+          {
+            "type": "text",
+            "text": " on the community’s original agreement. It could also destroy the "
+          },
+          {
+            "type": "vocab",
+            "word": "intangible",
+            "phonetic": "/ˌɪnˈtændʒəbəl/",
+            "meaning": "无形的；难以明确说明的"
+          },
+          {
+            "type": "text",
+            "text": " spirit that made the garden meaningful."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A public meeting was held during the "
+          },
+          {
+            "type": "vocab",
+            "word": "interim",
+            "phonetic": "/ˈɪntɚəm/",
+            "meaning": "过渡时期；临时的"
+          },
+          {
+            "type": "text",
+            "text": " period before any decision was made. Lawyers came to "
+          },
+          {
+            "type": "vocab",
+            "word": "interrogate",
+            "phonetic": "/ˌɪnˈtɛrəˌɡeɪt/",
+            "meaning": "质问；讯问"
+          },
+          {
+            "type": "text",
+            "text": " the company representatives about ownership, land use, and student rights. Some citizens asked whether the company should be "
+          },
+          {
+            "type": "vocab",
+            "word": "exempt",
+            "phonetic": "/ɪɡˈzɛmpt/",
+            "meaning": "被免除的；豁免的"
+          },
+          {
+            "type": "text",
+            "text": " from local rules. Others argued that no outside group should control a project built by students and residents."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The debate became intense, but the school tried to remain fair. An "
+          },
+          {
+            "type": "vocab",
+            "word": "intermediate",
+            "phonetic": "/ˌɪntɚˈmidiɪt/",
+            "meaning": "中间的；过渡的"
+          },
+          {
+            "type": "text",
+            "text": " committee was created to review the proposal. After weeks of discussion, the committee concluded that the garden could share its methods with other towns, but it should never become a commercial product."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The final decision was announced during an "
+          },
+          {
+            "type": "vocab",
+            "word": "impromptu",
+            "phonetic": "/ˌɪmˈprɑmptu/",
+            "meaning": "即兴的；临时的"
+          },
+          {
+            "type": "text",
+            "text": " speech by the principal. He said the garden belonged to a new "
+          },
+          {
+            "type": "vocab",
+            "word": "genre",
+            "phonetic": "/ˈʒɑnrə/",
+            "meaning": "类型；流派"
+          },
+          {
+            "type": "text",
+            "text": " of education: learning through action, responsibility, and public service. It was not a business model. It was a living lesson."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Years later, people still remembered that speech. The garden’s flowers changed with the seasons, but its meaning felt almost "
+          },
+          {
+            "type": "vocab",
+            "word": "eternal",
+            "phonetic": "/ɪˈtɝnəl/",
+            "meaning": "永恒的；永远的"
+          },
+          {
+            "type": "text",
+            "text": ". It reminded everyone that true community value cannot be bought, copied, or sold."
+          }
+        ]
+      }
+    ],
+    "vocabCount": 55
+  },
+  {
+    "id": 3,
+    "title": "The Night of the Small Observatory",
+    "paragraphs": [
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "At the "
+          },
+          {
+            "type": "vocab",
+            "word": "outset",
+            "phonetic": "/ˈaʊtˌsɛt/",
+            "meaning": "开始；开头"
+          },
+          {
+            "type": "text",
+            "text": " of the next "
+          },
+          {
+            "type": "vocab",
+            "word": "phase",
+            "phonetic": "/ˈfeɪz/",
+            "meaning": "阶段；时期"
+          },
+          {
+            "type": "text",
+            "text": ", the "
+          },
+          {
+            "type": "vocab",
+            "word": "municipal",
+            "phonetic": "/mjuˈnɪsəpəl/",
+            "meaning": "市政的；自治区的"
+          },
+          {
+            "type": "text",
+            "text": " garden received a new "
+          },
+          {
+            "type": "vocab",
+            "word": "mandate",
+            "phonetic": "/ˈmænˌdeɪt/",
+            "meaning": "授权；命令；指令"
+          },
+          {
+            "type": "text",
+            "text": ": the school would build a "
+          },
+          {
+            "type": "vocab",
+            "word": "miniature",
+            "phonetic": "/ˈmɪniəˌtʃʊr/",
+            "meaning": "微型的；缩小的"
+          },
+          {
+            "type": "text",
+            "text": " "
+          },
+          {
+            "type": "vocab",
+            "word": "observatory",
+            "phonetic": "/əbˈzɝvəˌtɔri/",
+            "meaning": "天文台；观测站"
+          },
+          {
+            "type": "text",
+            "text": " beside the old greenhouse. Ms. Rivera trusted her "
+          },
+          {
+            "type": "vocab",
+            "word": "intuition",
+            "phonetic": "/ˌɪntuˈɪʃən/",
+            "meaning": "直觉；直觉的知识"
+          },
+          {
+            "type": "text",
+            "text": ". She believed students should learn not only about plant "
+          },
+          {
+            "type": "vocab",
+            "word": "metabolism",
+            "phonetic": "/məˈtæbəˌlɪzəm/",
+            "meaning": "新陈代谢"
+          },
+          {
+            "type": "text",
+            "text": ", but also about "
+          },
+          {
+            "type": "vocab",
+            "word": "longitude",
+            "phonetic": "/ˈlɑndʒəˌtud/",
+            "meaning": "经度；经线"
+          },
+          {
+            "type": "text",
+            "text": ", weather, and the night sky through an "
+          },
+          {
+            "type": "vocab",
+            "word": "optic",
+            "phonetic": "/ˈɑptɪk/",
+            "meaning": "视觉的；光学的"
+          },
+          {
+            "type": "text",
+            "text": " telescope."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The plan quickly entered the "
+          },
+          {
+            "type": "vocab",
+            "word": "limelight",
+            "phonetic": "/ˈlaɪmˌlaɪt/",
+            "meaning": "公众关注；聚光灯下"
+          },
+          {
+            "type": "text",
+            "text": ". A "
+          },
+          {
+            "type": "vocab",
+            "word": "multitude",
+            "phonetic": "/ˈmʌltəˌtud/",
+            "meaning": "大量；群众"
+          },
+          {
+            "type": "text",
+            "text": " of visitors arrived: some by bus, one group on a restored "
+          },
+          {
+            "type": "vocab",
+            "word": "locomotive",
+            "phonetic": "/ˌloʊkəˈmoʊtɪv/",
+            "meaning": "火车头；机车"
+          },
+          {
+            "type": "text",
+            "text": ", and a coastal team on a small "
+          },
+          {
+            "type": "vocab",
+            "word": "liner",
+            "phonetic": "/ˈlaɪnɚ/",
+            "meaning": "班轮；客轮"
+          },
+          {
+            "type": "text",
+            "text": " from a "
+          },
+          {
+            "type": "vocab",
+            "word": "maritime",
+            "phonetic": "/ˈmɛrəˌtaɪm/",
+            "meaning": "海上的；海事的"
+          },
+          {
+            "type": "text",
+            "text": " town. Their excitement began to "
+          },
+          {
+            "type": "vocab",
+            "word": "mingle",
+            "phonetic": "/ˈmɪŋɡəl/",
+            "meaning": "混合；交往"
+          },
+          {
+            "type": "text",
+            "text": " with local pride, but it also attracted trouble. Vendors tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "peddle",
+            "phonetic": "/ˈpɛdəl/",
+            "meaning": "兜售；贩卖"
+          },
+          {
+            "type": "text",
+            "text": " cheap "
+          },
+          {
+            "type": "vocab",
+            "word": "merchandise",
+            "phonetic": "/ˈmɝtʃənˌdaɪz/",
+            "meaning": "商品；货物"
+          },
+          {
+            "type": "text",
+            "text": " near the gate, and one stall displayed an "
+          },
+          {
+            "type": "vocab",
+            "word": "obscene",
+            "phonetic": "/ɑbˈsin/",
+            "meaning": "淫秽的；猥亵的"
+          },
+          {
+            "type": "text",
+            "text": " poster. Residents called the vendors a "
+          },
+          {
+            "type": "vocab",
+            "word": "nuisance",
+            "phonetic": "/ˈnusəns/",
+            "meaning": "讨厌的东西；讨厌的人"
+          },
+          {
+            "type": "text",
+            "text": ", so the committee built a "
+          },
+          {
+            "type": "vocab",
+            "word": "partition",
+            "phonetic": "/pɑrˈtɪʃən/",
+            "meaning": "分隔；隔板；分区"
+          },
+          {
+            "type": "text",
+            "text": " between public exhibits and private sales."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "At first, the telescope design was "
+          },
+          {
+            "type": "vocab",
+            "word": "obscure",
+            "phonetic": "/əbˈskjʊr/",
+            "meaning": "模糊的；昏暗的；隐藏的"
+          },
+          {
+            "type": "text",
+            "text": ", and the manual was "
+          },
+          {
+            "type": "vocab",
+            "word": "opaque",
+            "phonetic": "/oʊˈpeɪk/",
+            "meaning": "不透明的；难懂的"
+          },
+          {
+            "type": "text",
+            "text": ". The technical "
+          },
+          {
+            "type": "vocab",
+            "word": "jargon",
+            "phonetic": "/ˈdʒɑrɡən/",
+            "meaning": "专门术语；行话"
+          },
+          {
+            "type": "text",
+            "text": " began to "
+          },
+          {
+            "type": "vocab",
+            "word": "perplex",
+            "phonetic": "/pɚˈplɛks/",
+            "meaning": "使困惑；使复杂化"
+          },
+          {
+            "type": "text",
+            "text": " younger students. To make the instructions clear, the team decided to "
+          },
+          {
+            "type": "vocab",
+            "word": "omit",
+            "phonetic": "/oʊˈmɪt/",
+            "meaning": "省略；删除"
+          },
+          {
+            "type": "text",
+            "text": " unnecessary details and "
+          },
+          {
+            "type": "vocab",
+            "word": "overhaul",
+            "phonetic": "/ˈoʊvɚˌhɔl/",
+            "meaning": "大修；彻底检修"
+          },
+          {
+            "type": "text",
+            "text": " the entire display. They created an "
+          },
+          {
+            "type": "vocab",
+            "word": "inventory",
+            "phonetic": "/ˈɪnvənˌtɔri/",
+            "meaning": "库存；存货清单"
+          },
+          {
+            "type": "text",
+            "text": " of lenses, wires, and tools, but a serious "
+          },
+          {
+            "type": "vocab",
+            "word": "oversight",
+            "phonetic": "/ˈoʊvɚˌsaɪt/",
+            "meaning": "疏忽；失察"
+          },
+          {
+            "type": "text",
+            "text": " occurred: a "
+          },
+          {
+            "type": "vocab",
+            "word": "negligent",
+            "phonetic": "/ˈnɛɡlədʒənt/",
+            "meaning": "疏忽的；粗心的"
+          },
+          {
+            "type": "text",
+            "text": " volunteer left the main lens in the storage room."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "For a short "
+          },
+          {
+            "type": "vocab",
+            "word": "interval",
+            "phonetic": "/ˈɪntɚvəl/",
+            "meaning": "间隔；距离"
+          },
+          {
+            "type": "text",
+            "text": ", the telescope was not "
+          },
+          {
+            "type": "vocab",
+            "word": "operative",
+            "phonetic": "/ˈɑpɚətɪv/",
+            "meaning": "运作中的；生效的"
+          },
+          {
+            "type": "text",
+            "text": ". Some people thought the missing part was "
+          },
+          {
+            "type": "vocab",
+            "word": "loot",
+            "phonetic": "/ˈlut/",
+            "meaning": "赃物；洗劫"
+          },
+          {
+            "type": "text",
+            "text": " from a thief, but the teacher discovered the real "
+          },
+          {
+            "type": "vocab",
+            "word": "motive",
+            "phonetic": "/ˈmoʊtɪv/",
+            "meaning": "动机；目的"
+          },
+          {
+            "type": "text",
+            "text": " was simple carelessness. The mistake almost seemed to "
+          },
+          {
+            "type": "vocab",
+            "word": "negate",
+            "phonetic": "/nɪˈɡeɪt/",
+            "meaning": "否定；否认"
+          },
+          {
+            "type": "text",
+            "text": " all their progress, yet the students refused to lose "
+          },
+          {
+            "type": "vocab",
+            "word": "momentum",
+            "phonetic": "/moʊˈmɛntəm/",
+            "meaning": "动力；动量"
+          },
+          {
+            "type": "text",
+            "text": ". They found the lens, chose the "
+          },
+          {
+            "type": "vocab",
+            "word": "optimum",
+            "phonetic": "/ˈɑptəməm/",
+            "meaning": "最佳条件；最适宜的"
+          },
+          {
+            "type": "text",
+            "text": " position, and used a careful "
+          },
+          {
+            "type": "vocab",
+            "word": "maneuver/manoeuvre",
+            "phonetic": "/məˈnuvɚ/",
+            "meaning": "策略；操纵；设法移动"
+          },
+          {
+            "type": "text",
+            "text": " to lift the heavy frame onto the roof."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Then a greater "
+          },
+          {
+            "type": "vocab",
+            "word": "menace",
+            "phonetic": "/ˈmɛnəs/",
+            "meaning": "威胁；胁迫"
+          },
+          {
+            "type": "text",
+            "text": " began to "
+          },
+          {
+            "type": "vocab",
+            "word": "loom",
+            "phonetic": "/ˈlum/",
+            "meaning": "隐约出现；逼近"
+          },
+          {
+            "type": "text",
+            "text": ". The "
+          },
+          {
+            "type": "vocab",
+            "word": "onset",
+            "phonetic": "/ˈɑnˌsɛt/",
+            "meaning": "开始；发作"
+          },
+          {
+            "type": "text",
+            "text": " of a chemical smell from a nearby "
+          },
+          {
+            "type": "vocab",
+            "word": "petrochemical",
+            "phonetic": "/ˌpɛtroʊˈkɛmɪkəl/",
+            "meaning": "石化的；石化产品的"
+          },
+          {
+            "type": "text",
+            "text": " warehouse caused "
+          },
+          {
+            "type": "vocab",
+            "word": "outrage",
+            "phonetic": "/ˈaʊˌtreɪdʒ/",
+            "meaning": "愤怒；暴行"
+          },
+          {
+            "type": "text",
+            "text": " across the neighborhood. The odor seemed to "
+          },
+          {
+            "type": "vocab",
+            "word": "permeate",
+            "phonetic": "/ˈpɝmiˌeɪt/",
+            "meaning": "弥漫；渗透"
+          },
+          {
+            "type": "text",
+            "text": " the air and "
+          },
+          {
+            "type": "vocab",
+            "word": "linger",
+            "phonetic": "/ˈlɪŋɡɚ/",
+            "meaning": "逗留；持续"
+          },
+          {
+            "type": "text",
+            "text": " near the garden wall. Parents feared the children were in "
+          },
+          {
+            "type": "vocab",
+            "word": "peril",
+            "phonetic": "/ˈpɛrəl/",
+            "meaning": "危险；险境"
+          },
+          {
+            "type": "text",
+            "text": ", and the pressure began to "
+          },
+          {
+            "type": "vocab",
+            "word": "overwhelm",
+            "phonetic": "/ˌoʊvɚˈwɛlm/",
+            "meaning": "淹没；使不知所措"
+          },
+          {
+            "type": "text",
+            "text": " several volunteers."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The city’s response was still "
+          },
+          {
+            "type": "vocab",
+            "word": "pending",
+            "phonetic": "/ˈpɛndɪŋ/",
+            "meaning": "待定的；即将发生的；在等待"
+          },
+          {
+            "type": "text",
+            "text": " so residents wrote a "
+          },
+          {
+            "type": "vocab",
+            "word": "petition",
+            "phonetic": "/pəˈtɪʃən/",
+            "meaning": "请愿；诉状；正式请求"
+          },
+          {
+            "type": "text",
+            "text": " demanding immediate action. Some "
+          },
+          {
+            "type": "vocab",
+            "word": "partisan",
+            "phonetic": "/ˈpɑrtəzən/",
+            "meaning": "党派的；偏袒的；支持者"
+          },
+          {
+            "type": "text",
+            "text": " speakers tried to turn the crisis into a political argument, but Ms. Rivera rejected that "
+          },
+          {
+            "type": "vocab",
+            "word": "notion",
+            "phonetic": "/ˈnoʊʃən/",
+            "meaning": "概念；观念"
+          },
+          {
+            "type": "text",
+            "text": ". She said safety should not belong to any party, nor should the garden become a tiny "
+          },
+          {
+            "type": "vocab",
+            "word": "monarchy",
+            "phonetic": "/ˈmɑnɑrki/",
+            "meaning": "君主政体；君主国"
+          },
+          {
+            "type": "text",
+            "text": " ruled by one loud voice."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "During the "
+          },
+          {
+            "type": "vocab",
+            "word": "interim",
+            "phonetic": "/ˈɪntɚəm/",
+            "meaning": "过渡时期；临时的"
+          },
+          {
+            "type": "text",
+            "text": ", the committee became more "
+          },
+          {
+            "type": "vocab",
+            "word": "lenient",
+            "phonetic": "/ˈliniənt/",
+            "meaning": "宽大的；温和的"
+          },
+          {
+            "type": "text",
+            "text": " with attendance because many parents were afraid. Still, several students chose to "
+          },
+          {
+            "type": "vocab",
+            "word": "persevere",
+            "phonetic": "/ˌpɝsəˈvɪr/",
+            "meaning": "坚持；孜孜不倦"
+          },
+          {
+            "type": "text",
+            "text": ". One boy said his "
+          },
+          {
+            "type": "vocab",
+            "word": "maternal",
+            "phonetic": "/məˈtɝnəl/",
+            "meaning": "母亲的；母系的"
+          },
+          {
+            "type": "text",
+            "text": " grandmother had taught him that patience was a "
+          },
+          {
+            "type": "vocab",
+            "word": "noble",
+            "phonetic": "/ˈnoʊbəl/",
+            "meaning": "高贵的；高尚的"
+          },
+          {
+            "type": "text",
+            "text": " habit. Another student, whose father had faced a "
+          },
+          {
+            "type": "vocab",
+            "word": "layoff",
+            "phonetic": "/ˈleɪˌɔf/",
+            "meaning": "裁员；临时解雇"
+          },
+          {
+            "type": "text",
+            "text": ", said the garden gave his family hope during a difficult time."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A man on "
+          },
+          {
+            "type": "vocab",
+            "word": "parole",
+            "phonetic": "/pɚˈoʊl/",
+            "meaning": "假释"
+          },
+          {
+            "type": "text",
+            "text": " also came to help repair the air filters. Some residents wanted to "
+          },
+          {
+            "type": "vocab",
+            "word": "persecute",
+            "phonetic": "/ˈpɝsəˌkjut/",
+            "meaning": "迫害；虐待"
+          },
+          {
+            "type": "text",
+            "text": " him for his past, but Ms. Rivera insisted that people should not be reduced to one mistake. The man took an "
+          },
+          {
+            "type": "vocab",
+            "word": "oath",
+            "phonetic": "/ˈoʊθ/",
+            "meaning": "誓约；誓言"
+          },
+          {
+            "type": "text",
+            "text": " to work honestly. He did not want to be treated as a "
+          },
+          {
+            "type": "vocab",
+            "word": "martyr",
+            "phonetic": "/ˈmɑrtɚ/",
+            "meaning": "烈士；殉道者"
+          },
+          {
+            "type": "text",
+            "text": ", only as a volunteer who could "
+          },
+          {
+            "type": "vocab",
+            "word": "offset",
+            "phonetic": "/ɔfˈsɛt/",
+            "meaning": "抵消；弥补"
+          },
+          {
+            "type": "text",
+            "text": " part of the damage."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The crisis became an "
+          },
+          {
+            "type": "vocab",
+            "word": "ordeal",
+            "phonetic": "/ɔrˈdil/",
+            "meaning": "严酷考验；痛苦经历"
+          },
+          {
+            "type": "text",
+            "text": ", but it also broke the "
+          },
+          {
+            "type": "vocab",
+            "word": "monotony",
+            "phonetic": "/məˈnɑtəni/",
+            "meaning": "单调；缺乏变化"
+          },
+          {
+            "type": "text",
+            "text": " of ordinary school life. Students had to think beyond "
+          },
+          {
+            "type": "vocab",
+            "word": "orthodox",
+            "phonetic": "/ˈɔrθəˌdɑks/",
+            "meaning": "正统的；传统的"
+          },
+          {
+            "type": "text",
+            "text": " lessons. They compared air quality, adjusted the telescope schedule, and studied how pollution could "
+          },
+          {
+            "type": "vocab",
+            "word": "intrude",
+            "phonetic": "/ˌɪnˈtrud/",
+            "meaning": "闯入；侵入；强加于"
+          },
+          {
+            "type": "text",
+            "text": " into soil and water. The danger was real, but it did not make the whole project "
+          },
+          {
+            "type": "vocab",
+            "word": "perish",
+            "phonetic": "/ˈpɛrɪʃ/",
+            "meaning": "死亡；毁灭"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "When the warehouse finally repaired the leak, the garden changed again. Its purpose became "
+          },
+          {
+            "type": "vocab",
+            "word": "manifest",
+            "phonetic": "/ˈmænəˌfɛst/",
+            "meaning": "明显的；显示；表明"
+          },
+          {
+            "type": "text",
+            "text": ": it was not only a place for flowers, but also a place where science, responsibility, and courage could "
+          },
+          {
+            "type": "vocab",
+            "word": "merge",
+            "phonetic": "/ˈmɝdʒ/",
+            "meaning": "合并；渐渐消失"
+          },
+          {
+            "type": "text",
+            "text": ". Visitors came like "
+          },
+          {
+            "type": "vocab",
+            "word": "pilgrim",
+            "phonetic": "/ˈpɪlɡrəm/",
+            "meaning": "旅行者；朝圣者"
+          },
+          {
+            "type": "text",
+            "text": ", not to worship, but to learn. The "
+          },
+          {
+            "type": "vocab",
+            "word": "outlook",
+            "phonetic": "/ˈaʊtˌlʊk/",
+            "meaning": "观点；前景；景色"
+          },
+          {
+            "type": "text",
+            "text": " of the community improved, and a "
+          },
+          {
+            "type": "vocab",
+            "word": "peculiar",
+            "phonetic": "/pəˈkjuljɚ/",
+            "meaning": "奇怪的；特有的"
+          },
+          {
+            "type": "text",
+            "text": " calm returned to the night garden."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "In the end, no rule could "
+          },
+          {
+            "type": "vocab",
+            "word": "oblige",
+            "phonetic": "/əˈblaɪdʒ/",
+            "meaning": "迫使；帮忙；使感激"
+          },
+          {
+            "type": "text",
+            "text": " students to care so deeply, but care had become natural to them. They understood that every shared place has an inherent value, and that its true worth may be "
+          },
+          {
+            "type": "vocab",
+            "word": "intangible",
+            "phonetic": "/ˌɪnˈtændʒəbəl/",
+            "meaning": "无形的；难以明了的"
+          },
+          {
+            "type": "text",
+            "text": ". The garden’s work was "
+          },
+          {
+            "type": "vocab",
+            "word": "perpetual",
+            "phonetic": "/pɚˈpɛtʃuəl/",
+            "meaning": "永久的；不断的"
+          },
+          {
+            "type": "text",
+            "text": ", not because the problems would never end, but because each generation would have to protect it again."
+          }
+        ]
+      }
+    ],
+    "vocabCount": 76
+  },
+  {
+    "id": 4,
+    "title": "The Garden Academy",
+    "paragraphs": [
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "After the city council agreed to "
+          },
+          {
+            "type": "vocab",
+            "word": "ratify",
+            "phonetic": "/ˈrætəˌfaɪ/",
+            "meaning": "批准；认可"
+          },
+          {
+            "type": "text",
+            "text": " the public decision, the garden entered a calmer season. Its "
+          },
+          {
+            "type": "vocab",
+            "word": "prestige",
+            "phonetic": "/prɛˈstiʒ/",
+            "meaning": "声望；威望"
+          },
+          {
+            "type": "text",
+            "text": " and "
+          },
+          {
+            "type": "vocab",
+            "word": "renown",
+            "phonetic": "/rɪˈnaʊn/",
+            "meaning": "名声；声望"
+          },
+          {
+            "type": "text",
+            "text": " continued to grow, and its "
+          },
+          {
+            "type": "vocab",
+            "word": "repute",
+            "phonetic": "/riˈpjut/",
+            "meaning": "名声；声誉"
+          },
+          {
+            "type": "text",
+            "text": " as a place for public learning became widely known."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A wealthy "
+          },
+          {
+            "type": "vocab",
+            "word": "patron",
+            "phonetic": "/ˈpeɪtrən/",
+            "meaning": "赞助人；顾客"
+          },
+          {
+            "type": "text",
+            "text": " proposed a new "
+          },
+          {
+            "type": "vocab",
+            "word": "scheme",
+            "phonetic": "/ˈskim/",
+            "meaning": "方案；计划"
+          },
+          {
+            "type": "text",
+            "text": ": to create a small Garden Academy beside the observatory. At first, the idea sounded "
+          },
+          {
+            "type": "vocab",
+            "word": "plausible",
+            "phonetic": "/ˈplɔzəbəl/",
+            "meaning": "貌似合理的"
+          },
+          {
+            "type": "text",
+            "text": ", but Ms. Rivera asked the committee to "
+          },
+          {
+            "type": "vocab",
+            "word": "ponder",
+            "phonetic": "/ˈpɑndɚ/",
+            "meaning": "沉思；考虑"
+          },
+          {
+            "type": "text",
+            "text": " the deeper purpose of the project. Her "
+          },
+          {
+            "type": "vocab",
+            "word": "premise",
+            "phonetic": "/ˈprɛmɪs/",
+            "meaning": "前提"
+          },
+          {
+            "type": "text",
+            "text": " was clear: education must "
+          },
+          {
+            "type": "vocab",
+            "word": "precede",
+            "phonetic": "/prɪˈsid/",
+            "meaning": "在……之前"
+          },
+          {
+            "type": "text",
+            "text": " profit."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The city required a "
+          },
+          {
+            "type": "vocab",
+            "word": "preliminary",
+            "phonetic": "/prɪˈlɪməˌnɛri/",
+            "meaning": "初步的"
+          },
+          {
+            "type": "text",
+            "text": " study before construction could begin. A "
+          },
+          {
+            "type": "vocab",
+            "word": "proficient",
+            "phonetic": "/prɑˈfɪʃənt/",
+            "meaning": "熟练的；精通的"
+          },
+          {
+            "type": "text",
+            "text": " engineer agreed to "
+          },
+          {
+            "type": "vocab",
+            "word": "preside",
+            "phonetic": "/prɪˈzaɪd/",
+            "meaning": "主持；主管"
+          },
+          {
+            "type": "text",
+            "text": " over the safety review. He warned that the academy site was near an old "
+          },
+          {
+            "type": "vocab",
+            "word": "reservoir",
+            "phonetic": "/ˈrɛzɚˌvwɑr/",
+            "meaning": "水库；储备"
+          },
+          {
+            "type": "text",
+            "text": " and that traces of "
+          },
+          {
+            "type": "vocab",
+            "word": "petroleum",
+            "phonetic": "/pəˈtroʊliəm/",
+            "meaning": "石油"
+          },
+          {
+            "type": "text",
+            "text": " might still remain underground."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "This discovery placed the community in a difficult "
+          },
+          {
+            "type": "vocab",
+            "word": "plight",
+            "phonetic": "/ˈplaɪt/",
+            "meaning": "困境；窘境"
+          },
+          {
+            "type": "text",
+            "text": ". Some residents feared that old pollution would "
+          },
+          {
+            "type": "vocab",
+            "word": "recur",
+            "phonetic": "/rɪˈkɝ/",
+            "meaning": "复发；再次发生"
+          },
+          {
+            "type": "text",
+            "text": ". Others believed the warning was only a "
+          },
+          {
+            "type": "vocab",
+            "word": "pretext",
+            "phonetic": "/ˈpriˌtɛkst/",
+            "meaning": "借口；托词"
+          },
+          {
+            "type": "text",
+            "text": " used by opponents who wanted to stop the academy."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "To avoid conflict, the school created a strict "
+          },
+          {
+            "type": "vocab",
+            "word": "protocol",
+            "phonetic": "/ˈproʊtəˌkɑl/",
+            "meaning": "协议；规程"
+          },
+          {
+            "type": "text",
+            "text": " for testing soil and water. Students built a "
+          },
+          {
+            "type": "vocab",
+            "word": "portfolio",
+            "phonetic": "/pɔrtˈfoʊliˌoʊ/",
+            "meaning": "文件夹；资料集"
+          },
+          {
+            "type": "text",
+            "text": " of evidence, then asked teachers to "
+          },
+          {
+            "type": "vocab",
+            "word": "proofread",
+            "phonetic": "/ˈpruˌfrid/",
+            "meaning": "校对；校正"
+          },
+          {
+            "type": "text",
+            "text": " every report. Whenever they found mistakes, they had to "
+          },
+          {
+            "type": "vocab",
+            "word": "revise",
+            "phonetic": "/rɪˈvaɪz/",
+            "meaning": "修改；修正"
+          },
+          {
+            "type": "text",
+            "text": " the text and "
+          },
+          {
+            "type": "vocab",
+            "word": "rectify",
+            "phonetic": "/ˈrɛktəˌfaɪ/",
+            "meaning": "纠正；矫正"
+          },
+          {
+            "type": "text",
+            "text": " the data."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The academy design included a "
+          },
+          {
+            "type": "vocab",
+            "word": "prototype",
+            "phonetic": "/ˈproʊtəˌtaɪp/",
+            "meaning": "原型"
+          },
+          {
+            "type": "text",
+            "text": " classroom made from recycled "
+          },
+          {
+            "type": "vocab",
+            "word": "scrap",
+            "phonetic": "/ˈskræp/",
+            "meaning": "废料；碎片"
+          },
+          {
+            "type": "text",
+            "text": " wood. A small "
+          },
+          {
+            "type": "vocab",
+            "word": "pendulum",
+            "phonetic": "/ˈpɛndʒələm/",
+            "meaning": "钟摆；摇锤"
+          },
+          {
+            "type": "text",
+            "text": " hung near the science wall. Another display explained "
+          },
+          {
+            "type": "vocab",
+            "word": "physiological",
+            "phonetic": "/ˌfɪziəˈlɑdʒɪkəl/",
+            "meaning": "生理学的"
+          },
+          {
+            "type": "text",
+            "text": " stress and how gardens could support mental health, even in the field of "
+          },
+          {
+            "type": "vocab",
+            "word": "psychiatry",
+            "phonetic": "/saɪˈkaɪətri/",
+            "meaning": "精神病学；精神治疗"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The plan also included a tiny "
+          },
+          {
+            "type": "vocab",
+            "word": "pharmacy",
+            "phonetic": "/ˈfɑrməsi/",
+            "meaning": "药房"
+          },
+          {
+            "type": "text",
+            "text": " exhibit showing how some plants were once used as a "
+          },
+          {
+            "type": "vocab",
+            "word": "remedy",
+            "phonetic": "/ˈrɛmədi/",
+            "meaning": "补救办法；治疗法"
+          },
+          {
+            "type": "text",
+            "text": " for common illnesses. Ms. Rivera warned students not to make "
+          },
+          {
+            "type": "vocab",
+            "word": "rash",
+            "phonetic": "/ˈræʃ/",
+            "meaning": "鲁莽的；轻率的"
+          },
+          {
+            "type": "text",
+            "text": " medical claims. Scientific "
+          },
+          {
+            "type": "vocab",
+            "word": "rigo(u)r",
+            "phonetic": "/ˈrɪɡɚ/",
+            "meaning": "严格；严谨"
+          },
+          {
+            "type": "text",
+            "text": " was a "
+          },
+          {
+            "type": "vocab",
+            "word": "prerequisite",
+            "phonetic": "/priˈrɛkwəzət/",
+            "meaning": "先决条件；必备条件"
+          },
+          {
+            "type": "text",
+            "text": " for every public lesson."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "On a quiet "
+          },
+          {
+            "type": "vocab",
+            "word": "plateau",
+            "phonetic": "/plæˈtoʊ/",
+            "meaning": "高地；高原"
+          },
+          {
+            "type": "text",
+            "text": " above the garden, students found a stone "
+          },
+          {
+            "type": "vocab",
+            "word": "relic",
+            "phonetic": "/ˈrɛlɪk/",
+            "meaning": "遗物；遗迹"
+          },
+          {
+            "type": "text",
+            "text": " from the town’s first schoolhouse. The object was "
+          },
+          {
+            "type": "vocab",
+            "word": "reminiscent",
+            "phonetic": "/ˌrɛməˈnɪsənt/",
+            "meaning": "令人回忆的；怀旧的"
+          },
+          {
+            "type": "text",
+            "text": " of a more "
+          },
+          {
+            "type": "vocab",
+            "word": "primitive",
+            "phonetic": "/ˈprɪmətɪv/",
+            "meaning": "原始的；早期的"
+          },
+          {
+            "type": "text",
+            "text": " period of local education. Ms. Rivera called it a "
+          },
+          {
+            "type": "vocab",
+            "word": "pillar",
+            "phonetic": "/ˈpɪlɚ/",
+            "meaning": "支柱；栋梁"
+          },
+          {
+            "type": "text",
+            "text": " of memory."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The old stone became part of a public "
+          },
+          {
+            "type": "vocab",
+            "word": "ritual",
+            "phonetic": "/ˈrɪtʃuəl/",
+            "meaning": "仪式；典礼"
+          },
+          {
+            "type": "text",
+            "text": ". Each student placed a seed beside it and promised to protect the garden. Although the event was "
+          },
+          {
+            "type": "vocab",
+            "word": "secular",
+            "phonetic": "/ˈsɛkjəlɚ/",
+            "meaning": "世俗的；非宗教的"
+          },
+          {
+            "type": "text",
+            "text": ", many people felt the garden had become a kind of "
+          },
+          {
+            "type": "vocab",
+            "word": "sanctuary",
+            "phonetic": "/ˈsæŋktʃuˌɛri/",
+            "meaning": "圣所；庇护所"
+          },
+          {
+            "type": "text",
+            "text": " for learning."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Not everyone approved. A former company manager used aggressive "
+          },
+          {
+            "type": "vocab",
+            "word": "rhetoric",
+            "phonetic": "/ˈrɛtɚɪk/",
+            "meaning": "修辞；华丽辞藻"
+          },
+          {
+            "type": "text",
+            "text": " to attack the academy. He said the school was using emotional stories to "
+          },
+          {
+            "type": "vocab",
+            "word": "seduce",
+            "phonetic": "/sɪˈdus/",
+            "meaning": "诱惑；引诱"
+          },
+          {
+            "type": "text",
+            "text": " voters. His speech contained so much "
+          },
+          {
+            "type": "vocab",
+            "word": "sarcasm",
+            "phonetic": "/ˈsɑrˌkæzəm/",
+            "meaning": "讽刺；挖苦"
+          },
+          {
+            "type": "text",
+            "text": " that several students began to "
+          },
+          {
+            "type": "vocab",
+            "word": "resent",
+            "phonetic": "/rɪˈzɛnt/",
+            "meaning": "愤恨；憎恶"
+          },
+          {
+            "type": "text",
+            "text": " him."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Ms. Rivera told them to "
+          },
+          {
+            "type": "vocab",
+            "word": "refrain",
+            "phonetic": "/rɪˈfreɪn/",
+            "meaning": "克制；避免"
+          },
+          {
+            "type": "text",
+            "text": " from anger. She said they should "
+          },
+          {
+            "type": "vocab",
+            "word": "refute",
+            "phonetic": "/rɪˈfjut/",
+            "meaning": "反驳；驳斥"
+          },
+          {
+            "type": "text",
+            "text": " false claims with evidence, not insults. She did not "
+          },
+          {
+            "type": "vocab",
+            "word": "reproach",
+            "phonetic": "/riˈproʊtʃ/",
+            "meaning": "责备；指责"
+          },
+          {
+            "type": "text",
+            "text": " the students for being upset, but she reminded them that public work required "
+          },
+          {
+            "type": "vocab",
+            "word": "poise",
+            "phonetic": "/ˈpɔɪz/",
+            "meaning": "镇定；平衡"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A second "
+          },
+          {
+            "type": "vocab",
+            "word": "referendum",
+            "phonetic": "/ˌrɛfɚˈɛndəm/",
+            "meaning": "全民投票；全民公决"
+          },
+          {
+            "type": "text",
+            "text": " was proposed to decide whether the academy should be funded. Volunteers began to "
+          },
+          {
+            "type": "vocab",
+            "word": "rally",
+            "phonetic": "/ˈræli/",
+            "meaning": "集合；重整旗鼓"
+          },
+          {
+            "type": "text",
+            "text": " support. They used a public "
+          },
+          {
+            "type": "vocab",
+            "word": "relay",
+            "phonetic": "/ˈriˌleɪ/",
+            "meaning": "传递；转播"
+          },
+          {
+            "type": "text",
+            "text": " system to send updates between neighborhoods, and a free "
+          },
+          {
+            "type": "vocab",
+            "word": "shuttle",
+            "phonetic": "/ˈʃʌtəl/",
+            "meaning": "穿梭巴士；往返运送"
+          },
+          {
+            "type": "text",
+            "text": " carried elderly residents to meetings."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The city set a speaking "
+          },
+          {
+            "type": "vocab",
+            "word": "quota",
+            "phonetic": "/ˈkwoʊtə/",
+            "meaning": "配额；限额"
+          },
+          {
+            "type": "text",
+            "text": " for each side and a strict "
+          },
+          {
+            "type": "vocab",
+            "word": "ration",
+            "phonetic": "/ˈræʃən/",
+            "meaning": "定额；定量"
+          },
+          {
+            "type": "text",
+            "text": " of debate time. The students had to "
+          },
+          {
+            "type": "vocab",
+            "word": "rehearse",
+            "phonetic": "/riˈhɝs/",
+            "meaning": "排练；预演"
+          },
+          {
+            "type": "text",
+            "text": " their speeches in a careful "
+          },
+          {
+            "type": "vocab",
+            "word": "sequence",
+            "phonetic": "/ˈsikwəns/",
+            "meaning": "序列；一连串事件"
+          },
+          {
+            "type": "text",
+            "text": ". Ms. Rivera organized them almost like a peaceful "
+          },
+          {
+            "type": "vocab",
+            "word": "regiment",
+            "phonetic": "/ˈrɛdʒəmənt/",
+            "meaning": "团；严格组织"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The opposition behaved in a "
+          },
+          {
+            "type": "vocab",
+            "word": "ruthless",
+            "phonetic": "/ˈruθləs/",
+            "meaning": "无情的；残忍的"
+          },
+          {
+            "type": "text",
+            "text": " way. It tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "segregate",
+            "phonetic": "/ˈsɛɡrəˌɡeɪt/",
+            "meaning": "使隔离；使分离"
+          },
+          {
+            "type": "text",
+            "text": " poorer residents from the discussion by holding meetings in expensive halls. The students called this a violation of "
+          },
+          {
+            "type": "vocab",
+            "word": "reciprocal",
+            "phonetic": "/rɪˈsɪprəkəl/",
+            "meaning": "相互的；互惠的"
+          },
+          {
+            "type": "text",
+            "text": " responsibility. Public education, they argued, should belong to everyone."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "One parent became the "
+          },
+          {
+            "type": "vocab",
+            "word": "plaintiff",
+            "phonetic": "/ˈpleɪntəf/",
+            "meaning": "原告；起诉人"
+          },
+          {
+            "type": "text",
+            "text": " in a legal complaint. She asked the city to "
+          },
+          {
+            "type": "vocab",
+            "word": "prosecute",
+            "phonetic": "/ˈprɑsəˌkjut/",
+            "meaning": "起诉；告发"
+          },
+          {
+            "type": "text",
+            "text": " anyone who had hidden pollution records. The company denied wrongdoing and threatened to "
+          },
+          {
+            "type": "vocab",
+            "word": "retaliate",
+            "phonetic": "/rɪˈtæliˌeɪt/",
+            "meaning": "报复；回击"
+          },
+          {
+            "type": "text",
+            "text": ", but the students refused to be frightened."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "As pressure increased, rumors began to "
+          },
+          {
+            "type": "vocab",
+            "word": "spiral",
+            "phonetic": "/ˈspaɪrəl/",
+            "meaning": "螺旋式上升；急剧恶化"
+          },
+          {
+            "type": "text",
+            "text": " online. Some posts tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "repel",
+            "phonetic": "/rɪˈpɛl/",
+            "meaning": "驱逐；使厌恶"
+          },
+          {
+            "type": "text",
+            "text": " families from supporting the academy. Others called for "
+          },
+          {
+            "type": "vocab",
+            "word": "revolt",
+            "phonetic": "/rɪˈvoʊlt/",
+            "meaning": "反抗；叛乱"
+          },
+          {
+            "type": "text",
+            "text": ", but Ms. Rivera rejected that idea. “We need reform, not chaos,” she said."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Rain soon began to "
+          },
+          {
+            "type": "vocab",
+            "word": "saturate",
+            "phonetic": "/ˈsætʃɚˌeɪt/",
+            "meaning": "浸透；使饱和"
+          },
+          {
+            "type": "text",
+            "text": " the garden paths. Volunteers had to "
+          },
+          {
+            "type": "vocab",
+            "word": "scrape",
+            "phonetic": "/ˈskreɪp/",
+            "meaning": "刮；擦"
+          },
+          {
+            "type": "text",
+            "text": " mud from signs and "
+          },
+          {
+            "type": "vocab",
+            "word": "scatter",
+            "phonetic": "/ˈskætɚ/",
+            "meaning": "分散；散布"
+          },
+          {
+            "type": "text",
+            "text": " fresh straw over slippery ground. When campaign papers tore apart, children helped collect every "
+          },
+          {
+            "type": "vocab",
+            "word": "shred",
+            "phonetic": "/ˈʃrɛd/",
+            "meaning": "碎片；细片"
+          },
+          {
+            "type": "text",
+            "text": " so the garden would stay clean."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "For a few days, public energy seemed to "
+          },
+          {
+            "type": "vocab",
+            "word": "recede",
+            "phonetic": "/rɪˈsid/",
+            "meaning": "后退；减弱"
+          },
+          {
+            "type": "text",
+            "text": ". Volunteers grew tired, and some became "
+          },
+          {
+            "type": "vocab",
+            "word": "slack",
+            "phonetic": "/ˈslæk/",
+            "meaning": "松懈的；懈怠的"
+          },
+          {
+            "type": "text",
+            "text": " about their duties. The movement felt like a slow "
+          },
+          {
+            "type": "vocab",
+            "word": "retreat",
+            "phonetic": "/riˈtrit/",
+            "meaning": "撤退；退缩"
+          },
+          {
+            "type": "text",
+            "text": " from its earlier confidence. But in "
+          },
+          {
+            "type": "vocab",
+            "word": "retrospect",
+            "phonetic": "/ˈrɛtrəˌspɛkt/",
+            "meaning": "回顾；回想"
+          },
+          {
+            "type": "text",
+            "text": ", this was the moment that made them stronger."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The students decided to "
+          },
+          {
+            "type": "vocab",
+            "word": "scrap",
+            "phonetic": "/ˈskræp/",
+            "meaning": "废弃；取消"
+          },
+          {
+            "type": "text",
+            "text": " several "
+          },
+          {
+            "type": "vocab",
+            "word": "redundant",
+            "phonetic": "/rɪˈdʌndənt/",
+            "meaning": "多余的"
+          },
+          {
+            "type": "text",
+            "text": " activities and focus on public meetings. They also had to "
+          },
+          {
+            "type": "vocab",
+            "word": "scramble",
+            "phonetic": "/ˈskræmbəl/",
+            "meaning": "匆忙做；争抢"
+          },
+          {
+            "type": "text",
+            "text": " to repair posters after a storm. One volunteer accidentally gave a speech full of cheap "
+          },
+          {
+            "type": "vocab",
+            "word": "satire",
+            "phonetic": "/ˈsæˌtaɪɚ/",
+            "meaning": "讽刺文学；讽刺"
+          },
+          {
+            "type": "text",
+            "text": ", and Ms. Rivera reminded everyone that mockery was not an argument."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A famous speaker joined the campaign and created a public "
+          },
+          {
+            "type": "vocab",
+            "word": "sensation",
+            "phonetic": "/sɛnˈseɪʃən/",
+            "meaning": "轰动；感觉"
+          },
+          {
+            "type": "text",
+            "text": ". He said the academy could "
+          },
+          {
+            "type": "vocab",
+            "word": "propagate",
+            "phonetic": "/ˈprɑpəˌɡeɪt/",
+            "meaning": "传播；繁殖"
+          },
+          {
+            "type": "text",
+            "text": " scientific thinking across the city. His words helped the movement "
+          },
+          {
+            "type": "vocab",
+            "word": "reap",
+            "phonetic": "/ˈrip/",
+            "meaning": "收获；获得"
+          },
+          {
+            "type": "text",
+            "text": " new support from teachers, parents, and students."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The company then promised a "
+          },
+          {
+            "type": "vocab",
+            "word": "premium",
+            "phonetic": "/ˈprimiəm/",
+            "meaning": "额外费用；高价"
+          },
+          {
+            "type": "text",
+            "text": " service for “advanced learners,” but many residents saw the danger. If education became too expensive, opportunities would become "
+          },
+          {
+            "type": "vocab",
+            "word": "scarce",
+            "phonetic": "/skɛrs/",
+            "meaning": "缺乏的；不足的"
+          },
+          {
+            "type": "text",
+            "text": ". The academy would no longer be a public place where ordinary families could "
+          },
+          {
+            "type": "vocab",
+            "word": "reside",
+            "phonetic": "/rɪˈzaɪd/",
+            "meaning": "居住；居留"
+          },
+          {
+            "type": "text",
+            "text": " nearby and participate freely."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "On voting day, older students helped "
+          },
+          {
+            "type": "vocab",
+            "word": "shepherd",
+            "phonetic": "/ˈʃɛpɚd/",
+            "meaning": "带领；引导"
+          },
+          {
+            "type": "text",
+            "text": " children through the crowd. When people tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "shove",
+            "phonetic": "/ˈʃʌv/",
+            "meaning": "推；挤"
+          },
+          {
+            "type": "text",
+            "text": " forward, volunteers restored order. The whole process tested the "
+          },
+          {
+            "type": "vocab",
+            "word": "realm",
+            "phonetic": "/ˈrɛlm/",
+            "meaning": "领域；王国"
+          },
+          {
+            "type": "text",
+            "text": " of public trust."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The result was clear: the academy would be built as a public institution. The company tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "reverse",
+            "phonetic": "/rɪˈvɝs/",
+            "meaning": "逆转；反转"
+          },
+          {
+            "type": "text",
+            "text": " the outcome, but the evidence was too strong. Its long "
+          },
+          {
+            "type": "vocab",
+            "word": "reign",
+            "phonetic": "/ˈreɪn/",
+            "meaning": "统治；盛行"
+          },
+          {
+            "type": "text",
+            "text": " over local development had finally ended."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Workers began to "
+          },
+          {
+            "type": "vocab",
+            "word": "renovate",
+            "phonetic": "/ˈrɛnəˌveɪt/",
+            "meaning": "更新；翻新"
+          },
+          {
+            "type": "text",
+            "text": " the old storage house and "
+          },
+          {
+            "type": "vocab",
+            "word": "rehabilitate",
+            "phonetic": "/ˌrihəˈbɪləˌteɪt/",
+            "meaning": "修复；恢复原状"
+          },
+          {
+            "type": "text",
+            "text": " the damaged soil. They removed the "
+          },
+          {
+            "type": "vocab",
+            "word": "remnant",
+            "phonetic": "/ˈrɛmnənt/",
+            "meaning": "残余；剩余部分"
+          },
+          {
+            "type": "text",
+            "text": " of old pipes near the reservoir. They also improved "
+          },
+          {
+            "type": "vocab",
+            "word": "sanitation",
+            "phonetic": "/ˌsænəˈteɪʃən/",
+            "meaning": "环境卫生"
+          },
+          {
+            "type": "text",
+            "text": " so visitors could use the site safely."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The final design was "
+          },
+          {
+            "type": "vocab",
+            "word": "sheer",
+            "phonetic": "/ʃɪr/",
+            "meaning": "纯粹的；完全的"
+          },
+          {
+            "type": "text",
+            "text": " simplicity. It had classrooms, garden beds, a small library, and a public stage. The academy’s "
+          },
+          {
+            "type": "vocab",
+            "word": "repertoire",
+            "phonetic": "/ˈrɛpɚˌtwɑr/",
+            "meaning": "全部技能；全部节目"
+          },
+          {
+            "type": "text",
+            "text": " included science lessons, art workshops, legal debates, and community planting days."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "At the opening ceremony, Ms. Rivera said the academy must never become "
+          },
+          {
+            "type": "vocab",
+            "word": "prone",
+            "phonetic": "/ˈproʊn/",
+            "meaning": "易于……的"
+          },
+          {
+            "type": "text",
+            "text": " to pride. If it forgot the people, it would lose its purpose. The garden had survived many tests, but its greatest lesson was simple: a community grows when people protect one another."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "After the ceremony, the final approval was still "
+          },
+          {
+            "type": "vocab",
+            "word": "contingent",
+            "phonetic": "/kənˈtɪndʒənt/",
+            "meaning": "取决于……的；视情况而定的"
+          },
+          {
+            "type": "text",
+            "text": " on a safety report, so the committee asked volunteers to "
+          },
+          {
+            "type": "vocab",
+            "word": "dispense",
+            "phonetic": "/dɪˈspɛns/",
+            "meaning": "分发；配发；免除"
+          },
+          {
+            "type": "text",
+            "text": " clean water and masks during the inspection. Scientists explained how each "
+          },
+          {
+            "type": "vocab",
+            "word": "molecule",
+            "phonetic": "/ˈmɑləˌkjul/",
+            "meaning": "分子"
+          },
+          {
+            "type": "text",
+            "text": " of pollution could affect the soil, and lawyers warned that the city might "
+          },
+          {
+            "type": "vocab",
+            "word": "indict",
+            "phonetic": "/ˌɪnˈdaɪt/",
+            "meaning": "起诉；控告"
+          },
+          {
+            "type": "text",
+            "text": " anyone who hid evidence. One student compared the company to a "
+          },
+          {
+            "type": "vocab",
+            "word": "predator",
+            "phonetic": "/ˈprɛdətɚ/",
+            "meaning": "掠夺者；食肉动物"
+          },
+          {
+            "type": "text",
+            "text": ", but Ms. Rivera told him not to let anger "
+          },
+          {
+            "type": "vocab",
+            "word": "rattle",
+            "phonetic": "/ˈrætəl/",
+            "meaning": "使紧张；发出格格声"
+          },
+          {
+            "type": "text",
+            "text": " his judgment. She said careless words could "
+          },
+          {
+            "type": "vocab",
+            "word": "derail",
+            "phonetic": "/dɪˈreɪl/",
+            "meaning": "使出轨；使偏离正轨"
+          },
+          {
+            "type": "text",
+            "text": " the whole campaign."
+          }
+        ]
+      }
+    ],
+    "vocabCount": 104
+  },
+  {
+    "id": 5,
+    "title": "The River Test",
+    "paragraphs": [
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "After the academy opened, Ms. Rivera decided to "
+          },
+          {
+            "type": "vocab",
+            "word": "situate",
+            "phonetic": "/ˈsɪtʃuˌeɪt/",
+            "meaning": "使位于；使处于"
+          },
+          {
+            "type": "text",
+            "text": " a new outdoor classroom near the river behind the garden. The place looked peaceful, but the riverbank soon came under "
+          },
+          {
+            "type": "vocab",
+            "word": "siege",
+            "phonetic": "/ˈsidʒ/",
+            "meaning": "包围；围攻"
+          },
+          {
+            "type": "text",
+            "text": " from reporters, officials, and curious visitors. Every decision faced public "
+          },
+          {
+            "type": "vocab",
+            "word": "scrutiny",
+            "phonetic": "/ˈskrutəni/",
+            "meaning": "仔细检查；细看"
+          },
+          {
+            "type": "text",
+            "text": ", because the academy had become a "
+          },
+          {
+            "type": "vocab",
+            "word": "singular",
+            "phonetic": "/ˈsɪŋɡjəlɚ/",
+            "meaning": "非凡的；单个的"
+          },
+          {
+            "type": "text",
+            "text": " symbol of community education."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The "
+          },
+          {
+            "type": "vocab",
+            "word": "scope",
+            "phonetic": "/ˈskoʊp/",
+            "meaning": "范围；机会"
+          },
+          {
+            "type": "text",
+            "text": " of the new project was larger than anything the students had done before. Ms. Rivera gave a sober/-"
+          },
+          {
+            "type": "vocab",
+            "word": "re",
+            "phonetic": "/ˈsoʊbɚ/",
+            "meaning": "清醒的；严肃的"
+          },
+          {
+            "type": "text",
+            "text": " warning: “A river classroom is beautiful, but it can also be dangerous.” At first, she stood alone like a "
+          },
+          {
+            "type": "vocab",
+            "word": "solitary",
+            "phonetic": "/ˈsɑləˌtɛri/",
+            "meaning": "孤独的；单独的"
+          },
+          {
+            "type": "text",
+            "text": " guard beside the water. Then she organized a safety "
+          },
+          {
+            "type": "vocab",
+            "word": "seminar",
+            "phonetic": "/ˈsɛməˌnɑr/",
+            "meaning": "专题讨论会；研究班"
+          },
+          {
+            "type": "text",
+            "text": " for all volunteers."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The old riverside shed was "
+          },
+          {
+            "type": "vocab",
+            "word": "shabby",
+            "phonetic": "/ˈʃæbi/",
+            "meaning": "破旧的；低劣的"
+          },
+          {
+            "type": "text",
+            "text": ", but the students gave it a new purpose. Each group received a working "
+          },
+          {
+            "type": "vocab",
+            "word": "slot",
+            "phonetic": "/ˈslɑt/",
+            "meaning": "时段；位置"
+          },
+          {
+            "type": "text",
+            "text": " on the schedule. The project began during an economic "
+          },
+          {
+            "type": "vocab",
+            "word": "slump",
+            "phonetic": "/ˈslʌmp/",
+            "meaning": "萧条；暴跌"
+          },
+          {
+            "type": "text",
+            "text": ", so money was limited. A "
+          },
+          {
+            "type": "vocab",
+            "word": "shrewd",
+            "phonetic": "/ˈʃrud/",
+            "meaning": "精明的；敏锐的"
+          },
+          {
+            "type": "text",
+            "text": " student noticed that the old electrical "
+          },
+          {
+            "type": "vocab",
+            "word": "socket",
+            "phonetic": "/ˈsɑkət/",
+            "meaning": "插座；眼窝"
+          },
+          {
+            "type": "text",
+            "text": " near the shed was damaged. When he bent down to "
+          },
+          {
+            "type": "vocab",
+            "word": "sniff",
+            "phonetic": "/ˈsnɪf/",
+            "meaning": "嗅；闻"
+          },
+          {
+            "type": "text",
+            "text": " the air, he smelled something "
+          },
+          {
+            "type": "vocab",
+            "word": "sinister",
+            "phonetic": "/ˈsɪnɪstɚ/",
+            "meaning": "不吉利的；凶恶的"
+          },
+          {
+            "type": "text",
+            "text": "—like burned plastic."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The academy planned to "
+          },
+          {
+            "type": "vocab",
+            "word": "showcase",
+            "phonetic": "/ˈʃoʊˌkeɪs/",
+            "meaning": "展示；展示平台"
+          },
+          {
+            "type": "text",
+            "text": " student research during the river opening, but the discovery changed everything. Some people suspected that someone had tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "smuggle",
+            "phonetic": "/ˈsmʌɡəl/",
+            "meaning": "走私；偷运"
+          },
+          {
+            "type": "text",
+            "text": " illegal chemicals through the abandoned shed. The students showed "
+          },
+          {
+            "type": "vocab",
+            "word": "solidarity",
+            "phonetic": "/ˌsɑləˈdɛrəti/",
+            "meaning": "团结；团结一致"
+          },
+          {
+            "type": "text",
+            "text": " and agreed to investigate carefully."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Near the shed, a "
+          },
+          {
+            "type": "vocab",
+            "word": "slender",
+            "phonetic": "/ˈslɛndɚ/",
+            "meaning": "苗条的；纤细的"
+          },
+          {
+            "type": "text",
+            "text": " path led through a line of "
+          },
+          {
+            "type": "vocab",
+            "word": "shrub",
+            "phonetic": "/ˈʃrʌb/",
+            "meaning": "灌木；矮树"
+          },
+          {
+            "type": "text",
+            "text": " plants. Ms. Rivera asked the students to "
+          },
+          {
+            "type": "vocab",
+            "word": "solicit",
+            "phonetic": "/səˈlɪsɪt/",
+            "meaning": "请求；乞求"
+          },
+          {
+            "type": "text",
+            "text": " help from local scientists. The first test gave a "
+          },
+          {
+            "type": "vocab",
+            "word": "stark",
+            "phonetic": "/stɑrk/",
+            "meaning": "鲜明的；严酷的"
+          },
+          {
+            "type": "text",
+            "text": " result: part of the bank had been polluted. Volunteers had to "
+          },
+          {
+            "type": "vocab",
+            "word": "sprinkle",
+            "phonetic": "/ˈsprɪŋkəl/",
+            "meaning": "洒；撒"
+          },
+          {
+            "type": "text",
+            "text": " safe absorbent material over the mud. Some residents acted out of "
+          },
+          {
+            "type": "vocab",
+            "word": "spite",
+            "phonetic": "/ˈspaɪt/",
+            "meaning": "恶意；怨恨"
+          },
+          {
+            "type": "text",
+            "text": " and accused the academy of creating the problem, but Ms. Rivera tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "soothe",
+            "phonetic": "/ˈsuð/",
+            "meaning": "安慰；缓和"
+          },
+          {
+            "type": "text",
+            "text": " the crowd."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "She warned that panic could "
+          },
+          {
+            "type": "vocab",
+            "word": "spoil",
+            "phonetic": "/ˈspɔɪl/",
+            "meaning": "破坏；损坏"
+          },
+          {
+            "type": "text",
+            "text": " the whole effort. If pollution continued to "
+          },
+          {
+            "type": "vocab",
+            "word": "sprawl",
+            "phonetic": "/ˈsprɔl/",
+            "meaning": "蔓延；摊开"
+          },
+          {
+            "type": "text",
+            "text": " across the riverbank, the project would "
+          },
+          {
+            "type": "vocab",
+            "word": "stagnate",
+            "phonetic": "/ˈstæɡˌneɪt/",
+            "meaning": "停滞；淤塞"
+          },
+          {
+            "type": "text",
+            "text": " for months. Then a "
+          },
+          {
+            "type": "vocab",
+            "word": "spontaneous",
+            "phonetic": "/spɑnˈteɪniəs/",
+            "meaning": "自发的；自然的"
+          },
+          {
+            "type": "text",
+            "text": " group of students formed a clean-up "
+          },
+          {
+            "type": "vocab",
+            "word": "squad",
+            "phonetic": "/ˈskwɑd/",
+            "meaning": "小队；班"
+          },
+          {
+            "type": "text",
+            "text": ". Their courage became a "
+          },
+          {
+            "type": "vocab",
+            "word": "spur",
+            "phonetic": "/spɝ/",
+            "meaning": "激励；刺激"
+          },
+          {
+            "type": "text",
+            "text": " for the whole neighborhood."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "At the emergency meeting, Ms. Rivera’s voice was "
+          },
+          {
+            "type": "vocab",
+            "word": "solemn",
+            "phonetic": "/ˈsɑləm/",
+            "meaning": "严肃的；郑重的"
+          },
+          {
+            "type": "text",
+            "text": ". She said a "
+          },
+          {
+            "type": "vocab",
+            "word": "stray",
+            "phonetic": "/ˈstreɪ/",
+            "meaning": "迷路的；偏离的"
+          },
+          {
+            "type": "text",
+            "text": " rumor could damage trust faster than pollution itself. A local "
+          },
+          {
+            "type": "vocab",
+            "word": "snob",
+            "phonetic": "/ˈsnɑb/",
+            "meaning": "势利的人；假内行"
+          },
+          {
+            "type": "text",
+            "text": " mocked the students, saying teenagers could never solve a technical problem. But one student had seen a suspicious man "
+          },
+          {
+            "type": "vocab",
+            "word": "stalk",
+            "phonetic": "/ˈstɔk/",
+            "meaning": "追踪；悄悄靠近"
+          },
+          {
+            "type": "text",
+            "text": " the shed the night before."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The academy cameras had recorded only "
+          },
+          {
+            "type": "vocab",
+            "word": "static",
+            "phonetic": "/ˈstætɪk/",
+            "meaning": "静电干扰；静态的"
+          },
+          {
+            "type": "text",
+            "text": " noise, because the storm had damaged the system. A food "
+          },
+          {
+            "type": "vocab",
+            "word": "stall",
+            "phonetic": "/ˈstɔl/",
+            "meaning": "摊位；停顿"
+          },
+          {
+            "type": "text",
+            "text": " owner heard a sudden sound that seemed to "
+          },
+          {
+            "type": "vocab",
+            "word": "startle",
+            "phonetic": "/ˈstɑrtəl/",
+            "meaning": "使吃惊；惊愕"
+          },
+          {
+            "type": "text",
+            "text": " everyone nearby. A chemistry teacher tested the water and found traces of "
+          },
+          {
+            "type": "vocab",
+            "word": "sodium",
+            "phonetic": "/ˈsoʊdiəm/",
+            "meaning": "钠"
+          },
+          {
+            "type": "text",
+            "text": " compounds. The result challenged the lazy "
+          },
+          {
+            "type": "vocab",
+            "word": "stereotype",
+            "phonetic": "/ˈstɛriəˌtaɪp/",
+            "meaning": "刻板印象"
+          },
+          {
+            "type": "text",
+            "text": " that students could only plant flowers, not conduct serious science."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The investigation became a "
+          },
+          {
+            "type": "vocab",
+            "word": "splendid",
+            "phonetic": "/ˈsplɛndɪd/",
+            "meaning": "了不起的；极好的"
+          },
+          {
+            "type": "text",
+            "text": " public "
+          },
+          {
+            "type": "vocab",
+            "word": "spectacle",
+            "phonetic": "/ˈspɛktəkəl/",
+            "meaning": "景象；奇观"
+          },
+          {
+            "type": "text",
+            "text": ". Every "
+          },
+          {
+            "type": "vocab",
+            "word": "spectator",
+            "phonetic": "/ˈspɛkteɪtɚ/",
+            "meaning": "观众；目击者"
+          },
+          {
+            "type": "text",
+            "text": " watched as students learned to "
+          },
+          {
+            "type": "vocab",
+            "word": "steer",
+            "phonetic": "/stɪr/",
+            "meaning": "引导；驾驶"
+          },
+          {
+            "type": "text",
+            "text": " small testing boats along the river. One girl used a needle and thread to "
+          },
+          {
+            "type": "vocab",
+            "word": "stitch",
+            "phonetic": "/ˈstɪtʃ/",
+            "meaning": "缝；针脚"
+          },
+          {
+            "type": "text",
+            "text": " labels onto sample bags. Another had to "
+          },
+          {
+            "type": "vocab",
+            "word": "stoop",
+            "phonetic": "/ˈstup/",
+            "meaning": "弯腰；降低身份"
+          },
+          {
+            "type": "text",
+            "text": " to collect mud beneath the dock while a "
+          },
+          {
+            "type": "vocab",
+            "word": "stern",
+            "phonetic": "/stɝn/",
+            "meaning": "严厉的；严肃的"
+          },
+          {
+            "type": "text",
+            "text": " official watched."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A broken "
+          },
+          {
+            "type": "vocab",
+            "word": "strand",
+            "phonetic": "/ˈstrænd/",
+            "meaning": "缕；股；使滞留"
+          },
+          {
+            "type": "text",
+            "text": " of cable nearly made one student "
+          },
+          {
+            "type": "vocab",
+            "word": "stumble",
+            "phonetic": "/ˈstʌmbəl/",
+            "meaning": "绊倒；蹒跚"
+          },
+          {
+            "type": "text",
+            "text": " into the water. A retired ship "
+          },
+          {
+            "type": "vocab",
+            "word": "steward(ess)",
+            "phonetic": "/ˈstuɚd/",
+            "meaning": "服务员；管理者"
+          },
+          {
+            "type": "text",
+            "text": " helped organize the supplies. A dark "
+          },
+          {
+            "type": "vocab",
+            "word": "streak",
+            "phonetic": "/ˈstrik/",
+            "meaning": "条纹；连续的一段"
+          },
+          {
+            "type": "text",
+            "text": " on the river surface showed where the leak had moved. One volunteer’s "
+          },
+          {
+            "type": "vocab",
+            "word": "spouse",
+            "phonetic": "/ˈspaʊs/",
+            "meaning": "配偶"
+          },
+          {
+            "type": "text",
+            "text": " brought hot drinks, because the cold air seemed to "
+          },
+          {
+            "type": "vocab",
+            "word": "stifle",
+            "phonetic": "/ˈstaɪfəl/",
+            "meaning": "使窒息；抑制"
+          },
+          {
+            "type": "text",
+            "text": " everyone’s energy."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The river narrowed into a dangerous "
+          },
+          {
+            "type": "vocab",
+            "word": "strait",
+            "phonetic": "/ˈstreɪt/",
+            "meaning": "海峡；困境"
+          },
+          {
+            "type": "text",
+            "text": " below the academy hill. Ms. Rivera asked students not to treat the river walk as a casual "
+          },
+          {
+            "type": "vocab",
+            "word": "stroll",
+            "phonetic": "/ˈstroʊl/",
+            "meaning": "漫步；闲逛"
+          },
+          {
+            "type": "text",
+            "text": ". They had to "
+          },
+          {
+            "type": "vocab",
+            "word": "stride",
+            "phonetic": "/ˈstraɪd/",
+            "meaning": "大步走；步幅"
+          },
+          {
+            "type": "text",
+            "text": " carefully over the wet stones. When the water began to "
+          },
+          {
+            "type": "vocab",
+            "word": "swell",
+            "phonetic": "/ˈswɛl/",
+            "meaning": "膨胀；增加"
+          },
+          {
+            "type": "text",
+            "text": ", she feared the current might "
+          },
+          {
+            "type": "vocab",
+            "word": "strangle",
+            "phonetic": "/ˈstræŋɡəl/",
+            "meaning": "勒死；扼杀"
+          },
+          {
+            "type": "text",
+            "text": " the roots of young trees along the bank."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Still, the students continued to "
+          },
+          {
+            "type": "vocab",
+            "word": "strive",
+            "phonetic": "/ˈstraɪv/",
+            "meaning": "努力；奋斗"
+          },
+          {
+            "type": "text",
+            "text": ". A hidden tree "
+          },
+          {
+            "type": "vocab",
+            "word": "stump",
+            "phonetic": "/ˈstʌmp/",
+            "meaning": "树桩；难住"
+          },
+          {
+            "type": "text",
+            "text": " blocked their path, and the discovery seemed to "
+          },
+          {
+            "type": "vocab",
+            "word": "stun",
+            "phonetic": "/ˈstʌn/",
+            "meaning": "使震惊；使昏迷"
+          },
+          {
+            "type": "text",
+            "text": " the younger children. In the past, talking about industrial pollution had been almost "
+          },
+          {
+            "type": "vocab",
+            "word": "taboo",
+            "phonetic": "/tæˈbu/",
+            "meaning": "禁忌；忌讳的"
+          },
+          {
+            "type": "text",
+            "text": " in the town. Now students used maps, samples, and "
+          },
+          {
+            "type": "vocab",
+            "word": "stationery",
+            "phonetic": "/ˈsteɪʃəˌnɛri/",
+            "meaning": "文具；信纸"
+          },
+          {
+            "type": "text",
+            "text": " to write public reports."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A city "
+          },
+          {
+            "type": "vocab",
+            "word": "statute",
+            "phonetic": "/ˈstætʃut/",
+            "meaning": "法令；成文法律"
+          },
+          {
+            "type": "text",
+            "text": " required immediate action if chemicals could "
+          },
+          {
+            "type": "vocab",
+            "word": "submerge",
+            "phonetic": "/səbˈmɝdʒ/",
+            "meaning": "使浸水；使陷入"
+          },
+          {
+            "type": "text",
+            "text": " protected soil. Some families near the river lived at a "
+          },
+          {
+            "type": "vocab",
+            "word": "subsistence",
+            "phonetic": "/səbˈsɪstəns/",
+            "meaning": "生存；生活"
+          },
+          {
+            "type": "text",
+            "text": " level, and they feared the "
+          },
+          {
+            "type": "vocab",
+            "word": "stigma",
+            "phonetic": "/ˈstɪɡmə/",
+            "meaning": "污名；耻辱"
+          },
+          {
+            "type": "text",
+            "text": " of living beside a polluted area. When donations began to "
+          },
+          {
+            "type": "vocab",
+            "word": "surge",
+            "phonetic": "/sɝdʒ/",
+            "meaning": "激增；汹涌"
+          },
+          {
+            "type": "text",
+            "text": ", Ms. Rivera promised that every dollar would create a "
+          },
+          {
+            "type": "vocab",
+            "word": "tangible",
+            "phonetic": "/ˈtændʒəbəl/",
+            "meaning": "有形的；可触摸的"
+          },
+          {
+            "type": "text",
+            "text": " benefit."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The crisis also had a "
+          },
+          {
+            "type": "vocab",
+            "word": "temporal",
+            "phonetic": "/ˈtɛmpɚəl/",
+            "meaning": "时间的；暂时的"
+          },
+          {
+            "type": "text",
+            "text": " side: if they waited too long, evidence would disappear. Students had to "
+          },
+          {
+            "type": "vocab",
+            "word": "subtract",
+            "phonetic": "/səbˈtrækt/",
+            "meaning": "减去；扣掉"
+          },
+          {
+            "type": "text",
+            "text": " natural minerals from the test results to identify the real pollution. The city placed the warehouse under "
+          },
+          {
+            "type": "vocab",
+            "word": "surveillance",
+            "phonetic": "/sɚˈveɪləns/",
+            "meaning": "监视；监督"
+          },
+          {
+            "type": "text",
+            "text": ", but public opinion continued to "
+          },
+          {
+            "type": "vocab",
+            "word": "sway",
+            "phonetic": "/ˈsweɪ/",
+            "meaning": "摇摆；影响"
+          },
+          {
+            "type": "text",
+            "text": " back and forth. Ms. Rivera’s best "
+          },
+          {
+            "type": "vocab",
+            "word": "tactic",
+            "phonetic": "/ˈtæktɪk/",
+            "meaning": "策略；战术"
+          },
+          {
+            "type": "text",
+            "text": " was patience."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Each student’s "
+          },
+          {
+            "type": "vocab",
+            "word": "temperament",
+            "phonetic": "/ˈtɛmprəmənt/",
+            "meaning": "气质；性格"
+          },
+          {
+            "type": "text",
+            "text": " appeared under pressure. Some wanted a "
+          },
+          {
+            "type": "vocab",
+            "word": "temporary",
+            "phonetic": "/ˈtɛmpɚˌɛri/",
+            "meaning": "暂时的；临时的"
+          },
+          {
+            "type": "text",
+            "text": " shutdown; others wanted the river classroom to open immediately. They built a "
+          },
+          {
+            "type": "vocab",
+            "word": "sturdy",
+            "phonetic": "/ˈstɝdi/",
+            "meaning": "结实的；强健的"
+          },
+          {
+            "type": "text",
+            "text": " testing platform with help from a "
+          },
+          {
+            "type": "vocab",
+            "word": "tertiary",
+            "phonetic": "/ˈtɝʃiˌɛri/",
+            "meaning": "第三的；高等教育的"
+          },
+          {
+            "type": "text",
+            "text": " college nearby. A city "
+          },
+          {
+            "type": "vocab",
+            "word": "subsidy",
+            "phonetic": "/ˈsʌbsɪdi/",
+            "meaning": "补助金；津贴"
+          },
+          {
+            "type": "text",
+            "text": " paid for safer tools."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The hardest problems were "
+          },
+          {
+            "type": "vocab",
+            "word": "subtle",
+            "phonetic": "/ˈsʌtəl/",
+            "meaning": "微妙的；不易察觉的"
+          },
+          {
+            "type": "text",
+            "text": " and "
+          },
+          {
+            "type": "vocab",
+            "word": "tedious",
+            "phonetic": "/ˈtidiəs/",
+            "meaning": "乏味的；冗长的"
+          },
+          {
+            "type": "text",
+            "text": ". Students had to compare the "
+          },
+          {
+            "type": "vocab",
+            "word": "texture",
+            "phonetic": "/ˈtɛkstʃɚ/",
+            "meaning": "质地；纹理"
+          },
+          {
+            "type": "text",
+            "text": " of polluted soil with clean soil. A local "
+          },
+          {
+            "type": "vocab",
+            "word": "textile",
+            "phonetic": "/ˈtɛkˌstaɪl/",
+            "meaning": "纺织品；纺织业"
+          },
+          {
+            "type": "text",
+            "text": " factory donated cloth filters. One design used "
+          },
+          {
+            "type": "vocab",
+            "word": "symmetry",
+            "phonetic": "/ˈsɪmətri/",
+            "meaning": "对称；匀称"
+          },
+          {
+            "type": "text",
+            "text": " to slow water flow evenly."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "To raise funds, the academy held a science "
+          },
+          {
+            "type": "vocab",
+            "word": "tournament",
+            "phonetic": "/ˈtʊrnəmənt/",
+            "meaning": "比赛；竞赛"
+          },
+          {
+            "type": "text",
+            "text": ". A professor with long "
+          },
+          {
+            "type": "vocab",
+            "word": "tenure",
+            "phonetic": "/ˈtɛnjɚ/",
+            "meaning": "任期；终身教职"
+          },
+          {
+            "type": "text",
+            "text": " gave each participant a wooden "
+          },
+          {
+            "type": "vocab",
+            "word": "token",
+            "phonetic": "/ˈtoʊkən/",
+            "meaning": "标志；象征"
+          },
+          {
+            "type": "text",
+            "text": " shaped like a leaf. Students had to "
+          },
+          {
+            "type": "vocab",
+            "word": "trim",
+            "phonetic": "/ˈtrɪm/",
+            "meaning": "修剪；整理"
+          },
+          {
+            "type": "text",
+            "text": " the river plants before the event. Later, a public "
+          },
+          {
+            "type": "vocab",
+            "word": "symposium",
+            "phonetic": "/sɪmˈpoʊziəm/",
+            "meaning": "座谈会；讨论会"
+          },
+          {
+            "type": "text",
+            "text": " discussed whether success might "
+          },
+          {
+            "type": "vocab",
+            "word": "tempt",
+            "phonetic": "/ˈtɛmpt/",
+            "meaning": "诱惑；引诱"
+          },
+          {
+            "type": "text",
+            "text": " other towns to copy the academy too quickly."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A doctor warned that fear itself could become a "
+          },
+          {
+            "type": "vocab",
+            "word": "syndrome",
+            "phonetic": "/ˈsɪnˌdroʊm/",
+            "meaning": "综合征；并发症状"
+          },
+          {
+            "type": "text",
+            "text": " in the community. If people allowed every rumor to "
+          },
+          {
+            "type": "vocab",
+            "word": "tilt",
+            "phonetic": "/ˈtɪlt/",
+            "meaning": "倾斜；倾向"
+          },
+          {
+            "type": "text",
+            "text": " their judgment, they would forget the facts. One student asked whether “caution” was just a "
+          },
+          {
+            "type": "vocab",
+            "word": "synonym",
+            "phonetic": "/ˈsɪnəˌnɪm/",
+            "meaning": "同义词"
+          },
+          {
+            "type": "text",
+            "text": " for fear. Ms. Rivera replied that wisdom was a "
+          },
+          {
+            "type": "vocab",
+            "word": "synthesis",
+            "phonetic": "/ˈsɪnθəsəs/",
+            "meaning": "综合；合成"
+          },
+          {
+            "type": "text",
+            "text": " of courage and care."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The emergency proved "
+          },
+          {
+            "type": "vocab",
+            "word": "transient",
+            "phonetic": "/ˈtrænʒənt/",
+            "meaning": "短暂的；易变的"
+          },
+          {
+            "type": "text",
+            "text": ", but its lesson remained. Ms. Rivera handled angry visitors with remarkable "
+          },
+          {
+            "type": "vocab",
+            "word": "tact",
+            "phonetic": "/ˈtækt/",
+            "meaning": "机智；手法"
+          },
+          {
+            "type": "text",
+            "text": ". She explained that the river "
+          },
+          {
+            "type": "vocab",
+            "word": "terrain",
+            "phonetic": "/tɚˈeɪn/",
+            "meaning": "地形；地带"
+          },
+          {
+            "type": "text",
+            "text": " had always been fragile. If the academy acted carelessly, one heavy flood could "
+          },
+          {
+            "type": "vocab",
+            "word": "topple",
+            "phonetic": "/ˈtɑpəl/",
+            "meaning": "推翻；倒塌"
+          },
+          {
+            "type": "text",
+            "text": " the new platform."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "In the end, the river classroom opened quietly. It was not a grand victory, but it was honest. The students had learned that protecting a place required science, patience, and courage. The garden had taught them how to grow; the observatory had taught them how to look upward; and the river taught them how to listen before acting."
+          }
+        ]
+      }
+    ],
+    "vocabCount": 98
+  },
+  {
+    "id": 6,
+    "title": "The Harbor Ledger",
+    "paragraphs": [
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "After the river classroom opened, the academy planned one final expansion: a small harbor study center. Every "
+          },
+          {
+            "type": "vocab",
+            "word": "transaction",
+            "phonetic": "/trænˈzækʃən/",
+            "meaning": "交易；办理"
+          },
+          {
+            "type": "text",
+            "text": " had to be recorded because the project involved public money. Ms. Rivera said the center should "
+          },
+          {
+            "type": "vocab",
+            "word": "transcend",
+            "phonetic": "/trænˈsɛnd/",
+            "meaning": "超越；胜过"
+          },
+          {
+            "type": "text",
+            "text": " ordinary classroom learning and bring students to the "
+          },
+          {
+            "type": "vocab",
+            "word": "threshold",
+            "phonetic": "/ˈθrɛˌʃoʊld/",
+            "meaning": "门槛；入口"
+          },
+          {
+            "type": "text",
+            "text": " of real civic work."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A company offered to sell tools at a "
+          },
+          {
+            "type": "vocab",
+            "word": "wholesale",
+            "phonetic": "/ˈhoʊlˌseɪl/",
+            "meaning": "批发；大规模的"
+          },
+          {
+            "type": "text",
+            "text": " price, but some students were too "
+          },
+          {
+            "type": "vocab",
+            "word": "timid",
+            "phonetic": "/ˈtɪmɪd/",
+            "meaning": "胆小的；羞怯的"
+          },
+          {
+            "type": "text",
+            "text": " to question the contract. Ms. Rivera reminded them that every "
+          },
+          {
+            "type": "vocab",
+            "word": "utility",
+            "phonetic": "/juˈtɪləti/",
+            "meaning": "功用；实用的东西"
+          },
+          {
+            "type": "text",
+            "text": " device had to serve a public need. The river looked "
+          },
+          {
+            "type": "vocab",
+            "word": "tranquil",
+            "phonetic": "/ˈtræŋkwəl/",
+            "meaning": "安静的；平静的"
+          },
+          {
+            "type": "text",
+            "text": ", yet she warned that no detail was "
+          },
+          {
+            "type": "vocab",
+            "word": "trivial",
+            "phonetic": "/ˈtrɪviəl/",
+            "meaning": "琐碎的；不重要的"
+          },
+          {
+            "type": "text",
+            "text": " when students worked near water."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The seniors wrote a "
+          },
+          {
+            "type": "vocab",
+            "word": "thesis",
+            "phonetic": "/ˈθisəs/",
+            "meaning": "论文；论题"
+          },
+          {
+            "type": "text",
+            "text": " about public education and "
+          },
+          {
+            "type": "vocab",
+            "word": "thrift",
+            "phonetic": "/ˈθrɪft/",
+            "meaning": "节俭；节约"
+          },
+          {
+            "type": "text",
+            "text": ". They found that the academy had reduced "
+          },
+          {
+            "type": "vocab",
+            "word": "turnover",
+            "phonetic": "/ˈtɝˌnoʊvɚ/",
+            "meaning": "营业额；人员流动率"
+          },
+          {
+            "type": "text",
+            "text": " among volunteers because people felt useful. The committee reached a "
+          },
+          {
+            "type": "vocab",
+            "word": "unanimous",
+            "phonetic": "/juˈnænəməs/",
+            "meaning": "一致的；无异议的"
+          },
+          {
+            "type": "text",
+            "text": " decision to utilize/-"
+          },
+          {
+            "type": "vocab",
+            "word": "ise",
+            "phonetic": "/ˈjutəˌlaɪz/",
+            "meaning": "利用"
+          },
+          {
+            "type": "text",
+            "text": " recycled materials. Though everyone was "
+          },
+          {
+            "type": "vocab",
+            "word": "weary",
+            "phonetic": "/ˈwɪri/",
+            "meaning": "疲倦的；厌烦的"
+          },
+          {
+            "type": "text",
+            "text": ", the plan had enough "
+          },
+          {
+            "type": "vocab",
+            "word": "warrant",
+            "phonetic": "/ˈwɔrənt/",
+            "meaning": "正当理由；授权令"
+          },
+          {
+            "type": "text",
+            "text": " to continue."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The river path ran in a "
+          },
+          {
+            "type": "vocab",
+            "word": "zigzag",
+            "phonetic": "/ˈzɪɡzæɡ/",
+            "meaning": "之字形；曲折的"
+          },
+          {
+            "type": "text",
+            "text": " line past the old shed. Workers had to "
+          },
+          {
+            "type": "vocab",
+            "word": "ventilate",
+            "phonetic": "/ˈvɛntəˌleɪt/",
+            "meaning": "使通风；使空气流通"
+          },
+          {
+            "type": "text",
+            "text": " the storage room before entering it. A student placed a small "
+          },
+          {
+            "type": "vocab",
+            "word": "tribute",
+            "phonetic": "/ˈtrɪbjut/",
+            "meaning": "礼物；贡物"
+          },
+          {
+            "type": "text",
+            "text": " of flowers near the door for the volunteers who had protected the river. Nobody knew the "
+          },
+          {
+            "type": "vocab",
+            "word": "whereabouts",
+            "phonetic": "/ˈwɛrəˌbaʊts/",
+            "meaning": "下落；所在之处"
+          },
+          {
+            "type": "text",
+            "text": " of the missing safety files, and the earlier pollution still felt like a kind of civic "
+          },
+          {
+            "type": "vocab",
+            "word": "trauma",
+            "phonetic": "/ˈtrɔmə/",
+            "meaning": "创伤；损伤"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The community stood on the "
+          },
+          {
+            "type": "vocab",
+            "word": "verge",
+            "phonetic": "/ˈvɝdʒ/",
+            "meaning": "边缘；边界"
+          },
+          {
+            "type": "text",
+            "text": " of new "
+          },
+          {
+            "type": "vocab",
+            "word": "turmoil",
+            "phonetic": "/ˈtɝˌmɔɪl/",
+            "meaning": "混乱；骚动"
+          },
+          {
+            "type": "text",
+            "text": " when rumors spread online. Ms. Rivera tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "uphold",
+            "phonetic": "/əpˈhoʊld/",
+            "meaning": "维护；支持"
+          },
+          {
+            "type": "text",
+            "text": " the "
+          },
+          {
+            "type": "vocab",
+            "word": "utmost",
+            "phonetic": "/ˈʌtˌmoʊst/",
+            "meaning": "最大限度；极度的"
+          },
+          {
+            "type": "text",
+            "text": " honesty. Some posts were "
+          },
+          {
+            "type": "vocab",
+            "word": "vicious",
+            "phonetic": "/ˈvɪʃəs/",
+            "meaning": "恶毒的；邪恶的"
+          },
+          {
+            "type": "text",
+            "text": ", and the public mood became "
+          },
+          {
+            "type": "vocab",
+            "word": "volatile",
+            "phonetic": "/ˈvɑlətəl/",
+            "meaning": "易变的；易挥发的"
+          },
+          {
+            "type": "text",
+            "text": ". The academy refused to "
+          },
+          {
+            "type": "vocab",
+            "word": "waive",
+            "phonetic": "/ˈweɪv/",
+            "meaning": "放弃；不坚持要求"
+          },
+          {
+            "type": "text",
+            "text": " its safety rules."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "In the "
+          },
+          {
+            "type": "vocab",
+            "word": "vicinity",
+            "phonetic": "/vəˈsɪnəti/",
+            "meaning": "附近；邻近"
+          },
+          {
+            "type": "text",
+            "text": " of the harbor, a "
+          },
+          {
+            "type": "vocab",
+            "word": "vague",
+            "phonetic": "/ˈveɪɡ/",
+            "meaning": "含糊的；不清楚的"
+          },
+          {
+            "type": "text",
+            "text": " sign pointed to a warehouse. The building looked "
+          },
+          {
+            "type": "vocab",
+            "word": "versatile",
+            "phonetic": "/ˈvɝsətəl/",
+            "meaning": "多用途的；多才多艺的"
+          },
+          {
+            "type": "text",
+            "text": ", but its permits were not "
+          },
+          {
+            "type": "vocab",
+            "word": "valid",
+            "phonetic": "/ˈvælɪd/",
+            "meaning": "有效的；有根据的"
+          },
+          {
+            "type": "text",
+            "text": ". When reporters began to "
+          },
+          {
+            "type": "vocab",
+            "word": "zoom",
+            "phonetic": "/ˈzum/",
+            "meaning": "急速上升；变焦"
+          },
+          {
+            "type": "text",
+            "text": " in on the issue, the city promised a legal "
+          },
+          {
+            "type": "vocab",
+            "word": "verdict",
+            "phonetic": "/ˈvɝdɪkt/",
+            "meaning": "裁决；判决"
+          },
+          {
+            "type": "text",
+            "text": ". Officials could not "
+          },
+          {
+            "type": "vocab",
+            "word": "withhold",
+            "phonetic": "/wɪθˈhoʊld/",
+            "meaning": "扣留；克制"
+          },
+          {
+            "type": "text",
+            "text": " information anymore."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The academy wanted the harbor to remain "
+          },
+          {
+            "type": "vocab",
+            "word": "wholesome",
+            "phonetic": "/ˈhoʊlsəm/",
+            "meaning": "有益健康的；健康的"
+          },
+          {
+            "type": "text",
+            "text": ". Students learned how to "
+          },
+          {
+            "type": "vocab",
+            "word": "wield",
+            "phonetic": "/ˈwild/",
+            "meaning": "运用；挥舞"
+          },
+          {
+            "type": "text",
+            "text": " evidence without anger. One "
+          },
+          {
+            "type": "vocab",
+            "word": "vendor",
+            "phonetic": "/ˈvɛndɚ/",
+            "meaning": "小贩；卖主"
+          },
+          {
+            "type": "text",
+            "text": " complained that inspections made business "
+          },
+          {
+            "type": "vocab",
+            "word": "wretched",
+            "phonetic": "/ˈrɛtʃɪd/",
+            "meaning": "可怜的；不幸的"
+          },
+          {
+            "type": "text",
+            "text": ", but the children still "
+          },
+          {
+            "type": "vocab",
+            "word": "yearn",
+            "phonetic": "/jɝn/",
+            "meaning": "渴望；想念"
+          },
+          {
+            "type": "text",
+            "text": " for a clean river. A new equipment "
+          },
+          {
+            "type": "vocab",
+            "word": "warranty",
+            "phonetic": "/ˈwɔrənti/",
+            "meaning": "保修；保证"
+          },
+          {
+            "type": "text",
+            "text": " protected the school, while a "
+          },
+          {
+            "type": "vocab",
+            "word": "wicked",
+            "phonetic": "/ˈwɪkəd/",
+            "meaning": "邪恶的；坏的"
+          },
+          {
+            "type": "text",
+            "text": " scheme to hide broken pumps was exposed."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Ms. Rivera said the central "
+          },
+          {
+            "type": "vocab",
+            "word": "virtue",
+            "phonetic": "/ˈvɝtʃu/",
+            "meaning": "美德；德行"
+          },
+          {
+            "type": "text",
+            "text": " of the academy was trust. Students calculated the "
+          },
+          {
+            "type": "vocab",
+            "word": "aggregate",
+            "phonetic": "/ˈæɡrəɡət/",
+            "meaning": "总计；合计的"
+          },
+          {
+            "type": "text",
+            "text": " cost of the harbor center and received a public "
+          },
+          {
+            "type": "vocab",
+            "word": "compliment",
+            "phonetic": "/ˈkɑmpləmɛnt/",
+            "meaning": "称赞；恭维"
+          },
+          {
+            "type": "text",
+            "text": " for their honesty. They refused to buy a useless "
+          },
+          {
+            "type": "vocab",
+            "word": "ornament",
+            "phonetic": "/ˈɔrnəmənt/",
+            "meaning": "装饰；点缀品"
+          },
+          {
+            "type": "text",
+            "text": " for the gate because the "
+          },
+          {
+            "type": "vocab",
+            "word": "overhead",
+            "phonetic": "/ˈoʊvɚˈhɛd/",
+            "meaning": "间接费用；头顶上的"
+          },
+          {
+            "type": "text",
+            "text": " cost was too high. Instead, they used "
+          },
+          {
+            "type": "vocab",
+            "word": "cement",
+            "phonetic": "/səˈmɛnt/",
+            "meaning": "水泥；巩固"
+          },
+          {
+            "type": "text",
+            "text": " to repair the walkway and labeled every "
+          },
+          {
+            "type": "vocab",
+            "word": "parcel",
+            "phonetic": "/ˈpɑrsəl/",
+            "meaning": "包裹；一部分"
+          },
+          {
+            "type": "text",
+            "text": " of donated supplies."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The project began to "
+          },
+          {
+            "type": "vocab",
+            "word": "animate",
+            "phonetic": "/ˈænəˌmeɪt/",
+            "meaning": "使有生气；有生命的"
+          },
+          {
+            "type": "text",
+            "text": " the whole river district. Students learned to "
+          },
+          {
+            "type": "vocab",
+            "word": "articulate",
+            "phonetic": "/ɑrˈtɪkjəˌleɪt/",
+            "meaning": "清楚表达；发音清晰的"
+          },
+          {
+            "type": "text",
+            "text": " their concerns inside the city "
+          },
+          {
+            "type": "vocab",
+            "word": "chamber",
+            "phonetic": "/ˈtʃeɪmbɚ/",
+            "meaning": "议院；房间"
+          },
+          {
+            "type": "text",
+            "text": ". Residents began to "
+          },
+          {
+            "type": "vocab",
+            "word": "congregate",
+            "phonetic": "/ˈkɑŋɡrəˌɡeɪt/",
+            "meaning": "聚集；集合"
+          },
+          {
+            "type": "text",
+            "text": " by the harbor, but officials discovered "
+          },
+          {
+            "type": "vocab",
+            "word": "counterfeit",
+            "phonetic": "/ˈkaʊntɚˌfɪt/",
+            "meaning": "伪造的；赝品"
+          },
+          {
+            "type": "text",
+            "text": " inspection stickers on several machines. Without reform, Ms. Rivera warned, public trust could "
+          },
+          {
+            "type": "vocab",
+            "word": "degenerate",
+            "phonetic": "/dɪˈdʒɛnəˌreɪt/",
+            "meaning": "退化；堕落"
+          },
+          {
+            "type": "text",
+            "text": " quickly."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The academy built a small "
+          },
+          {
+            "type": "vocab",
+            "word": "terrace",
+            "phonetic": "/ˈtɛrəs/",
+            "meaning": "露台；梯田"
+          },
+          {
+            "type": "text",
+            "text": " above the water. Students had to start from "
+          },
+          {
+            "type": "vocab",
+            "word": "scratch",
+            "phonetic": "/ˈskrætʃ/",
+            "meaning": "从零开始；划痕"
+          },
+          {
+            "type": "text",
+            "text": " when the first design failed. A health booth offered information about "
+          },
+          {
+            "type": "vocab",
+            "word": "acupuncture",
+            "phonetic": "/ˈækjuˌpʌŋktʃɚ/",
+            "meaning": "针灸；针刺疗法"
+          },
+          {
+            "type": "text",
+            "text": " and river safety. An "
+          },
+          {
+            "type": "vocab",
+            "word": "auction",
+            "phonetic": "/ˈɑkʃən/",
+            "meaning": "拍卖"
+          },
+          {
+            "type": "text",
+            "text": " of student artwork helped "
+          },
+          {
+            "type": "vocab",
+            "word": "augment",
+            "phonetic": "/ɔɡˈmɛnt/",
+            "meaning": "增加；增长"
+          },
+          {
+            "type": "text",
+            "text": " the budget. Each photo had a clear "
+          },
+          {
+            "type": "vocab",
+            "word": "caption",
+            "phonetic": "/ˈkæpʃən/",
+            "meaning": "说明；字幕"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Beyond the terrace lay an old "
+          },
+          {
+            "type": "vocab",
+            "word": "pasture",
+            "phonetic": "/ˈpæstʃɚ/",
+            "meaning": "牧场；草地"
+          },
+          {
+            "type": "text",
+            "text": " where students hoped to "
+          },
+          {
+            "type": "vocab",
+            "word": "salvage",
+            "phonetic": "/ˈsælvədʒ/",
+            "meaning": "抢救；挽救"
+          },
+          {
+            "type": "text",
+            "text": " damaged plants. A businessman tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "bluff",
+            "phonetic": "/ˈblʌf/",
+            "meaning": "虚张声势；吓唬"
+          },
+          {
+            "type": "text",
+            "text": " the committee by claiming he owned the land. In a dusty "
+          },
+          {
+            "type": "vocab",
+            "word": "closet",
+            "phonetic": "/ˈklɑzət/",
+            "meaning": "壁橱；秘密的"
+          },
+          {
+            "type": "text",
+            "text": " behind the city office, students found documents that confirmed public ownership. Their "
+          },
+          {
+            "type": "vocab",
+            "word": "dread",
+            "phonetic": "/ˈdrɛd/",
+            "meaning": "恐惧；可怕的事"
+          },
+          {
+            "type": "text",
+            "text": " faded, though one injured volunteer still had to "
+          },
+          {
+            "type": "vocab",
+            "word": "limp",
+            "phonetic": "/ˈlɪmp/",
+            "meaning": "跛行；无力的"
+          },
+          {
+            "type": "text",
+            "text": " back to the academy."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A rumor spread that the city would take a new "
+          },
+          {
+            "type": "vocab",
+            "word": "mortgage",
+            "phonetic": "/ˈmɔrɡədʒ/",
+            "meaning": "抵押；抵押贷款"
+          },
+          {
+            "type": "text",
+            "text": " to fund the center. Some parents began to "
+          },
+          {
+            "type": "vocab",
+            "word": "quiver",
+            "phonetic": "/ˈkwɪvɚ/",
+            "meaning": "颤抖；震动"
+          },
+          {
+            "type": "text",
+            "text": " with worry. Students cleaned the old dock with brushes and "
+          },
+          {
+            "type": "vocab",
+            "word": "scrub",
+            "phonetic": "/ˈskrʌb/",
+            "meaning": "擦洗；刷洗"
+          },
+          {
+            "type": "text",
+            "text": " pads. The mayor called the project a brave "
+          },
+          {
+            "type": "vocab",
+            "word": "venture",
+            "phonetic": "/ˈvɛntʃɚ/",
+            "meaning": "冒险；风险"
+          },
+          {
+            "type": "text",
+            "text": ", but it was still "
+          },
+          {
+            "type": "vocab",
+            "word": "bound",
+            "phonetic": "/ˈbaʊnd/",
+            "meaning": "一定会；受约束的"
+          },
+          {
+            "type": "text",
+            "text": " by law."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The first report revealed "
+          },
+          {
+            "type": "vocab",
+            "word": "gross",
+            "phonetic": "/ˈɡroʊs/",
+            "meaning": "总的；严重的；粗俗的"
+          },
+          {
+            "type": "text",
+            "text": " negligence by a contractor. Someone had tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "hack",
+            "phonetic": "/ˈhæk/",
+            "meaning": "黑客攻击；砍"
+          },
+          {
+            "type": "text",
+            "text": " the sensor system, so the academy planted a living "
+          },
+          {
+            "type": "vocab",
+            "word": "hedge",
+            "phonetic": "/ˈhɛdʒ/",
+            "meaning": "树篱；防范"
+          },
+          {
+            "type": "text",
+            "text": " around the control box and added security. No one was allowed to remain "
+          },
+          {
+            "type": "vocab",
+            "word": "idle",
+            "phonetic": "/ˈaɪdəl/",
+            "meaning": "闲散的；懒惰的"
+          },
+          {
+            "type": "text",
+            "text": " during the response. Even the literature club wrote "
+          },
+          {
+            "type": "vocab",
+            "word": "prose",
+            "phonetic": "/ˈproʊz/",
+            "meaning": "散文"
+          },
+          {
+            "type": "text",
+            "text": " about the harbor’s recovery."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "One angry "
+          },
+          {
+            "type": "vocab",
+            "word": "rebel",
+            "phonetic": "/ˈrɛbəl/",
+            "meaning": "反叛者；反抗的"
+          },
+          {
+            "type": "text",
+            "text": " tried to organize a protest against all inspections. A shopkeeper asked whether the academy would allow "
+          },
+          {
+            "type": "vocab",
+            "word": "retail",
+            "phonetic": "/ˈriˌteɪl/",
+            "meaning": "零售"
+          },
+          {
+            "type": "text",
+            "text": " booths near the gate. The committee was "
+          },
+          {
+            "type": "vocab",
+            "word": "split",
+            "phonetic": "/ˈsplɪt/",
+            "meaning": "分裂；劈开"
+          },
+          {
+            "type": "text",
+            "text": " on the issue because old food had once gone "
+          },
+          {
+            "type": "vocab",
+            "word": "stale",
+            "phonetic": "/ˈsteɪl/",
+            "meaning": "不新鲜的；陈腐的"
+          },
+          {
+            "type": "text",
+            "text": " in nearby stalls. Bread was a local "
+          },
+          {
+            "type": "vocab",
+            "word": "staple",
+            "phonetic": "/ˈsteɪpəl/",
+            "meaning": "主食；主要产品"
+          },
+          {
+            "type": "text",
+            "text": ", but safety rules had to remain "
+          },
+          {
+            "type": "vocab",
+            "word": "stiff",
+            "phonetic": "/ˈstɪf/",
+            "meaning": "严格的；僵硬的"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A "
+          },
+          {
+            "type": "vocab",
+            "word": "tender",
+            "phonetic": "/ˈtɛndɚ/",
+            "meaning": "温柔的；投标"
+          },
+          {
+            "type": "text",
+            "text": " proposal from a small family business finally won support. They promised tables made from fallen "
+          },
+          {
+            "type": "vocab",
+            "word": "trunk",
+            "phonetic": "/ˈtrʌŋk/",
+            "meaning": "树干；躯干"
+          },
+          {
+            "type": "text",
+            "text": " wood and simple kitchen "
+          },
+          {
+            "type": "vocab",
+            "word": "ware",
+            "phonetic": "/wɛr/",
+            "meaning": "器具；商品"
+          },
+          {
+            "type": "text",
+            "text": " for workshops. The academy decided to "
+          },
+          {
+            "type": "vocab",
+            "word": "archive",
+            "phonetic": "/ˈɑrˌkaɪv/",
+            "meaning": "存档；档案馆"
+          },
+          {
+            "type": "text",
+            "text": " every contract. A suspicious "
+          },
+          {
+            "type": "vocab",
+            "word": "syndicate",
+            "phonetic": "/ˈsɪndɪkət/",
+            "meaning": "企业联合；辛迪加"
+          },
+          {
+            "type": "text",
+            "text": " had tried to control the market, but its "
+          },
+          {
+            "type": "vocab",
+            "word": "allure",
+            "phonetic": "/əˈlʊr/",
+            "meaning": "魅力；诱惑力"
+          },
+          {
+            "type": "text",
+            "text": " faded once the public saw the facts."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A small boat remained "
+          },
+          {
+            "type": "vocab",
+            "word": "afloat",
+            "phonetic": "/əˈfloʊt/",
+            "meaning": "漂浮着的；在海上"
+          },
+          {
+            "type": "text",
+            "text": " near the dock after a storm. A "
+          },
+          {
+            "type": "vocab",
+            "word": "hardy",
+            "phonetic": "/ˈhɑrdi/",
+            "meaning": "强壮耐寒的；能吃苦的"
+          },
+          {
+            "type": "text",
+            "text": " group of students rescued it, and their mood turned "
+          },
+          {
+            "type": "vocab",
+            "word": "jolly",
+            "phonetic": "/ˈdʒɑli/",
+            "meaning": "愉快的；高兴的"
+          },
+          {
+            "type": "text",
+            "text": " when the owner gave "
+          },
+          {
+            "type": "vocab",
+            "word": "consent",
+            "phonetic": "/kənˈsɛnt/",
+            "meaning": "同意；许可"
+          },
+          {
+            "type": "text",
+            "text": " for them to repair it. The boat’s slow "
+          },
+          {
+            "type": "vocab",
+            "word": "motion",
+            "phonetic": "/ˈmoʊʃən/",
+            "meaning": "移动；手势"
+          },
+          {
+            "type": "text",
+            "text": " across the harbor inspired a class project about "
+          },
+          {
+            "type": "vocab",
+            "word": "voyage",
+            "phonetic": "/ˈvɔɪədʒ/",
+            "meaning": "航行；航海"
+          },
+          {
+            "type": "text",
+            "text": " and responsibility."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Near the garden, a new "
+          },
+          {
+            "type": "vocab",
+            "word": "hive",
+            "phonetic": "/ˈhaɪv/",
+            "meaning": "蜂箱；蜂群"
+          },
+          {
+            "type": "text",
+            "text": " buzzed beside the flowers. One child had to "
+          },
+          {
+            "type": "vocab",
+            "word": "pant",
+            "phonetic": "/ˈpænt/",
+            "meaning": "喘气；气喘吁吁"
+          },
+          {
+            "type": "text",
+            "text": " after running to warn the teachers about smoke. A worried "
+          },
+          {
+            "type": "vocab",
+            "word": "tenant",
+            "phonetic": "/ˈtɛnənt/",
+            "meaning": "房客；承租人"
+          },
+          {
+            "type": "text",
+            "text": " from the old riverside building pointed to a broken "
+          },
+          {
+            "type": "vocab",
+            "word": "vent",
+            "phonetic": "/ˈvɛnt/",
+            "meaning": "排气口；发泄"
+          },
+          {
+            "type": "text",
+            "text": " near the storage wall. The academy’s old "
+          },
+          {
+            "type": "vocab",
+            "word": "adversary",
+            "phonetic": "/ˈædvɚˌsɛri/",
+            "meaning": "对手；敌手"
+          },
+          {
+            "type": "text",
+            "text": " tried to blame the students, but a doctor found only harmless mold, not a need for "
+          },
+          {
+            "type": "vocab",
+            "word": "antibiotic",
+            "phonetic": "/ˌæntibaɪˈɑtɪk/",
+            "meaning": "抗生素；抗生的"
+          },
+          {
+            "type": "text",
+            "text": " treatment."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "In the end, the harbor center opened without drama. It did not replace the garden, the observatory, or the river classroom. It connected them. The students learned that public work is never just about buildings or budgets. It is about trust, memory, and the courage to protect what belongs to everyone."
+          }
+        ]
+      }
+    ],
+    "vocabCount": 100
+  },
+  {
+    "id": 7,
+    "title": "The Ceramic Charter",
+    "paragraphs": [
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "After the harbor center opened, Ms. Rivera proposed an "
+          },
+          {
+            "type": "vocab",
+            "word": "auxiliary",
+            "phonetic": "/ɔɡˈzɪljəri/",
+            "meaning": "辅助的；备用的"
+          },
+          {
+            "type": "text",
+            "text": " workshop beside the old storage house. It would train students to repair tools, test river samples, and make small "
+          },
+          {
+            "type": "vocab",
+            "word": "ceramic",
+            "phonetic": "/səˈræmɪk/",
+            "meaning": "陶瓷的；陶瓷制品"
+          },
+          {
+            "type": "text",
+            "text": " markers for the garden paths. The class had a "
+          },
+          {
+            "type": "vocab",
+            "word": "captive",
+            "phonetic": "/ˈkæptɪv/",
+            "meaning": "被吸引的；俘虏"
+          },
+          {
+            "type": "text",
+            "text": " audience from the beginning, because everyone wanted to know what the academy would build next."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Two "
+          },
+          {
+            "type": "vocab",
+            "word": "concurrent",
+            "phonetic": "/kənˈkɝənt/",
+            "meaning": "同时发生的；一致的"
+          },
+          {
+            "type": "text",
+            "text": " problems appeared at once. The first was financial; the second was political. A "
+          },
+          {
+            "type": "vocab",
+            "word": "cordial",
+            "phonetic": "/ˈkɔrdʒəl/",
+            "meaning": "热情友好的"
+          },
+          {
+            "type": "text",
+            "text": " donor offered help, but some students worried the gift was only "
+          },
+          {
+            "type": "vocab",
+            "word": "cosmetic",
+            "phonetic": "/kɑzˈmɛtɪk/",
+            "meaning": "表面的；化妆用的"
+          },
+          {
+            "type": "text",
+            "text": " support. They wanted real tools, not a pretty sign. A math teacher asked them to record every "
+          },
+          {
+            "type": "vocab",
+            "word": "decimal",
+            "phonetic": "/ˈdɛsəməl/",
+            "meaning": "小数的；十进制的"
+          },
+          {
+            "type": "text",
+            "text": " in the budget."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A "
+          },
+          {
+            "type": "vocab",
+            "word": "dissident",
+            "phonetic": "/ˈdɪsədənt/",
+            "meaning": "持不同意见的人；意见不同的"
+          },
+          {
+            "type": "text",
+            "text": " student from the nearby "
+          },
+          {
+            "type": "vocab",
+            "word": "polytechnic",
+            "phonetic": "/ˌpɑlɪˈtɛknɪk/",
+            "meaning": "理工学院"
+          },
+          {
+            "type": "text",
+            "text": " argued that the workshop was too small. He pointed to a "
+          },
+          {
+            "type": "vocab",
+            "word": "dent",
+            "phonetic": "/ˈdɛnt/",
+            "meaning": "凹痕；削弱"
+          },
+          {
+            "type": "text",
+            "text": " in one old machine and said the academy was pretending broken equipment was still useful. Ms. Rivera answered with a "
+          },
+          {
+            "type": "vocab",
+            "word": "fable",
+            "phonetic": "/ˈfeɪbəl/",
+            "meaning": "寓言；神话"
+          },
+          {
+            "type": "text",
+            "text": " about a cracked pot that watered flowers along the road."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "To make the rules clear, the students placed a "
+          },
+          {
+            "type": "vocab",
+            "word": "hyphen",
+            "phonetic": "/ˈhaɪfən/",
+            "meaning": "连字符"
+          },
+          {
+            "type": "text",
+            "text": " between “river” and “workshop” on the official sign: River-Workshop. Some "
+          },
+          {
+            "type": "vocab",
+            "word": "affluent",
+            "phonetic": "/ˈæfluənt/",
+            "meaning": "富裕的；富足的"
+          },
+          {
+            "type": "text",
+            "text": " visitors laughed at the simple name, calling it "
+          },
+          {
+            "type": "vocab",
+            "word": "superficial",
+            "phonetic": "/ˌsupɚˈfɪʃəl/",
+            "meaning": "表面的；肤浅的"
+          },
+          {
+            "type": "text",
+            "text": " branding. But the students worked at a "
+          },
+          {
+            "type": "vocab",
+            "word": "brisk",
+            "phonetic": "/ˈbrɪsk/",
+            "meaning": "轻快的；活跃的"
+          },
+          {
+            "type": "text",
+            "text": " pace and refused to be embarrassed."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The first task was to "
+          },
+          {
+            "type": "vocab",
+            "word": "dilute",
+            "phonetic": "/daɪˈlut/",
+            "meaning": "稀释；冲淡"
+          },
+          {
+            "type": "text",
+            "text": " old cleaning fluid so it could be disposed of safely. A sponsor offered a "
+          },
+          {
+            "type": "vocab",
+            "word": "lavish",
+            "phonetic": "/ˈlævɪʃ/",
+            "meaning": "奢华的；大量的"
+          },
+          {
+            "type": "text",
+            "text": " set of imported tools, but the students chose a practical "
+          },
+          {
+            "type": "vocab",
+            "word": "assortment",
+            "phonetic": "/əˈsɔrtmənt/",
+            "meaning": "各种各样；分类"
+          },
+          {
+            "type": "text",
+            "text": " of local supplies instead. Each box went into a labeled "
+          },
+          {
+            "type": "vocab",
+            "word": "compartment",
+            "phonetic": "/kəmˈpɑrtmənt/",
+            "meaning": "分隔间；隔间"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Public "
+          },
+          {
+            "type": "vocab",
+            "word": "sentiment",
+            "phonetic": "/ˈsɛntəmənt/",
+            "meaning": "感情；情绪"
+          },
+          {
+            "type": "text",
+            "text": " slowly changed. At first, some residents found the workshop "
+          },
+          {
+            "type": "vocab",
+            "word": "dull",
+            "phonetic": "/ˈdʌl/",
+            "meaning": "无趣的；迟钝的"
+          },
+          {
+            "type": "text",
+            "text": ", and one newspaper called it a "
+          },
+          {
+            "type": "vocab",
+            "word": "lame",
+            "phonetic": "/ˈleɪm/",
+            "meaning": "差劲的；站不住脚的"
+          },
+          {
+            "type": "text",
+            "text": " sequel to the river classroom. But when students repaired old pumps, they received local "
+          },
+          {
+            "type": "vocab",
+            "word": "acclaim",
+            "phonetic": "/əˈkleɪm/",
+            "meaning": "喝彩；赞扬"
+          },
+          {
+            "type": "text",
+            "text": ". Several schools asked to "
+          },
+          {
+            "type": "vocab",
+            "word": "affiliate",
+            "phonetic": "/əˈfɪliˌeɪt/",
+            "meaning": "使附属；发生联系"
+          },
+          {
+            "type": "text",
+            "text": " with the academy."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The attention also began to "
+          },
+          {
+            "type": "vocab",
+            "word": "aggravate",
+            "phonetic": "/ˈæɡrəˌveɪt/",
+            "meaning": "使恶化；使更严重"
+          },
+          {
+            "type": "text",
+            "text": " old rivalries. A few outsiders tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "agitate",
+            "phonetic": "/ˈædʒəˌteɪt/",
+            "meaning": "煽动；搅动"
+          },
+          {
+            "type": "text",
+            "text": " residents against the project. One volunteer felt real "
+          },
+          {
+            "type": "vocab",
+            "word": "anguish",
+            "phonetic": "/ˈæŋɡwɪʃ/",
+            "meaning": "痛苦；剧痛"
+          },
+          {
+            "type": "text",
+            "text": " when online critics mocked her work. Ms. Rivera asked an independent engineer to "
+          },
+          {
+            "type": "vocab",
+            "word": "appraise",
+            "phonetic": "/əˈpreɪz/",
+            "meaning": "评价；估价"
+          },
+          {
+            "type": "text",
+            "text": " the equipment so no one could accuse the students of dishonesty."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A young "
+          },
+          {
+            "type": "vocab",
+            "word": "apprentice",
+            "phonetic": "/əˈprɛntəs/",
+            "meaning": "学徒；生手"
+          },
+          {
+            "type": "text",
+            "text": " named Leo helped with the review. When two suppliers argued over payment, the city had to "
+          },
+          {
+            "type": "vocab",
+            "word": "arbitrate",
+            "phonetic": "/ˈɑrbəˌtreɪt/",
+            "meaning": "仲裁；公断"
+          },
+          {
+            "type": "text",
+            "text": " the dispute. One angry blogger tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "assassinate",
+            "phonetic": "/əˈsæsəˌneɪt/",
+            "meaning": "暗杀；行刺"
+          },
+          {
+            "type": "text",
+            "text": " the academy’s reputation with false stories, and another launched a verbal "
+          },
+          {
+            "type": "vocab",
+            "word": "assault",
+            "phonetic": "/əˈsɔlt/",
+            "meaning": "攻击；袭击"
+          },
+          {
+            "type": "text",
+            "text": " on the students."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Ms. Rivera told the students not to "
+          },
+          {
+            "type": "vocab",
+            "word": "assimilate",
+            "phonetic": "/əˈsɪməˌleɪt/",
+            "meaning": "吸收；同化"
+          },
+          {
+            "type": "text",
+            "text": " every outside opinion blindly. The harbor district had once been "
+          },
+          {
+            "type": "vocab",
+            "word": "barren",
+            "phonetic": "/ˈbærən/",
+            "meaning": "贫瘠的；不育的"
+          },
+          {
+            "type": "text",
+            "text": ", and one careless "
+          },
+          {
+            "type": "vocab",
+            "word": "blunder",
+            "phonetic": "/ˈblʌndɚ/",
+            "meaning": "大错；失策"
+          },
+          {
+            "type": "text",
+            "text": " could ruin years of trust. To "
+          },
+          {
+            "type": "vocab",
+            "word": "bolster",
+            "phonetic": "/ˈboʊlstɚ/",
+            "meaning": "支持；加强"
+          },
+          {
+            "type": "text",
+            "text": " public confidence, the academy published all repair records. A few residents still threatened to "
+          },
+          {
+            "type": "vocab",
+            "word": "boycott",
+            "phonetic": "/ˈbɔɪˌkɑt/",
+            "meaning": "抵制；联合抵制"
+          },
+          {
+            "type": "text",
+            "text": " the opening ceremony."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Near the workshop, a "
+          },
+          {
+            "type": "vocab",
+            "word": "cluster",
+            "phonetic": "/ˈklʌstɚ/",
+            "meaning": "一串；一群"
+          },
+          {
+            "type": "text",
+            "text": " of students built a small wall to "
+          },
+          {
+            "type": "vocab",
+            "word": "commemorate",
+            "phonetic": "/kəˈmɛmɚˌeɪt/",
+            "meaning": "纪念"
+          },
+          {
+            "type": "text",
+            "text": " the first river volunteers. When a child cried because his family had lost work during the harbor shutdown, Ms. Rivera tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "console",
+            "phonetic": "/kənˈsoʊl/",
+            "meaning": "安慰；慰藉"
+          },
+          {
+            "type": "text",
+            "text": " him. The engineering team had to "
+          },
+          {
+            "type": "vocab",
+            "word": "contrive",
+            "phonetic": "/kənˈtraɪv/",
+            "meaning": "设计；发明"
+          },
+          {
+            "type": "text",
+            "text": " a cheaper filter from old parts."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Then the investigation took a serious turn. The city found enough evidence to "
+          },
+          {
+            "type": "vocab",
+            "word": "convict",
+            "phonetic": "/kənˈvɪkt/",
+            "meaning": "宣告有罪；罪犯"
+          },
+          {
+            "type": "text",
+            "text": " a contractor who had hidden damaged equipment. The case would "
+          },
+          {
+            "type": "vocab",
+            "word": "culminate",
+            "phonetic": "/ˈkʌlmɪˌneɪt/",
+            "meaning": "达到高潮；到达顶点"
+          },
+          {
+            "type": "text",
+            "text": " in a public hearing, but negotiations reached a "
+          },
+          {
+            "type": "vocab",
+            "word": "deadlock",
+            "phonetic": "/ˈdɛdˌlɑk/",
+            "meaning": "僵局；相持不下"
+          },
+          {
+            "type": "text",
+            "text": ". If the contractor went into "
+          },
+          {
+            "type": "vocab",
+            "word": "default",
+            "phonetic": "/dɪˈfɔlt/",
+            "meaning": "违约；默认"
+          },
+          {
+            "type": "text",
+            "text": ", the academy might lose money."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Some business owners wanted the city to "
+          },
+          {
+            "type": "vocab",
+            "word": "deregulate",
+            "phonetic": "/diˈrɛɡjəleɪt/",
+            "meaning": "放松管制；撤销管制"
+          },
+          {
+            "type": "text",
+            "text": " harbor repairs, but students said loose rules had caused the problem in the first place. They did not "
+          },
+          {
+            "type": "vocab",
+            "word": "despise",
+            "phonetic": "/dɪˈspaɪz/",
+            "meaning": "轻视"
+          },
+          {
+            "type": "text",
+            "text": " business, but they rejected shortcuts. The public "
+          },
+          {
+            "type": "vocab",
+            "word": "discord",
+            "phonetic": "/ˈdɪskɔrd/",
+            "meaning": "不和；冲突"
+          },
+          {
+            "type": "text",
+            "text": " forced a long civic "
+          },
+          {
+            "type": "vocab",
+            "word": "discourse",
+            "phonetic": "/ˈdɪskɔrs/",
+            "meaning": "论述；话语"
+          },
+          {
+            "type": "text",
+            "text": " about trust."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "One cloudy afternoon, a partial "
+          },
+          {
+            "type": "vocab",
+            "word": "eclipse",
+            "phonetic": "/ɪˈklɪps/",
+            "meaning": "日食；使黯然失色"
+          },
+          {
+            "type": "text",
+            "text": " darkened the garden. Students served "
+          },
+          {
+            "type": "vocab",
+            "word": "edible",
+            "phonetic": "/ˈɛdəbəl/",
+            "meaning": "可食用的；食品"
+          },
+          {
+            "type": "text",
+            "text": " plants from the greenhouse and watched banners "
+          },
+          {
+            "type": "vocab",
+            "word": "flutter",
+            "phonetic": "/ˈflʌtɚ/",
+            "meaning": "飘动；拍动"
+          },
+          {
+            "type": "text",
+            "text": " in the wind. The river seemed to "
+          },
+          {
+            "type": "vocab",
+            "word": "glitter",
+            "phonetic": "/ˈɡlɪtɚ/",
+            "meaning": "闪烁；灿烂"
+          },
+          {
+            "type": "text",
+            "text": " under the strange light. Volunteers covered the tables with "
+          },
+          {
+            "type": "vocab",
+            "word": "linen",
+            "phonetic": "/ˈlɪnən/",
+            "meaning": "亚麻布；亚麻线"
+          },
+          {
+            "type": "text",
+            "text": " cloth."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "At the center of the workshop stood a small "
+          },
+          {
+            "type": "vocab",
+            "word": "monument",
+            "phonetic": "/ˈmɑnjumənt/",
+            "meaning": "纪念碑；纪念物"
+          },
+          {
+            "type": "text",
+            "text": " made of broken tools. It reminded everyone that mistakes were "
+          },
+          {
+            "type": "vocab",
+            "word": "mortal",
+            "phonetic": "/ˈmɔrtəl/",
+            "meaning": "致命的；凡人的"
+          },
+          {
+            "type": "text",
+            "text": " but also teachable. Heavy rain caused the drainage tank to "
+          },
+          {
+            "type": "vocab",
+            "word": "overflow",
+            "phonetic": "/ˌoʊvɚˈfloʊ/",
+            "meaning": "溢出；泛滥"
+          },
+          {
+            "type": "text",
+            "text": ", so the committee had to "
+          },
+          {
+            "type": "vocab",
+            "word": "reshuffle",
+            "phonetic": "/riˈʃʌfəl/",
+            "meaning": "改组；重新安排"
+          },
+          {
+            "type": "text",
+            "text": " duties quickly."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "A student band played a bright "
+          },
+          {
+            "type": "vocab",
+            "word": "trumpet",
+            "phonetic": "/ˈtrʌmpət/",
+            "meaning": "小号；喇叭"
+          },
+          {
+            "type": "text",
+            "text": " piece at the reopening. Families received a repair "
+          },
+          {
+            "type": "vocab",
+            "word": "voucher",
+            "phonetic": "/ˈvaʊtʃɚ/",
+            "meaning": "凭证；代金券"
+          },
+          {
+            "type": "text",
+            "text": " for old garden tools. The academy divided applicants into each income "
+          },
+          {
+            "type": "vocab",
+            "word": "bracket",
+            "phonetic": "/ˈbrækɪt/",
+            "meaning": "等级；括号"
+          },
+          {
+            "type": "text",
+            "text": " fairly. Breakfast volunteers served "
+          },
+          {
+            "type": "vocab",
+            "word": "cereal",
+            "phonetic": "/ˈsɪriəl/",
+            "meaning": "谷类食品；谷类植物"
+          },
+          {
+            "type": "text",
+            "text": " before the morning safety class."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The city drafted a new "
+          },
+          {
+            "type": "vocab",
+            "word": "charter",
+            "phonetic": "/ˈtʃɑrtɚ/",
+            "meaning": "宪章；包租"
+          },
+          {
+            "type": "text",
+            "text": " for the harbor workshop. A lawyer offered "
+          },
+          {
+            "type": "vocab",
+            "word": "counsel",
+            "phonetic": "/ˈkaʊnsəl/",
+            "meaning": "建议；律师"
+          },
+          {
+            "type": "text",
+            "text": " to the students, and soft mats were placed as a "
+          },
+          {
+            "type": "vocab",
+            "word": "cushion",
+            "phonetic": "/ˈkʊʃən/",
+            "meaning": "垫子；缓冲"
+          },
+          {
+            "type": "text",
+            "text": " near the machines. Ms. Rivera warned that anyone who tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "deceive",
+            "phonetic": "/dɪˈsiv/",
+            "meaning": "欺骗；行骗"
+          },
+          {
+            "type": "text",
+            "text": " the public again would be exposed."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The city had to "
+          },
+          {
+            "type": "vocab",
+            "word": "despatch",
+            "phonetic": "/dɪˈspætʃ/",
+            "meaning": "派遣；派出"
+          },
+          {
+            "type": "text",
+            "text": " inspectors after one old filter began to "
+          },
+          {
+            "type": "vocab",
+            "word": "disintegrate",
+            "phonetic": "/dɪˈsɪntəˌɡreɪt/",
+            "meaning": "分解；碎裂"
+          },
+          {
+            "type": "text",
+            "text": ". Behind the workshop, a small "
+          },
+          {
+            "type": "vocab",
+            "word": "furnace",
+            "phonetic": "/ˈfɝnəs/",
+            "meaning": "火炉；熔炉"
+          },
+          {
+            "type": "text",
+            "text": " was used to recycle metal brackets. Students learned that “data” could be treated as a "
+          },
+          {
+            "type": "vocab",
+            "word": "plural",
+            "phonetic": "/ˈplʊrəl/",
+            "meaning": "复数的；两个以上的"
+          },
+          {
+            "type": "text",
+            "text": " noun in formal reports, and one student wrote a careful "
+          },
+          {
+            "type": "vocab",
+            "word": "preface",
+            "phonetic": "/ˈprɛfəs/",
+            "meaning": "前言；序言"
+          },
+          {
+            "type": "text",
+            "text": " to the final handbook."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Ms. Rivera quoted an old "
+          },
+          {
+            "type": "vocab",
+            "word": "proverb",
+            "phonetic": "/ˈprɑvɚb/",
+            "meaning": "谚语；格言"
+          },
+          {
+            "type": "text",
+            "text": ": “A clean river begins with clean hands.” A nervous child began to "
+          },
+          {
+            "type": "vocab",
+            "word": "tremble",
+            "phonetic": "/ˈtrɛmbəl/",
+            "meaning": "颤抖；战栗"
+          },
+          {
+            "type": "text",
+            "text": " before presenting her research, so Leo brought a small "
+          },
+          {
+            "type": "vocab",
+            "word": "trolley",
+            "phonetic": "/ˈtrɑli/",
+            "meaning": "手推车；电车"
+          },
+          {
+            "type": "text",
+            "text": " of samples to help her. Another group tested whether "
+          },
+          {
+            "type": "vocab",
+            "word": "vinegar",
+            "phonetic": "/ˈvɪnəɡɚ/",
+            "meaning": "醋"
+          },
+          {
+            "type": "text",
+            "text": " could remove mineral stains from old tools."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "The students worked "
+          },
+          {
+            "type": "vocab",
+            "word": "abreast",
+            "phonetic": "/əˈbrɛst/",
+            "meaning": "并肩地；并列地"
+          },
+          {
+            "type": "text",
+            "text": " along the dock, "
+          },
+          {
+            "type": "vocab",
+            "word": "notwithstanding",
+            "phonetic": "/ˌnɑtwɪθˈstændɪŋ/",
+            "meaning": "尽管；虽然"
+          },
+          {
+            "type": "text",
+            "text": " the cold wind. They learned to "
+          },
+          {
+            "type": "vocab",
+            "word": "affix",
+            "phonetic": "/əˈfɪks/",
+            "meaning": "附上；署名"
+          },
+          {
+            "type": "text",
+            "text": " labels to each sample and store extra parts in a small "
+          },
+          {
+            "type": "vocab",
+            "word": "annex",
+            "phonetic": "/ˈæˌnɛks/",
+            "meaning": "附属建筑；附加"
+          },
+          {
+            "type": "text",
+            "text": " behind the workshop. Some test results seemed to "
+          },
+          {
+            "type": "vocab",
+            "word": "appal(l)",
+            "phonetic": "/əˈpɔl/",
+            "meaning": "使惊骇；使吓坏"
+          },
+          {
+            "type": "text",
+            "text": " the younger students."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "An independent "
+          },
+          {
+            "type": "vocab",
+            "word": "audit",
+            "phonetic": "/ˈɔdɪt/",
+            "meaning": "审计；查账"
+          },
+          {
+            "type": "text",
+            "text": " showed that every donation had been used properly. Still, money alone would not "
+          },
+          {
+            "type": "vocab",
+            "word": "avail",
+            "phonetic": "/əˈveɪl/",
+            "meaning": "有用；帮助"
+          },
+          {
+            "type": "text",
+            "text": " them if public trust disappeared. A strange reading continued to "
+          },
+          {
+            "type": "vocab",
+            "word": "baffle",
+            "phonetic": "/ˈbæfəl/",
+            "meaning": "使困惑；为难"
+          },
+          {
+            "type": "text",
+            "text": " the science team. Then a "
+          },
+          {
+            "type": "vocab",
+            "word": "barge",
+            "phonetic": "/bɑrdʒ/",
+            "meaning": "驳船；闯入"
+          },
+          {
+            "type": "text",
+            "text": " operator admitted that storms had pushed waste into the harbor."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Rain began to "
+          },
+          {
+            "type": "vocab",
+            "word": "batter",
+            "phonetic": "/ˈbætɚ/",
+            "meaning": "猛打；击打"
+          },
+          {
+            "type": "text",
+            "text": " the roof while students watched Ms. Rivera "
+          },
+          {
+            "type": "vocab",
+            "word": "beckon",
+            "phonetic": "/ˈbɛkən/",
+            "meaning": "招手示意；召唤"
+          },
+          {
+            "type": "text",
+            "text": " everyone inside. She said the hidden dumping was a "
+          },
+          {
+            "type": "vocab",
+            "word": "breach",
+            "phonetic": "/ˈbritʃ/",
+            "meaning": "违反；裂口；破坏"
+          },
+          {
+            "type": "text",
+            "text": " of public trust. Anger started to "
+          },
+          {
+            "type": "vocab",
+            "word": "brew",
+            "phonetic": "/ˈbru/",
+            "meaning": "酝酿；酿造"
+          },
+          {
+            "type": "text",
+            "text": " in the room, but she told students not to "
+          },
+          {
+            "type": "vocab",
+            "word": "brood",
+            "phonetic": "/ˈbrud/",
+            "meaning": "沉思；忧思"
+          },
+          {
+            "type": "text",
+            "text": " in silence."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Rumors began to "
+          },
+          {
+            "type": "vocab",
+            "word": "buzz",
+            "phonetic": "/ˈbʌz/",
+            "meaning": "嗡嗡声；流言"
+          },
+          {
+            "type": "text",
+            "text": " across town. A nervous official tried to "
+          },
+          {
+            "type": "vocab",
+            "word": "censor",
+            "phonetic": "/ˈsɛnsɚ/",
+            "meaning": "审查；检查"
+          },
+          {
+            "type": "text",
+            "text": " the student report, but the latest "
+          },
+          {
+            "type": "vocab",
+            "word": "census",
+            "phonetic": "/ˈsɛnsəs/",
+            "meaning": "人口普查；统计调查"
+          },
+          {
+            "type": "text",
+            "text": " showed that most residents supported transparency. Leo had to "
+          },
+          {
+            "type": "vocab",
+            "word": "clench",
+            "phonetic": "/ˈklɛntʃ/",
+            "meaning": "紧握；牢牢抓住"
+          },
+          {
+            "type": "text",
+            "text": " his fists when officials delayed the hearing."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Old mud started to "
+          },
+          {
+            "type": "vocab",
+            "word": "clog",
+            "phonetic": "/ˈklɑɡ/",
+            "meaning": "阻塞；障碍"
+          },
+          {
+            "type": "text",
+            "text": " the drainage channel, so the harbor sent a "
+          },
+          {
+            "type": "vocab",
+            "word": "convoy",
+            "phonetic": "/ˈkɑnˌvɔɪ/",
+            "meaning": "护送；护卫"
+          },
+          {
+            "type": "text",
+            "text": " of repair trucks. Workers had to "
+          },
+          {
+            "type": "vocab",
+            "word": "cram",
+            "phonetic": "/ˈkræm/",
+            "meaning": "塞满；填满"
+          },
+          {
+            "type": "text",
+            "text": " equipment into the narrow lane. A child had to "
+          },
+          {
+            "type": "vocab",
+            "word": "crouch",
+            "phonetic": "/ˈkraʊtʃ/",
+            "meaning": "蹲伏；蜷缩"
+          },
+          {
+            "type": "text",
+            "text": " behind a wall while hoses sprayed the dock, and a hard "
+          },
+          {
+            "type": "vocab",
+            "word": "crust",
+            "phonetic": "/ˈkrʌst/",
+            "meaning": "外壳；硬皮"
+          },
+          {
+            "type": "text",
+            "text": " of dried chemical residue broke apart under the water."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "Suddenly, a small fish seemed to "
+          },
+          {
+            "type": "vocab",
+            "word": "dart",
+            "phonetic": "/dɑrt/",
+            "meaning": "疾走；突进"
+          },
+          {
+            "type": "text",
+            "text": " through the clean section of the harbor. The sight became the unofficial "
+          },
+          {
+            "type": "vocab",
+            "word": "debut",
+            "phonetic": "/deɪˈbju/",
+            "meaning": "初次登场；开张"
+          },
+          {
+            "type": "text",
+            "text": " of the restored workshop. Nobody cheered loudly at first; they simply stood still, realizing that the harbor was healing."
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "text",
+            "text": "By sunset, Ms. Rivera closed the workshop doors and looked across the water. The academy had survived another test. It had learned that repair was not only technical work. It was moral work: the patient labor of truth, memory, and public responsibility."
+          }
+        ]
+      }
+    ],
+    "vocabCount": 100
+  }
+];

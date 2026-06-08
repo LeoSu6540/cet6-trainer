@@ -1,0 +1,10 @@
+{
+  "name": "CET-6 单词训练器",
+  "short_name": "CET6",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#3730a3",
+  "description": "本地离线 CET-6 单词训练器",
+  "icons": []
+}
