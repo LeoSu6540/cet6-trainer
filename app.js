@@ -562,69 +562,341 @@ async function saveStateCompat() {
 }
 
 
-async function saveState() {
+
+async function saveStateLocalOnly() {
   await saveStateCompat();
-  trySyncToGist();
 }
 
-// ---- Gist 云端同步 ----
-function getGistToken() { return localStorage.getItem('gist_token') || ''; }
-function setGistToken(v) { localStorage.setItem('gist_token', String(v || '').trim()); }
-function getGistId() { return localStorage.getItem('gist_id') || ''; }
-function setGistId(v) { localStorage.setItem('gist_id', String(v || '').trim()); }
-let lastSyncTime = null;
+async function saveState() {
+  await saveStateLocalOnly();
+  scheduleAutoSync();
+}
+
+// ---- Gist 云端自动同步 v2 ----
+const GIST_STATE_FILE = 'cet6_state.json';
+const GIST_API_BASE = 'https://api.github.com/gists';
+
+let cloudSyncTimer = null;
+let cloudSyncInFlight = false;
+let cloudSyncQueued = false;
+
+const cloudSyncState = {
+  status: 'idle',
+  message: '',
+  lastSyncTime: localStorage.getItem('gist_last_sync_time') || '',
+  lastError: localStorage.getItem('gist_last_error') || ''
+};
+
+function getGistToken() {
+  return localStorage.getItem('gist_token') || '';
+}
+
+function setGistToken(value) {
+  const token = String(value || '').trim();
+  if (token) localStorage.setItem('gist_token', token);
+}
+
+function clearGistToken() {
+  localStorage.removeItem('gist_token');
+}
+
+function getGistId() {
+  return localStorage.getItem('gist_id') || '';
+}
+
+function setGistId(value) {
+  const id = String(value || '').trim();
+  if (id) localStorage.setItem('gist_id', id);
+  else localStorage.removeItem('gist_id');
+}
+
+function hasGistToken() {
+  return !!getGistToken();
+}
+
+function hasGistConfig() {
+  return !!getGistToken();
+}
+
+function getDeviceId() {
+  let id = localStorage.getItem('cet6_device_id');
+  if (!id) {
+    if (window.crypto && crypto.randomUUID) {
+      id = crypto.randomUUID();
+    } else {
+      id = 'device-' + Date.now() + '-' + Math.random().toString(16).slice(2);
+    }
+    localStorage.setItem('cet6_device_id', id);
+  }
+  return id;
+}
+
+function deepClone(value) {
+  return JSON.parse(JSON.stringify(value || {}));
+}
+
+function setCloudSyncStatus(status, message) {
+  cloudSyncState.status = status || 'idle';
+  cloudSyncState.message = message || '';
+}
+
+function markCloudSyncSuccess(message) {
+  const t = nowISO();
+  cloudSyncState.status = 'synced';
+  cloudSyncState.message = message || '已同步';
+  cloudSyncState.lastSyncTime = t;
+  cloudSyncState.lastError = '';
+  localStorage.setItem('gist_last_sync_time', t);
+  localStorage.removeItem('gist_last_error');
+}
+
+function markCloudSyncError(error) {
+  const msg = error && error.message ? error.message : String(error || '未知错误');
+  cloudSyncState.status = 'error';
+  cloudSyncState.message = msg;
+  cloudSyncState.lastError = msg;
+  localStorage.setItem('gist_last_error', msg);
+}
 
 async function gistApi(method, path, body) {
   const token = getGistToken();
-  if (!token) return null;
-  const opts = { method, headers: { Authorization: 'token ' + token, 'Content-Type': 'application/json' } };
-  if (body) opts.body = JSON.stringify(body);
-  const res = await fetch('https://api.github.com/gists' + path, opts);
-  if (!res.ok) return null;
-  return res.json();
+  if (!token) throw new Error('尚未配置 GitHub Token');
+
+  const opts = {
+    method,
+    headers: {
+      'Authorization': 'Bearer ' + token,
+      'Accept': 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28'
+    }
+  };
+
+  if (body !== undefined) {
+    opts.headers['Content-Type'] = 'application/json';
+    opts.body = JSON.stringify(body);
+  }
+
+  const res = await fetch(GIST_API_BASE + path, opts);
+  const text = await res.text();
+
+  let payload = null;
+  if (text) {
+    try { payload = JSON.parse(text); } catch (_) { payload = { message: text }; }
+  }
+
+  if (!res.ok) {
+    const msg = payload && payload.message ? payload.message : res.statusText;
+    throw new Error('GitHub Gist 请求失败 ' + res.status + '：' + msg);
+  }
+
+  return payload;
 }
 
-async function trySyncToGist() {
-  const token = getGistToken();
-  if (!token) return;
-  const data = { updatedAt: state.updatedAt || nowISO(), state };
+function makeCloudEnvelope(nextState) {
+  const cleanState = normalizeClientState(nextState);
+  return {
+    app: 'cet6-word-trainer',
+    schemaVersion: 1,
+    updatedAt: cleanState.updatedAt || nowISO(),
+    deviceId: getDeviceId(),
+    state: cleanState
+  };
+}
+
+function normalizeCloudEnvelope(raw) {
+  if (!raw || typeof raw !== 'object') return null;
+  if (raw.state) {
+    return {
+      app: raw.app || 'cet6-word-trainer',
+      schemaVersion: raw.schemaVersion || 1,
+      updatedAt: raw.updatedAt || raw.state.updatedAt || '',
+      deviceId: raw.deviceId || '',
+      state: normalizeClientState(raw.state)
+    };
+  }
+  if (raw.mainChallenge || raw.wrongBook || raw.unfamiliar) {
+    const s = normalizeClientState(raw);
+    return { app: 'cet6-word-trainer', schemaVersion: 1, updatedAt: s.updatedAt || '', deviceId: '', state: s };
+  }
+  return null;
+}
+
+async function fetchRemoteEnvelope() {
+  const gistId = getGistId();
+  if (!gistId) return null;
+  const gist = await gistApi('GET', '/' + encodeURIComponent(gistId));
+  if (!gist || !gist.files || !gist.files[GIST_STATE_FILE]) return null;
+  const file = gist.files[GIST_STATE_FILE];
+  let content = file.content;
+  if (!content && file.raw_url) {
+    const res = await fetch(file.raw_url + '?ts=' + Date.now(), { cache: 'no-store' });
+    if (!res.ok) throw new Error('无法读取 Gist 原始文件内容');
+    content = await res.text();
+  }
+  if (!content) return null;
+  let parsed;
+  try { parsed = JSON.parse(content); } catch (err) { throw new Error('云端 cet6_state.json 不是合法 JSON：' + err.message); }
+  return normalizeCloudEnvelope(parsed);
+}
+
+async function uploadCloudEnvelope(envelope) {
+  const content = JSON.stringify(envelope, null, 2);
+  const gistId = getGistId();
+  if (gistId) {
+    const updated = await gistApi('PATCH', '/' + encodeURIComponent(gistId), { files: { [GIST_STATE_FILE]: { content } } });
+    if (!updated || !updated.id) throw new Error('Gist 更新失败：没有返回 Gist ID');
+    return updated;
+  }
+  const created = await gistApi('POST', '', { public: false, description: 'CET6 学习数据同步', files: { [GIST_STATE_FILE]: { content } } });
+  if (!created || !created.id) throw new Error('Gist 创建失败：没有返回 Gist ID');
+  setGistId(created.id);
+  return created;
+}
+
+function mergeNumberMapMax(a, b) {
+  const out = {};
+  for (const key of new Set([...Object.keys(a||{}), ...Object.keys(b||{})])) {
+    const n = Math.max(Number(a[key]||0), Number(b[key]||0));
+    if (n > 0) out[key] = n;
+  }
+  return out;
+}
+
+function mergeFlagMapUnion(a, b) {
+  const out = {};
+  for (const key of new Set([...Object.keys(a||{}), ...Object.keys(b||{})])) {
+    if (a[key] || b[key]) out[key] = true;
+  }
+  return out;
+}
+
+function mergeDateMapEarliest(a, b) {
+  const out = {};
+  for (const key of new Set([...Object.keys(a||{}), ...Object.keys(b||{})])) {
+    const v1 = a[key], v2 = b[key];
+    if (v1 && v2) out[key] = String(v1) <= String(v2) ? v1 : v2;
+    else if (v1) out[key] = v1;
+    else if (v2) out[key] = v2;
+  }
+  return out;
+}
+
+function mainProgressScore(main) {
+  const total = words && words.length ? words.length : 1602;
+  const round = Math.max(1, Number(main && main.round) || 1);
+  const nextIndex = Math.max(0, Math.min(total, Number(main && main.nextIndex) || 0));
+  return (round - 1) * total + nextIndex;
+}
+
+function chooseMoreAdvancedMain(localMain, remoteMain) {
+  return deepClone(mainProgressScore(remoteMain) > mainProgressScore(localMain) ? remoteMain : localMain);
+}
+
+function mergeHistoryArray(a, b, limit) {
+  const out = [];
+  const seen = new Set();
+  for (const item of [...(a||[]), ...(b||[])]) {
+    const key = JSON.stringify(item);
+    if (seen.has(key)) continue;
+    seen.add(key); out.push(item);
+  }
+  return out.slice(Math.max(0, out.length - (Number(limit)||300)));
+}
+
+function mergeClientStates(localState, remoteState) {
+  const local = normalizeClientState(localState);
+  const remote = normalizeClientState(remoteState);
+  const localTime = String(local.updatedAt || '');
+  const remoteTime = String(remote.updatedAt || '');
+  const newer = localTime >= remoteTime ? local : remote;
+  const older = localTime >= remoteTime ? remote : local;
+  const merged = normalizeClientState(deepClone(newer));
+
+  merged.mainChallenge = chooseMoreAdvancedMain(local.mainChallenge, remote.mainChallenge);
+  merged.mainChallenge.history = mergeHistoryArray(
+    local.mainChallenge && local.mainChallenge.history,
+    remote.mainChallenge && remote.mainChallenge.history, 300
+  );
+
+  merged.wrongBook = {
+    wrongCounts: mergeNumberMapMax(local.wrongBook&&local.wrongBook.wrongCounts, remote.wrongBook&&remote.wrongBook.wrongCounts),
+    firstWrongAt: mergeDateMapEarliest(local.wrongBook&&local.wrongBook.firstWrongAt, remote.wrongBook&&remote.wrongBook.firstWrongAt)
+  };
+  merged.unfamiliar = {
+    ids: mergeFlagMapUnion(local.unfamiliar&&local.unfamiliar.ids, remote.unfamiliar&&remote.unfamiliar.ids),
+    markedAt: mergeDateMapEarliest(local.unfamiliar&&local.unfamiliar.markedAt, remote.unfamiliar&&remote.unfamiliar.markedAt)
+  };
+  merged.veryUnfamiliar = {
+    ids: mergeFlagMapUnion(local.veryUnfamiliar&&local.veryUnfamiliar.ids, remote.veryUnfamiliar&&remote.veryUnfamiliar.ids),
+    markedAt: mergeDateMapEarliest(local.veryUnfamiliar&&local.veryUnfamiliar.markedAt, remote.veryUnfamiliar&&remote.veryUnfamiliar.markedAt)
+  };
+  merged.articleVocabForgetCounts = mergeNumberMapMax(local.articleVocabForgetCounts, remote.articleVocabForgetCounts);
+  merged.sessionHistory = { sessions: Object.assign({}, (older.sessionHistory&&older.sessionHistory.sessions)||{}, (newer.sessionHistory&&newer.sessionHistory.sessions)||{}) };
+  merged.wrongTraining = deepClone(newer.wrongTraining || merged.wrongTraining);
+  merged.unfamiliarTraining = deepClone(newer.unfamiliarTraining || merged.unfamiliarTraining);
+  merged.veryUnfamiliarTraining = deepClone(newer.veryUnfamiliarTraining || merged.veryUnfamiliarTraining);
+  merged.batchTraining = deepClone(newer.batchTraining || merged.batchTraining);
+  merged.updatedAt = nowISO();
+  return normalizeClientState(merged);
+}
+
+function scheduleAutoSync(delayMs = 3500) {
+  if (!hasGistConfig()) return;
+  clearTimeout(cloudSyncTimer);
+  cloudSyncTimer = setTimeout(() => { syncNow({ manual: false }).catch(() => {}); }, delayMs);
+}
+
+async function syncNow(options = {}) {
+  const manual = !!options.manual;
+  if (!hasGistToken()) {
+    if (manual) alert('请先填写并保存 GitHub Token。');
+    return false;
+  }
+  if (cloudSyncInFlight) { cloudSyncQueued = true; return false; }
+  cloudSyncInFlight = true;
+  cloudSyncQueued = false;
+  setCloudSyncStatus('syncing', '同步中...');
   try {
-    let gistId = getGistId();
-    if (gistId) {
-      await gistApi('PATCH', '/' + gistId, { files: { 'cet6_state.json': { content: JSON.stringify(data) } } });
-    } else {
-      const gist = await gistApi('POST', '', { public: false, description: 'CET6 学习数据同步', files: { 'cet6_state.json': { content: JSON.stringify(data) } } });
-      if (gist && gist.id) setGistId(gist.id);
+    const remoteEnvelope = await fetchRemoteEnvelope();
+    let mergedState = normalizeClientState(state);
+    if (remoteEnvelope && remoteEnvelope.state) {
+      mergedState = mergeClientStates(state, remoteEnvelope.state);
     }
-    lastSyncTime = nowISO();
-  } catch (_) {}
+    state = normalizeClientState(mergedState);
+    await saveStateLocalOnly();
+    const envelope = makeCloudEnvelope(state);
+    await uploadCloudEnvelope(envelope);
+    markCloudSyncSuccess(remoteEnvelope ? '已合并并同步' : '已上传并同步');
+    if (manual) alert('云同步完成。' + (getGistId() ? '\nGist ID：' + getGistId() : ''));
+    return true;
+  } catch (err) {
+    markCloudSyncError(err);
+    if (manual) alert('云同步失败：' + (err.message || String(err)));
+    throw err;
+  } finally {
+    cloudSyncInFlight = false;
+    if (cloudSyncQueued) { cloudSyncQueued = false; scheduleAutoSync(1200); }
+  }
 }
 
 async function pullFromGist() {
-  const token = getGistToken(), gistId = getGistId();
-  if (!token || !gistId) return false;
-  try {
-    const gist = await gistApi('GET', '/' + gistId);
-    if (!gist || !gist.files || !gist.files['cet6_state.json']) return false;
-    const data = JSON.parse(gist.files['cet6_state.json'].content);
-    if (!data.state) return false;
-    if (state.updatedAt && data.state.updatedAt <= state.updatedAt) return false;
-    if (!confirm('云端有更新的学习数据（' + new Date(data.state.updatedAt).toLocaleString() + '），要拉取覆盖本地吗？')) return false;
-    state = normalizeClientState(data.state);
-    await saveStateToIndexedDB(state);
-    lastSyncTime = nowISO();
-    return true;
-  } catch (_) { return false; }
+  return syncNow({ manual: true });
+}
+
+function renderCloudSyncPanel() {
+  const tokenReady = hasGistToken();
+  const gistId = getGistId();
+  const last = cloudSyncState.lastSyncTime ? new Date(cloudSyncState.lastSyncTime).toLocaleString() : '尚未同步';
+  const error = cloudSyncState.lastError ? '<br><span style=\"color:#b91c1c;\">上次错误：' + escapeHtml(cloudSyncState.lastError) + '</span>' : '';
+  const statusText = cloudSyncState.status === 'syncing' ? '同步中...' : cloudSyncState.status === 'error' ? '同步失败' : tokenReady ? '已配置' : '未配置';
+  return '<section class=\"menu-card\" style=\"margin-top:16px;\"><h2>☁️ 云端自动同步</h2><p class=\"small-note\">状态：' + escapeHtml(statusText) + '｜上次同步：' + escapeHtml(last) + error + '</p><p class=\"small-note\">GitHub Token：<input type=\"password\" id=\"gist-token-input\" placeholder=\"' + (tokenReady ? '已保存；留空表示不修改' : '粘贴 GitHub Token') + '\" style=\"width:320px;padding:4px 8px;border:1px solid var(--line);border-radius:6px;\"></p><p class=\"small-note\">Gist ID：<input type=\"text\" id=\"gist-id-input\" value=\"' + escapeHtml(gistId) + '\" placeholder=\"第二台设备必须填写同一个 Gist ID\" style=\"width:320px;padding:4px 8px;border:1px solid var(--line);border-radius:6px;\"></p><p class=\"small-note\">首台设备可只填 Token，然后点保存配置并立即同步，系统会自动创建 private Gist。第二台设备请填写同一个 Gist ID 后再同步。</p><div class=\"actions\"><button class=\"btn primary\" data-action=\"save-gist-config\">保存配置并立即同步</button><button class=\"btn\" data-action=\"sync-now\">立即同步</button><button class=\"btn\" data-action=\"copy-gist-id\">复制 Gist ID</button><button class=\"btn warn\" data-action=\"clear-gist-config\">清除云同步配置</button></div></section>';
 }
 
 function renderSyncStatus() {
-  const hasGist = !!(getGistToken() && getGistId());
-  const last = lastSyncTime ? new Date(lastSyncTime).toLocaleTimeString() : '尚未同步';
-  let html = '';
-  if (hasGist) html += `<p class="sync-status">☁️ Gist 同步就绪 | 上次：${last} | <button class="btn" data-action="pull-gist">拉取数据</button></p>`;
-  return html;
+  return renderCloudSyncPanel();
 }
 // ---- 同步结束 ----
+
 
 function getWrongIds() {
   return Object.entries(state.wrongBook.wrongCounts || {})
@@ -796,10 +1068,6 @@ function renderHome() {
     <p class="small-note">数据文件：${escapeHtml(dataPath || '尚未读取')}</p>
     ${renderSyncStatus()}
     <p class="small-note">答对会自动进入下一词；答错会停留当前题、标红并记录错题次数，需要手动点击"下一词"。</p>
-    <p class="small-note" style="margin-top:0;">
-      ☁️ 云端同步：<input type="password" id="gist-token-input" placeholder="粘贴 GitHub Token" style="width:320px;padding:4px 8px;border:1px solid var(--line);border-radius:6px;">
-      <button class="btn" data-action="set-gist-token" style="padding:6px 12px;">保存并同步</button>
-    </p>
 
     <div class="actions">
       <button class="btn warn" data-action="reset-main">重置挑战进度</button>
@@ -2275,8 +2543,39 @@ function handleClick(event) {
     if (action === 'import-learning-data') importLearningDataJSON();
     if (action === 'export-wrong-docx') exportWrongDocx().catch(showFatalError);
     if (action === 'export-very-unfamiliar-docx') exportVeryUnfamiliarDocx().catch(showFatalError);
-    if (action === 'pull-gist') { pullFromGist().then(ok => { if (ok) renderHome(); }).catch(showFatalError); }
-    if (action === 'set-gist-token') { const inp = document.getElementById('gist-token-input'); if (inp) { setGistToken(inp.value); trySyncToGist(); } renderHome(); }
+    if (action === 'save-gist-config') {
+      const tokenInput = document.getElementById('gist-token-input');
+      const gistIdInput = document.getElementById('gist-id-input');
+      if (tokenInput && tokenInput.value.trim()) setGistToken(tokenInput.value);
+      if (gistIdInput) setGistId(gistIdInput.value);
+      renderHome();
+      syncNow({ manual: true }).then(() => renderHome()).catch(() => renderHome());
+      return;
+    }
+    if (action === 'sync-now') {
+      syncNow({ manual: true }).then(() => renderHome()).catch(() => renderHome());
+      return;
+    }
+    if (action === 'copy-gist-id') {
+      const id = getGistId();
+      if (!id) { alert('还没有 Gist ID。请先保存配置并同步一次。'); return; }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(id).then(() => alert('已复制 Gist ID：' + id)).catch(() => alert('Gist ID：' + id));
+      } else { alert('Gist ID：' + id); }
+      return;
+    }
+    if (action === 'clear-gist-config') {
+      if (!confirm('确定清除本机保存的 GitHub Token 和 Gist ID 吗？云端 Gist 不会被删除。')) return;
+      clearGistToken();
+      setGistId('');
+      localStorage.removeItem('gist_last_sync_time');
+      localStorage.removeItem('gist_last_error');
+      cloudSyncState.lastSyncTime = '';
+      cloudSyncState.lastError = '';
+      setCloudSyncStatus('idle', '');
+      renderHome();
+      return;
+    }
     if (action === 'reset-main') resetMainProgress().catch(showFatalError);
   } catch (err) {
     showFatalError(err);
@@ -2338,6 +2637,10 @@ async function init() {
     }
 
     await loadArticles();
+
+    if (getGistToken() && getGistId()) {
+      try { await syncNow({ manual: false }); } catch (_) {}
+    }
 
     document.addEventListener('click', handleClick);
     document.addEventListener('keydown', handleKeydown);
