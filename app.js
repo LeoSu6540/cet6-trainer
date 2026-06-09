@@ -564,43 +564,53 @@ async function saveStateCompat() {
 
 async function saveState() {
   await saveStateCompat();
-  trySyncToServer();
+  trySyncToGist();
 }
 
-// ---- 云端同步 ----
-function getSyncServerUrl() {
-  return localStorage.getItem('sync_server_url') || '';
-}
-
-function setSyncServerUrl(url) {
-  localStorage.setItem('sync_server_url', String(url || '').trim());
-}
-
+// ---- Gist 云端同步 ----
+function getGistToken() { return localStorage.getItem('gist_token') || ''; }
+function setGistToken(v) { localStorage.setItem('gist_token', String(v || '').trim()); }
+function getGistId() { return localStorage.getItem('gist_id') || ''; }
+function setGistId(v) { localStorage.setItem('gist_id', String(v || '').trim()); }
 let lastSyncTime = null;
 
-async function trySyncToServer() {
-  const url = getSyncServerUrl();
-  if (!url) return;
+async function gistApi(method, path, body) {
+  const token = getGistToken();
+  if (!token) return null;
+  const opts = { method, headers: { Authorization: 'token ' + token, 'Content-Type': 'application/json' } };
+  if (body) opts.body = JSON.stringify(body);
+  const res = await fetch('https://api.github.com/gists' + path, opts);
+  if (!res.ok) return null;
+  return res.json();
+}
+
+async function trySyncToGist() {
+  const token = getGistToken();
+  if (!token) return;
+  const data = { updatedAt: state.updatedAt || nowISO(), state };
   try {
-    const res = await fetch(url + '/api/sync', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ state })
-    });
-    if (res.ok) { lastSyncTime = nowISO(); }
+    let gistId = getGistId();
+    if (gistId) {
+      await gistApi('PATCH', '/' + gistId, { files: { 'cet6_state.json': { content: JSON.stringify(data) } } });
+    } else {
+      const gist = await gistApi('POST', '', { public: false, description: 'CET6 学习数据同步', files: { 'cet6_state.json': { content: JSON.stringify(data) } } });
+      if (gist && gist.id) setGistId(gist.id);
+    }
+    lastSyncTime = nowISO();
   } catch (_) {}
 }
 
-async function pullFromServer() {
-  const url = getSyncServerUrl();
-  if (!url) return false;
+async function pullFromGist() {
+  const token = getGistToken(), gistId = getGistId();
+  if (!token || !gistId) return false;
   try {
-    const res = await fetch(url + '/api/sync?ts=' + Date.now());
-    if (!res.ok) return false;
-    const payload = await res.json();
-    if (!payload.state || !payload.state.updatedAt) return false;
-    if (state.updatedAt && payload.state.updatedAt <= state.updatedAt) return false;
-    if (!confirm('服务器上有更新的学习数据（' + new Date(payload.state.updatedAt).toLocaleString() + '），要拉取覆盖本地数据吗？')) return false;
-    state = normalizeClientState(payload.state);
+    const gist = await gistApi('GET', '/' + gistId);
+    if (!gist || !gist.files || !gist.files['cet6_state.json']) return false;
+    const data = JSON.parse(gist.files['cet6_state.json'].content);
+    if (!data.state) return false;
+    if (state.updatedAt && data.state.updatedAt <= state.updatedAt) return false;
+    if (!confirm('云端有更新的学习数据（' + new Date(data.state.updatedAt).toLocaleString() + '），要拉取覆盖本地吗？')) return false;
+    state = normalizeClientState(data.state);
     await saveStateToIndexedDB(state);
     lastSyncTime = nowISO();
     return true;
@@ -608,12 +618,12 @@ async function pullFromServer() {
 }
 
 function renderSyncStatus() {
-  const url = getSyncServerUrl();
-  if (!url) return '';
+  const hasGist = !!(getGistToken() && getGistId());
   const last = lastSyncTime ? new Date(lastSyncTime).toLocaleTimeString() : '尚未同步';
-  return `<p class="sync-status">📡 同步服务器：${escapeHtml(url)} | 上次同步：${last} | <button class="btn" data-action="pull-sync">拉取数据</button></p>`;
+  let html = '';
+  if (hasGist) html += `<p class="sync-status">☁️ Gist 同步就绪 | 上次：${last} | <button class="btn" data-action="pull-gist">拉取数据</button></p>`;
+  return html;
 }
-
 // ---- 同步结束 ----
 
 function getWrongIds() {
@@ -787,8 +797,8 @@ function renderHome() {
     ${renderSyncStatus()}
     <p class="small-note">答对会自动进入下一词；答错会停留当前题、标红并记录错题次数，需要手动点击"下一词"。</p>
     <p class="small-note" style="margin-top:0;">
-      同步设置：<input type="text" id="sync-url-input" placeholder="输入电脑IP，如 http://10.62.35.34:5176" value="${escapeHtml(getSyncServerUrl())}" style="width:280px;padding:4px 8px;border:1px solid var(--line);border-radius:6px;">
-      <button class="btn" data-action="set-sync-url" style="padding:6px 12px;">保存</button>
+      ☁️ 云端同步：<input type="password" id="gist-token-input" placeholder="粘贴 GitHub Token" style="width:320px;padding:4px 8px;border:1px solid var(--line);border-radius:6px;">
+      <button class="btn" data-action="set-gist-token" style="padding:6px 12px;">保存并同步</button>
     </p>
 
     <div class="actions">
@@ -2265,8 +2275,8 @@ function handleClick(event) {
     if (action === 'import-learning-data') importLearningDataJSON();
     if (action === 'export-wrong-docx') exportWrongDocx().catch(showFatalError);
     if (action === 'export-very-unfamiliar-docx') exportVeryUnfamiliarDocx().catch(showFatalError);
-    if (action === 'pull-sync') { pullFromServer().then(ok => { if (ok) renderHome(); }).catch(showFatalError); }
-    if (action === 'set-sync-url') { const inp = document.getElementById('sync-url-input'); setSyncServerUrl(inp ? inp.value : ''); renderHome(); }
+    if (action === 'pull-gist') { pullFromGist().then(ok => { if (ok) renderHome(); }).catch(showFatalError); }
+    if (action === 'set-gist-token') { const inp = document.getElementById('gist-token-input'); if (inp) { setGistToken(inp.value); trySyncToGist(); } renderHome(); }
     if (action === 'reset-main') resetMainProgress().catch(showFatalError);
   } catch (err) {
     showFatalError(err);
