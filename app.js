@@ -564,7 +564,57 @@ async function saveStateCompat() {
 
 async function saveState() {
   await saveStateCompat();
+  trySyncToServer();
 }
+
+// ---- 云端同步 ----
+function getSyncServerUrl() {
+  return localStorage.getItem('sync_server_url') || '';
+}
+
+function setSyncServerUrl(url) {
+  localStorage.setItem('sync_server_url', String(url || '').trim());
+}
+
+let lastSyncTime = null;
+
+async function trySyncToServer() {
+  const url = getSyncServerUrl();
+  if (!url) return;
+  try {
+    const res = await fetch(url + '/api/sync', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ state })
+    });
+    if (res.ok) { lastSyncTime = nowISO(); }
+  } catch (_) {}
+}
+
+async function pullFromServer() {
+  const url = getSyncServerUrl();
+  if (!url) return false;
+  try {
+    const res = await fetch(url + '/api/sync?ts=' + Date.now());
+    if (!res.ok) return false;
+    const payload = await res.json();
+    if (!payload.state || !payload.state.updatedAt) return false;
+    if (state.updatedAt && payload.state.updatedAt <= state.updatedAt) return false;
+    if (!confirm('服务器上有更新的学习数据（' + new Date(payload.state.updatedAt).toLocaleString() + '），要拉取覆盖本地数据吗？')) return false;
+    state = normalizeClientState(payload.state);
+    await saveStateToIndexedDB(state);
+    lastSyncTime = nowISO();
+    return true;
+  } catch (_) { return false; }
+}
+
+function renderSyncStatus() {
+  const url = getSyncServerUrl();
+  if (!url) return '';
+  const last = lastSyncTime ? new Date(lastSyncTime).toLocaleTimeString() : '尚未同步';
+  return `<p class="sync-status">📡 同步服务器：${escapeHtml(url)} | 上次同步：${last} | <button class="btn" data-action="pull-sync">拉取数据</button></p>`;
+}
+
+// ---- 同步结束 ----
 
 function getWrongIds() {
   return Object.entries(state.wrongBook.wrongCounts || {})
@@ -734,7 +784,12 @@ function renderHome() {
     </div>
 
     <p class="small-note">数据文件：${escapeHtml(dataPath || '尚未读取')}</p>
+    ${renderSyncStatus()}
     <p class="small-note">答对会自动进入下一词；答错会停留当前题、标红并记录错题次数，需要手动点击"下一词"。</p>
+    <p class="small-note" style="margin-top:0;">
+      同步设置：<input type="text" id="sync-url-input" placeholder="输入电脑IP，如 http://10.62.35.34:5176" value="${escapeHtml(getSyncServerUrl())}" style="width:280px;padding:4px 8px;border:1px solid var(--line);border-radius:6px;">
+      <button class="btn" data-action="set-sync-url" style="padding:6px 12px;">保存</button>
+    </p>
 
     <div class="actions">
       <button class="btn warn" data-action="reset-main">重置挑战进度</button>
@@ -2210,6 +2265,8 @@ function handleClick(event) {
     if (action === 'import-learning-data') importLearningDataJSON();
     if (action === 'export-wrong-docx') exportWrongDocx().catch(showFatalError);
     if (action === 'export-very-unfamiliar-docx') exportVeryUnfamiliarDocx().catch(showFatalError);
+    if (action === 'pull-sync') { pullFromServer().then(ok => { if (ok) renderHome(); }).catch(showFatalError); }
+    if (action === 'set-sync-url') { const inp = document.getElementById('sync-url-input'); setSyncServerUrl(inp ? inp.value : ''); renderHome(); }
     if (action === 'reset-main') resetMainProgress().catch(showFatalError);
   } catch (err) {
     showFatalError(err);
