@@ -1140,7 +1140,6 @@ function renderHome() {
         <h1>CET-6 单词训练器</h1>
         <p>本地优先训练 · 保存到本地 JSON · 支持 Gist 云端自动同步</p>
       </div>
-      <div class="home-progress-pill">进度 ${progress} / ${total}</div>
     </div>
 
     <section class="home-stats">
