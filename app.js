@@ -1144,28 +1144,28 @@ function renderHome() {
 
     <main class="home-panel">
       <section class="home-grid two-col">
-        <button class="home-card primary-card" data-action="start-main">
+        <button type="button" class="home-card primary-card" data-action="start-main">
           <div class="card-icon">START</div>
           <h2>进入单词挑战</h2>
           <p>按原始词表顺序训练，每个词在一轮内只出现一次。</p>
           <div class="mini-progress"><span>当前进度</span><strong>${progress} / ${total}</strong></div>
         </button>
 
-        <button class="home-card" data-action="wrong-book">
+        <button type="button" class="home-card" data-action="wrong-book">
           <div class="card-icon">ERR</div>
           <h2>错题本训练</h2>
           <p>集中复习答错的词，按错误次数掌握薄弱点。</p>
           <div class="mini-progress danger"><span>错题</span><strong>${wrongCount} 个</strong></div>
         </button>
 
-        <button class="home-card" data-action="unfamiliar-page">
+        <button type="button" class="home-card" data-action="unfamiliar-page">
           <div class="card-icon">NEW</div>
           <h2>陌生词训练</h2>
           <p>复习你主动标记"不熟悉"的单词。</p>
           <div class="mini-progress success"><span>陌生</span><strong>${unfamiliarCount} 个</strong></div>
         </button>
 
-        <button class="home-card" data-action="article-reading">
+        <button type="button" class="home-card" data-action="article-reading">
           <div class="card-icon">ART</div>
           <h2>文章阅读</h2>
           <p>在文章语境中复习词义，点击加粗词查看中文意思。</p>
@@ -2532,9 +2532,9 @@ function handleClick(event) {
 
   try {
     if (action === 'home') renderHome();
-    if (action === 'start-main') startMainChallenge();
-    if (action === 'wrong-book') renderWrongBook();
-    if (action === 'unfamiliar-page') renderUnfamiliarPage();
+    if (action === 'start-main') { startMainChallenge(); return; }
+    if (action === 'wrong-book') { renderWrongBook(); return; }
+    if (action === 'unfamiliar-page') { renderUnfamiliarPage(); return; }
     if (action === 'wrong-sequential') startWrongTraining('sequential');
     if (action === 'wrong-random') startWrongTraining('random');
     if (action === 'unfamiliar-sequential') startUnfamiliarTraining('sequential');
@@ -2722,7 +2722,13 @@ function maybeSyncOnFocus() {
   const now = Date.now();
   if (now - lastFocusSyncAt < 30000) return;
   lastFocusSyncAt = now;
-  syncNow({ manual: false }).then(() => renderHome()).catch(() => renderHome());
+  syncNow({ manual: false })
+    .then(() => rerenderCurrentViewAfterSync())
+    .catch(() => rerenderCurrentViewAfterSync());
+}
+
+function rerenderCurrentViewAfterSync() {
+  if (currentView === 'home') renderHome();
 }
 
     if (getGistToken()) {
