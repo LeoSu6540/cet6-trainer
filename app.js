@@ -1135,13 +1135,6 @@ function renderHome() {
   const articleBatchCount = Array.isArray(articles) ? articles.length : 0;
 
   setApp(`
-    <div class="home-hero">
-      <div>
-        <h1>CET-6 单词训练器</h1>
-        <p>本地优先训练 · 保存到本地 JSON · 支持 Gist 云端自动同步</p>
-      </div>
-    </div>
-
     <section class="home-stats">
       <div class="stat-chip"><span>词条</span><strong>${total}</strong></div>
       <div class="stat-chip danger"><span>错题</span><strong>${wrongCount}</strong></div>

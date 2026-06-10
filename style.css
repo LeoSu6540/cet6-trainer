@@ -1149,9 +1149,7 @@ h1 {
   }
 }
 
-/* v5 home redesign */
-.home-hero{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin-bottom:18px;}
-.home-panel{background:rgba(255,255,255,0.88);border:1px solid var(--line);border-radius:22px;box-shadow:0 24px 70px rgba(15,23,42,0.08);padding:28px;}
+/* v5 home redesign */.home-panel{background:rgba(255,255,255,0.88);border:1px solid var(--line);border-radius:22px;box-shadow:0 24px 70px rgba(15,23,42,0.08);padding:28px;}
 .home-grid.two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
 .home-card{appearance:none;text-align:left;width:100%;min-height:190px;border:1px solid var(--line);border-radius:20px;padding:22px;background:#fff;cursor:pointer;transition:transform .16s ease,box-shadow .16s ease;}
 .home-card:hover{transform:translateY(-2px);border-color:rgba(79,70,229,.35);box-shadow:0 16px 34px rgba(15,23,42,.08);}
