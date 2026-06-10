@@ -575,6 +575,8 @@ async function saveState() {
 // ---- Gist 云端自动同步 v2 ----
 const GIST_STATE_FILE = 'cet6_state.json';
 const GIST_API_BASE = 'https://api.github.com/gists';
+const GIST_SYNC_DESCRIPTION = 'CET6_WORD_TRAINER_SYNC';
+const LEGACY_GIST_SYNC_DESCRIPTIONS = ['CET6_WORD_TRAINER_SYNC','CET6 学习数据同步','CET6学习数据同步'];
 
 let cloudSyncTimer = null;
 let cloudSyncInFlight = false;
@@ -692,6 +694,74 @@ async function gistApi(method, path, body) {
   return payload;
 }
 
+function hasGistStateFile(gist) {
+  return !!(gist && gist.files && Object.prototype.hasOwnProperty.call(gist.files, GIST_STATE_FILE));
+}
+
+function isCet6SyncGist(gist) {
+  if (!gist || !gist.files) return false;
+  const hasStateFile = hasGistStateFile(gist);
+  const desc = String(gist.description || '').trim();
+  if (hasStateFile && desc === GIST_SYNC_DESCRIPTION) return true;
+  if (hasStateFile && LEGACY_GIST_SYNC_DESCRIPTIONS.includes(desc)) return true;
+  if (hasStateFile) return true;
+  return false;
+}
+
+function pickBestSyncGist(gists) {
+  const matches = (Array.isArray(gists) ? gists : []).filter(isCet6SyncGist);
+  if (!matches.length) return null;
+  matches.sort((a, b) => {
+    const ta = new Date(a.updated_at || a.created_at || 0).getTime();
+    const tb = new Date(b.updated_at || b.created_at || 0).getTime();
+    return tb - ta;
+  });
+  return matches[0];
+}
+
+async function listUserGists() {
+  const all = [];
+  for (let page = 1; page <= 5; page += 1) {
+    const items = await gistApi('GET', '?per_page=100&page=' + page);
+    if (!Array.isArray(items) || items.length === 0) break;
+    all.push(...items);
+    if (items.length < 100) break;
+  }
+  return all;
+}
+
+async function findExistingSyncGist() {
+  const gists = await listUserGists();
+  return pickBestSyncGist(gists);
+}
+
+async function createSyncGist() {
+  const envelope = makeCloudEnvelope(state);
+  const content = JSON.stringify(envelope, null, 2);
+  const created = await gistApi('POST', '', {
+    public: false,
+    description: GIST_SYNC_DESCRIPTION,
+    files: { [GIST_STATE_FILE]: { content } }
+  });
+  if (!created || !created.id) throw new Error('Gist 创建失败：没有返回 Gist ID');
+  setGistId(created.id);
+  return created;
+}
+
+async function ensureSyncGist() {
+  const currentId = getGistId();
+  if (currentId) {
+    try {
+      const existing = await gistApi('GET', '/' + encodeURIComponent(currentId));
+      if (existing && existing.id && hasGistStateFile(existing)) return existing;
+      setGistId('');
+    } catch (_) { setGistId(''); }
+  }
+  const found = await findExistingSyncGist();
+  if (found && found.id) { setGistId(found.id); return found; }
+  return await createSyncGist();
+}
+
 function makeCloudEnvelope(nextState) {
   const cleanState = normalizeClientState(nextState);
   return {
@@ -747,7 +817,7 @@ async function uploadCloudEnvelope(envelope) {
     if (!updated || !updated.id) throw new Error('Gist 更新失败：没有返回 Gist ID');
     return updated;
   }
-  const created = await gistApi('POST', '', { public: false, description: 'CET6 学习数据同步', files: { [GIST_STATE_FILE]: { content } } });
+  const created = await gistApi('POST', '', { public: false, description: GIST_SYNC_DESCRIPTION, files: { [GIST_STATE_FILE]: { content } } });
   if (!created || !created.id) throw new Error('Gist 创建失败：没有返回 Gist ID');
   setGistId(created.id);
   return created;
@@ -857,6 +927,7 @@ async function syncNow(options = {}) {
   cloudSyncQueued = false;
   setCloudSyncStatus('syncing', '同步中...');
   try {
+    await ensureSyncGist();
     const remoteEnvelope = await fetchRemoteEnvelope();
     let mergedState = normalizeClientState(state);
     if (remoteEnvelope && remoteEnvelope.state) {
@@ -867,7 +938,7 @@ async function syncNow(options = {}) {
     const envelope = makeCloudEnvelope(state);
     await uploadCloudEnvelope(envelope);
     markCloudSyncSuccess(remoteEnvelope ? '已合并并同步' : '已上传并同步');
-    if (manual) alert('云同步完成。' + (getGistId() ? '\nGist ID：' + getGistId() : ''));
+    if (manual) alert('云同步完成。');
     return true;
   } catch (err) {
     markCloudSyncError(err);
@@ -887,11 +958,11 @@ function renderCloudSyncPanel() {
   const tokenReady = hasGistToken();
   const gistId = getGistId();
   const last = cloudSyncState.lastSyncTime ? new Date(cloudSyncState.lastSyncTime).toLocaleString() : '尚未同步';
-  const error = cloudSyncState.lastError ? '<br><span style=\"color:#b91c1c;\">上次错误：' + escapeHtml(cloudSyncState.lastError) + '</span>' : '';
+  const error = cloudSyncState.lastError ? '<br><span style="color:#b91c1c;">上次错误：' + escapeHtml(cloudSyncState.lastError) + '</span>' : '';
   const statusText = cloudSyncState.status === 'syncing' ? '同步中...' : cloudSyncState.status === 'error' ? '同步失败' : tokenReady ? '已配置' : '未配置';
-  return '<section class=\"menu-card\" style=\"margin-top:16px;\"><h2>☁️ 云端自动同步</h2><p class=\"small-note\">状态：' + escapeHtml(statusText) + '｜上次同步：' + escapeHtml(last) + error + '</p><p class=\"small-note\">GitHub Token：<input type=\"password\" id=\"gist-token-input\" placeholder=\"' + (tokenReady ? '已保存；留空表示不修改' : '粘贴 GitHub Token') + '\" style=\"width:320px;padding:4px 8px;border:1px solid var(--line);border-radius:6px;\"></p><p class=\"small-note\">Gist ID：<input type=\"text\" id=\"gist-id-input\" value=\"' + escapeHtml(gistId) + '\" placeholder=\"第二台设备必须填写同一个 Gist ID\" style=\"width:320px;padding:4px 8px;border:1px solid var(--line);border-radius:6px;\"></p><p class=\"small-note\">首台设备可只填 Token，然后点保存配置并立即同步，系统会自动创建 private Gist。第二台设备请填写同一个 Gist ID 后再同步。</p><div class=\"actions\"><button class=\"btn primary\" data-action=\"save-gist-config\">保存配置并立即同步</button><button class=\"btn\" data-action=\"sync-now\">立即同步</button><button class=\"btn\" data-action=\"copy-gist-id\">复制 Gist ID</button><button class=\"btn warn\" data-action=\"clear-gist-config\">清除云同步配置</button></div></section>';
+  const gistInfo = gistId ? '已绑定 Gist：' + escapeHtml(gistId) : '尚未绑定 Gist；首次连接时会自动查找或创建。';
+  return '<section class="menu-card" style="margin-top:16px; grid-column:1 / -1;"><h2>☁️ 云端自动同步</h2><p class="small-note">状态：' + escapeHtml(statusText) + '｜上次同步：' + escapeHtml(last) + error + '</p><p class="small-note">GitHub Token：<input type="password" id="gist-token-input" placeholder="' + (tokenReady ? '已保存；留空表示不修改' : '粘贴 GitHub Token') + '" style="width:360px;max-width:100%;padding:6px 8px;border:1px solid var(--line);border-radius:8px;"></p><p class="small-note">只需要填写 GitHub Token。系统会自动查找已有同步 Gist；如果没有找到，会自动创建 private Gist。</p><div class="actions"><button class="btn primary" data-action="save-gist-config">连接并同步 GitHub</button><button class="btn" data-action="sync-now">立即同步</button><button class="btn" data-action="copy-gist-id">复制 Gist ID</button><button class="btn warn" data-action="clear-gist-config">清除云同步配置</button></div><details style="margin-top:12px;"><summary class="small-note" style="cursor:pointer;">高级信息</summary><p class="small-note" style="margin-top:8px;">' + gistInfo + '</p></details></section>';
 }
-
 function renderSyncStatus() {
   return renderCloudSyncPanel();
 }
@@ -2545,9 +2616,7 @@ function handleClick(event) {
     if (action === 'export-very-unfamiliar-docx') exportVeryUnfamiliarDocx().catch(showFatalError);
     if (action === 'save-gist-config') {
       const tokenInput = document.getElementById('gist-token-input');
-      const gistIdInput = document.getElementById('gist-id-input');
       if (tokenInput && tokenInput.value.trim()) setGistToken(tokenInput.value);
-      if (gistIdInput) setGistId(gistIdInput.value);
       renderHome();
       syncNow({ manual: true }).then(() => renderHome()).catch(() => renderHome());
       return;
@@ -2638,9 +2707,24 @@ async function init() {
 
     await loadArticles();
 
-    if (getGistToken() && getGistId()) {
+    let lastFocusSyncAt = 0;
+
+function maybeSyncOnFocus() {
+  if (!getGistToken()) return;
+  const now = Date.now();
+  if (now - lastFocusSyncAt < 30000) return;
+  lastFocusSyncAt = now;
+  syncNow({ manual: false }).then(() => renderHome()).catch(() => renderHome());
+}
+
+    if (getGistToken()) {
       try { await syncNow({ manual: false }); } catch (_) {}
     }
+
+    window.addEventListener('focus', maybeSyncOnFocus);
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') maybeSyncOnFocus();
+    });
 
     document.addEventListener('click', handleClick);
     document.addEventListener('keydown', handleKeydown);
