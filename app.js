@@ -958,11 +958,15 @@ function renderCloudSyncPanel() {
   const tokenReady = hasGistToken();
   const gistId = getGistId();
   const last = cloudSyncState.lastSyncTime ? new Date(cloudSyncState.lastSyncTime).toLocaleString() : '尚未同步';
-  const error = cloudSyncState.lastError ? '<br><span style="color:#b91c1c;">上次错误：' + escapeHtml(cloudSyncState.lastError) + '</span>' : '';
-  const statusText = cloudSyncState.status === 'syncing' ? '同步中...' : cloudSyncState.status === 'error' ? '同步失败' : tokenReady ? '已配置' : '未配置';
-  const gistInfo = gistId ? '已绑定 Gist：' + escapeHtml(gistId) : '尚未绑定 Gist；首次连接时会自动查找或创建。';
-  return '<section class="menu-card" style="margin-top:16px; grid-column:1 / -1;"><h2>☁️ 云端自动同步</h2><p class="small-note">状态：' + escapeHtml(statusText) + '｜上次同步：' + escapeHtml(last) + error + '</p><p class="small-note">GitHub Token：<input type="password" id="gist-token-input" placeholder="' + (tokenReady ? '已保存；留空表示不修改' : '粘贴 GitHub Token') + '" style="width:360px;max-width:100%;padding:6px 8px;border:1px solid var(--line);border-radius:8px;"></p><p class="small-note">只需要填写 GitHub Token。系统会自动查找已有同步 Gist；如果没有找到，会自动创建 private Gist。</p><div class="actions"><button class="btn primary" data-action="save-gist-config">连接并同步 GitHub</button><button class="btn" data-action="sync-now">立即同步</button><button class="btn" data-action="copy-gist-id">复制 Gist ID</button><button class="btn warn" data-action="clear-gist-config">清除云同步配置</button></div><details style="margin-top:12px;"><summary class="small-note" style="cursor:pointer;">高级信息</summary><p class="small-note" style="margin-top:8px;">' + gistInfo + '</p></details></section>';
+  const statusText = cloudSyncState.status === 'syncing' ? '同步中' : cloudSyncState.status === 'error' ? '同步失败' : tokenReady ? '云同步已开启' : '未开启云同步';
+  const statusClass = cloudSyncState.status === 'error' ? 'error' : cloudSyncState.status === 'syncing' ? 'syncing' : tokenReady ? 'ok' : 'idle';
+  const errorBlock = cloudSyncState.lastError ? '<details class=\"sync-error-details\"><summary>查看错误详情</summary><pre>' + escapeHtml(cloudSyncState.lastError) + '</pre></details>' : '';
+  const setupBlock = tokenReady
+    ? '<details class=\"sync-settings\"><summary>同步设置</summary><div class=\"sync-settings-body\"><p class=\"small-note\">GitHub Token 已保存。留空表示不修改，重新输入可替换当前 Token。</p><p><input type=\"password\" id=\"gist-token-input\" placeholder=\"重新粘贴 GitHub Token\" class=\"sync-token-input\"></p><div class=\"actions compact-actions\"><button class=\"btn\" data-action=\"save-gist-config\">重新连接并同步</button><button class=\"btn warn\" data-action=\"clear-gist-config\">清除云同步配置</button></div><details class=\"sync-advanced\"><summary>高级信息</summary><p class=\"small-note\">Gist ID：' + escapeHtml(gistId || '尚未绑定，首次同步时自动查找或创建') + '</p><button class=\"btn\" data-action=\"copy-gist-id\">复制 Gist ID</button></details></div></details>'
+    : '<div class=\"sync-setup\"><p class=\"small-note\">填写 GitHub Token 后，系统会自动查找已有同步 Gist；如果没有找到，会自动创建 private Gist。</p><div class=\"sync-setup-row\"><input type=\"password\" id=\"gist-token-input\" placeholder=\"粘贴 GitHub Token\" class=\"sync-token-input\"><button class=\"btn primary\" data-action=\"save-gist-config\">连接并同步 GitHub</button></div></div>';
+  return '<section class=\"sync-card ' + statusClass + '\"><div class=\"sync-main-row\"><div class=\"sync-title\"><span class=\"sync-dot\"></span><div><h2>云端自动同步</h2><p>' + escapeHtml(statusText) + ' · 上次同步：' + escapeHtml(last) + '</p></div></div><div class=\"sync-actions\"><button class=\"btn\" data-action=\"sync-now\">立即同步</button></div></div>' + errorBlock + setupBlock + '</section>';
 }
+
 function renderSyncStatus() {
   return renderCloudSyncPanel();
 }
@@ -1090,72 +1094,76 @@ function renderHome() {
   activeSession = null;
   clearTimeout(autoTimer);
   updateStats();
-
   const nextIndex = clampNumber(state.mainChallenge.nextIndex, 0, words.length, 0);
-  const percent = words.length ? Math.round((nextIndex / words.length) * 100) : 0;
+  const progress = nextIndex >= words.length ? words.length : nextIndex;
+  const total = words.length || 1602;
   const wrongCount = getWrongIds().length;
   const wrongTimes = getTotalWrongTimes();
   const unfamiliarCount = getUnfamiliarIds().length;
+  const articleBatchCount = Array.isArray(articles) ? articles.length : 0;
 
   setApp(`
-    <div class="grid-2">
-      <section class="menu-card clickable" data-action="start-main">
-        <h2>进入 单词挑战</h2>
-        <p>按照原始单词表顺序训练。每个词在一轮内只出现一次，刷完整张表后才会从头开始。</p>
-        <div class="progress-bar">
-          <div class="progress-fill green" style="width:${percent}%"></div>
-          <div class="progress-label green">当前进度：${nextIndex} / ${words.length}</div>
-        </div>
-      </section>
-
-      <section class="menu-card clickable" data-action="wrong-book">
-        <h2>错题本界面</h2>
-        <p>查看答错的词与累计错误次数，并选择正序训练或乱序训练。</p>
-        <div class="progress-bar">
-          <div class="progress-fill red" style="width:${wrongCount ? 100 : 0}%"></div>
-          <div class="progress-label red">错题：${wrongCount} 个 · 错误次数：${wrongTimes}</div>
-        </div>
-      </section>
-
-      <section class="menu-card clickable" data-action="unfamiliar-page">
-        <h2>陌生词汇</h2>
-        <p>记录你主动标记"不熟悉"的单词，和错题本分开统计。</p>
-        <div class="progress-bar">
-          <div class="progress-fill green" style="width:${unfamiliarCount ? 100 : 0}%"></div>
-          <div class="progress-label green">陌生：${unfamiliarCount} 个</div>
-        </div>
-      </section>
-
-      <section class="menu-card clickable" data-action="article-reading">
-        <h2>文章阅读模式</h2>
-        <p>按文章批次阅读嵌入陌生词的故事；点击加粗单词可显示中文意思。</p>
-        <div class="progress-bar">
-          <div class="progress-fill green" style="width:${articles.length ? 100 : 0}%"></div>
-          <div class="progress-label green">文章：${articles.length} 批</div>
-        </div>
-      </section>
+    <div class="home-hero">
+      <div>
+        <h1>CET-6 单词训练器</h1>
+        <p>本地优先训练 · 保存到本地 JSON · 支持 Gist 云端自动同步</p>
+      </div>
+      <div class="home-progress-pill">进度 ${progress} / ${total}</div>
     </div>
 
-    <p class="small-note">数据文件：${escapeHtml(dataPath || '尚未读取')}</p>
-    ${renderSyncStatus()}
-    <p class="small-note">答对会自动进入下一词；答错会停留当前题、标红并记录错题次数，需要手动点击"下一词"。</p>
+    <section class="home-stats">
+      <div class="stat-chip"><span>词条</span><strong>${total}</strong></div>
+      <div class="stat-chip danger"><span>错题</span><strong>${wrongCount}</strong></div>
+      <div class="stat-chip success"><span>陌生词</span><strong>${unfamiliarCount}</strong></div>
+      <div class="stat-chip muted"><span>错误次数</span><strong>${wrongTimes}</strong></div>
+    </section>
 
-    <div class="actions">
-      <button class="btn warn" data-action="reset-main">重置挑战进度</button>
-    <button class="btn" data-action="export-learning-data">导出学习数据</button>
-    <button class="btn" data-action="import-learning-data">导入学习数据</button>
-    </div>
+    <main class="home-panel">
+      <section class="home-grid two-col">
+        <button class="home-card primary-card" data-action="start-main">
+          <div class="card-icon">START</div>
+          <h2>进入单词挑战</h2>
+          <p>按原始词表顺序训练，每个词在一轮内只出现一次。</p>
+          <div class="mini-progress"><span>当前进度</span><strong>${progress} / ${total}</strong></div>
+        </button>
+
+        <button class="home-card" data-action="wrong-book">
+          <div class="card-icon">ERR</div>
+          <h2>错题本训练</h2>
+          <p>集中复习答错的词，按错误次数掌握薄弱点。</p>
+          <div class="mini-progress danger"><span>错题</span><strong>${wrongCount} 个</strong></div>
+        </button>
+
+        <button class="home-card" data-action="unfamiliar-page">
+          <div class="card-icon">NEW</div>
+          <h2>陌生词训练</h2>
+          <p>复习你主动标记"不熟悉"的单词。</p>
+          <div class="mini-progress success"><span>陌生</span><strong>${unfamiliarCount} 个</strong></div>
+        </button>
+
+        <button class="home-card" data-action="article-reading">
+          <div class="card-icon">ART</div>
+          <h2>文章阅读</h2>
+          <p>在文章语境中复习词义，点击加粗词查看中文意思。</p>
+          <div class="mini-progress success"><span>文章</span><strong>${articleBatchCount} 批</strong></div>
+        </button>
+      </section>
+
+      ${renderSyncStatus()}
+
+      <details class="data-manage">
+        <summary>数据管理</summary>
+        <div class="data-manage-body">
+          <p class="small-note">本地数据文件：${escapeHtml(dataPath || '尚未读取')}</p>
+          <p class="small-note">学习数据会自动保存到本地；云同步开启后会自动同步到 GitHub Gist。</p>
+          <div class="actions compact-actions">
+            <button class="btn warn" data-action="reset-main">重置挑战进度</button>
+          </div>
+        </div>
+      </details>
+    </main>
   `);
 }
-
-function renderTopHomeButton() {
-  return `
-    <div class="top-home-row">
-      <button type="button" class="btn top-home-btn" data-action="home">← 返回首页</button>
-    </div>
-  `;
-}
-
 function startMainChallenge() {
   if (!words.length) return;
   const baseSession = {
@@ -2477,34 +2485,7 @@ async function exportVeryUnfamiliarDocx() {
 }
 
 
-async function exportLearningDataJSON() {
-  await saveStateCompat();
-  const json=JSON.stringify(state,null,2);
-  const blob=new Blob([json],{type:'application/json'});
-  const a=document.createElement('a');
-  a.href=URL.createObjectURL(blob);
-  a.download='CET6_学习数据备份_'+todayDateString()+'.json';
-  document.body.appendChild(a);a.click();a.remove();
-}
 
-async function importLearningDataJSON() {
-  const input=document.createElement('input');
-  input.type='file';
-  input.accept='.json';
-  input.onchange=async (e)=>{
-    const file=e.target.files[0];
-    if(!file)return;
-    try{
-      const text=await file.text();
-      const parsed=JSON.parse(text);
-      if(!confirm('即将导入学习数据，现有数据将被覆盖。请确认文件名：'+file.name+' 继续吗？'))return;
-      state=normalizeClientState(parsed);
-      await saveStateCompat();
-      renderHome();
-    }catch(err){alert('导入失败：'+err.message);}
-  };
-  input.click();
-}
 async function resetMainProgress() {
   if (!confirm('只重置"单词挑战"进度，不会删除错题本和错误次数。确定继续吗？')) return;
   try {
@@ -2610,8 +2591,6 @@ function handleClick(event) {
       toggleArticleVocabSortMode();
       return;
     }
-    if (action === 'export-learning-data') exportLearningDataJSON().catch(showFatalError);
-    if (action === 'import-learning-data') importLearningDataJSON();
     if (action === 'export-wrong-docx') exportWrongDocx().catch(showFatalError);
     if (action === 'export-very-unfamiliar-docx') exportVeryUnfamiliarDocx().catch(showFatalError);
     if (action === 'save-gist-config') {
