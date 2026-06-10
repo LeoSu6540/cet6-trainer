@@ -586,7 +586,8 @@ const cloudSyncState = {
   status: 'idle',
   message: '',
   lastSyncTime: localStorage.getItem('gist_last_sync_time') || '',
-  lastError: localStorage.getItem('gist_last_error') || ''
+  lastError: localStorage.getItem('gist_last_error') || '',
+  lastErrorCode: localStorage.getItem('gist_last_error_code') || ''
 };
 
 function getGistToken() {
@@ -648,16 +649,22 @@ function markCloudSyncSuccess(message) {
   cloudSyncState.message = message || '已同步';
   cloudSyncState.lastSyncTime = t;
   cloudSyncState.lastError = '';
+  cloudSyncState.lastErrorCode = '';
   localStorage.setItem('gist_last_sync_time', t);
   localStorage.removeItem('gist_last_error');
+  localStorage.removeItem('gist_last_error_code');
 }
 
 function markCloudSyncError(error) {
   const msg = error && error.message ? error.message : String(error || '未知错误');
+  const code = error && error.code ? String(error.code) : '';
   cloudSyncState.status = 'error';
   cloudSyncState.message = msg;
   cloudSyncState.lastError = msg;
+  cloudSyncState.lastErrorCode = code;
   localStorage.setItem('gist_last_error', msg);
+  if (code) localStorage.setItem('gist_last_error_code', code);
+  else localStorage.removeItem('gist_last_error_code');
 }
 
 async function gistApi(method, path, body) {
@@ -791,6 +798,30 @@ function normalizeCloudEnvelope(raw) {
   return null;
 }
 
+function isCloudJsonCorruptError() {
+  const code = cloudSyncState.lastErrorCode || '';
+  const msg = cloudSyncState.lastError || '';
+  return code === 'REMOTE_JSON_CORRUPT' || msg.includes('不是合法 JSON') || msg.includes('Expected double-quoted property name') || msg.includes('Unexpected token') || msg.includes('JSON.parse');
+}
+
+async function repairCloudFromLocalState() {
+  if (!hasGistToken()) { markCloudSyncError(new Error('请先填写并保存 GitHub Token。')); return false; }
+  if (cloudSyncInFlight) { cloudSyncQueued = true; return false; }
+  cloudSyncInFlight = true; cloudSyncQueued = false;
+  setCloudSyncStatus('syncing', '正在用本地数据修复云端...');
+  try {
+    await ensureSyncGist();
+    state = normalizeClientState(state);
+    state.updatedAt = nowISO();
+    await saveStateLocalOnly();
+    const envelope = makeCloudEnvelope(state);
+    await uploadCloudEnvelope(envelope);
+    markCloudSyncSuccess('已用本地数据修复云端');
+    return true;
+  } catch (err) { markCloudSyncError(err); throw err; }
+  finally { cloudSyncInFlight = false; if (cloudSyncQueued) { cloudSyncQueued = false; scheduleAutoSync(1200); } }
+}
+
 async function fetchRemoteEnvelope() {
   const gistId = getGistId();
   if (!gistId) return null;
@@ -805,7 +836,7 @@ async function fetchRemoteEnvelope() {
   }
   if (!content) return null;
   let parsed;
-  try { parsed = JSON.parse(content); } catch (err) { throw new Error('云端 cet6_state.json 不是合法 JSON：' + err.message); }
+  try { parsed = JSON.parse(content); } catch (err) { const e = new Error('云端 cet6_state.json 不是合法 JSON：' + err.message); e.code = 'REMOTE_JSON_CORRUPT'; throw e; }
   return normalizeCloudEnvelope(parsed);
 }
 
@@ -942,7 +973,7 @@ async function syncNow(options = {}) {
     return true;
   } catch (err) {
     markCloudSyncError(err);
-    if (manual) alert('云同步失败：' + (err.message || String(err)));
+
     throw err;
   } finally {
     cloudSyncInFlight = false;
@@ -960,7 +991,8 @@ function renderCloudSyncPanel() {
   const last = cloudSyncState.lastSyncTime ? new Date(cloudSyncState.lastSyncTime).toLocaleString() : '尚未同步';
   const statusText = cloudSyncState.status === 'syncing' ? '同步中' : cloudSyncState.status === 'error' ? '同步失败' : tokenReady ? '云同步已开启' : '未开启云同步';
   const statusClass = cloudSyncState.status === 'error' ? 'error' : cloudSyncState.status === 'syncing' ? 'syncing' : tokenReady ? 'ok' : 'idle';
-  const errorBlock = cloudSyncState.lastError ? '<details class=\"sync-error-details\"><summary>查看错误详情</summary><pre>' + escapeHtml(cloudSyncState.lastError) + '</pre></details>' : '';
+  const canRepairCloud = tokenReady && isCloudJsonCorruptError();
+  const errorBlock = cloudSyncState.lastError ? '<details class=\"sync-error-details\"><summary>查看错误详情</summary><pre>' + escapeHtml(cloudSyncState.lastError) + '</pre></details>' + (canRepairCloud ? '<div class=\"sync-repair-box\"><p class=\"small-note\">云端同步文件已损坏。确认当前本地学习数据是正确版本后，可以用本地数据覆盖修复云端。</p><button class=\"btn warn\" data-action=\"repair-cloud-from-local\">用本地数据修复云端</button></div>' : '') : '';
   const setupBlock = tokenReady
     ? '<details class=\"sync-settings\"><summary>同步设置</summary><div class=\"sync-settings-body\"><p class=\"small-note\">GitHub Token 已保存。留空表示不修改，重新输入可替换当前 Token。</p><p><input type=\"password\" id=\"gist-token-input\" placeholder=\"重新粘贴 GitHub Token\" class=\"sync-token-input\"></p><div class=\"actions compact-actions\"><button class=\"btn\" data-action=\"save-gist-config\">重新连接并同步</button><button class=\"btn warn\" data-action=\"clear-gist-config\">清除云同步配置</button></div><details class=\"sync-advanced\"><summary>高级信息</summary><p class=\"small-note\">Gist ID：' + escapeHtml(gistId || '尚未绑定，首次同步时自动查找或创建') + '</p><button class=\"btn\" data-action=\"copy-gist-id\">复制 Gist ID</button></details></div></details>'
     : '<div class=\"sync-setup\"><p class=\"small-note\">填写 GitHub Token 后，系统会自动查找已有同步 Gist；如果没有找到，会自动创建 private Gist。</p><div class=\"sync-setup-row\"><input type=\"password\" id=\"gist-token-input\" placeholder=\"粘贴 GitHub Token\" class=\"sync-token-input\"><button class=\"btn primary\" data-action=\"save-gist-config\">连接并同步 GitHub</button></div></div>';
@@ -2598,6 +2630,11 @@ function handleClick(event) {
       if (tokenInput && tokenInput.value.trim()) setGistToken(tokenInput.value);
       renderHome();
       syncNow({ manual: true }).then(() => renderHome()).catch(() => renderHome());
+      return;
+    }
+    if (action === 'repair-cloud-from-local') {
+      if (!confirm('确定用当前本地学习数据覆盖修复云端 Gist 吗？\n\n请先确认当前页面中的进度、错题、陌生词数据是你想保留的版本。')) return;
+      repairCloudFromLocalState().then(() => renderHome()).catch(() => renderHome());
       return;
     }
     if (action === 'sync-now') {
