@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cet6-trainer-pwa-v9';
+const CACHE_NAME = 'cet6-trainer-pwa-v10';
 
 const CORE_ASSETS = [
   './',

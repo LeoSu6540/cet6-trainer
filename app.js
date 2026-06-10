@@ -1,3 +1,4 @@
+console.log('[CET6 app.js loaded]', 'home-card-click-fix-v1');
 'use strict';
 
 const appEl = document.getElementById('app');
@@ -1133,6 +1134,21 @@ function renderHome() {
   const wrongTimes = getTotalWrongTimes();
   const unfamiliarCount = getUnfamiliarIds().length;
   const articleBatchCount = Array.isArray(articles) ? articles.length : 0;
+
+  function bindHomeCardClickFallback() {
+    const cards = document.querySelectorAll('.home-card[data-action]');
+    console.log('[CET6 bind home cards]', cards.length);
+    cards.forEach(card => {
+      card.addEventListener('click', event => {
+        const action = card.dataset.action;
+        console.log('[CET6 direct card click]', action);
+        if (handleHomeEntryAction(action)) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+      });
+    });
+  }
 
   setApp(`
     <section class="home-stats">
@@ -2525,6 +2541,30 @@ async function resetMainProgress() {
   renderHome();
 }
 
+function handleHomeEntryAction(action) {
+  if (action === 'start-main') {
+    console.log('[CET6 enter]', 'start-main');
+    startMainChallenge();
+    return true;
+  }
+  if (action === 'wrong-book') {
+    console.log('[CET6 enter]', 'wrong-book');
+    renderWrongBook();
+    return true;
+  }
+  if (action === 'unfamiliar-page') {
+    console.log('[CET6 enter]', 'unfamiliar-page');
+    renderUnfamiliarPage();
+    return true;
+  }
+  if (action === 'article-reading') {
+    console.log('[CET6 enter]', 'article-reading');
+    renderArticleListPage();
+    return true;
+  }
+  return false;
+}
+
 function handleClick(event) {
   const target = event.target.closest('[data-action]');
   if (!target) return;
@@ -2723,8 +2763,8 @@ function maybeSyncOnFocus() {
   if (now - lastFocusSyncAt < 30000) return;
   lastFocusSyncAt = now;
   syncNow({ manual: false })
-    .then(() => rerenderCurrentViewAfterSync())
-    .catch(() => rerenderCurrentViewAfterSync());
+    .then(() => { if (currentView === 'home') renderHome(); })
+    .catch(() => { if (currentView === 'home') renderHome(); });
 }
 
 function rerenderCurrentViewAfterSync() {
@@ -2740,7 +2780,9 @@ function rerenderCurrentViewAfterSync() {
       if (document.visibilityState === 'visible') maybeSyncOnFocus();
     });
 
+    document.removeEventListener('click', handleClick);
     document.addEventListener('click', handleClick);
+    console.log('[CET6 init] click listener registered');
     document.addEventListener('keydown', handleKeydown);
     renderHome();
   } catch (err) {
